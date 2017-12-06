@@ -1,0 +1,1198 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+// SCSS Syntax http://sass-lang.com/documentation/file.SASS_REFERENCE.html#css_extensions
+
+// variable declaration in SCSS we use variables to keep style clean and easy to modify
+// if we use this variable to say 50 rules and want to change the color, we would change only this variable.
+$white: #f5f5f5;
+$brandcolor: #751212;
+$darkgray: #292c2f;
+
+// in SCSS we nest
+html { 
+  margin: 0px; 
+  padding: 0px; 
+}
+
+body {
+min-height: 100%;
+ background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+font-family: 'Lato', sans-serif;
+
+
+.no-gutter>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+  .header-white {
+    color: $white;
+      font-family: 'Lato', sans-serif;
+  }
+
+.text-dark {
+  color: $darkgray;
+}
+
+.text-brand {
+  color: $brandcolor;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 18px;
+  color: $white;
+  line-height: 28px;
+
+}
+
+h5 {
+  display: block;
+}
+
+h6 {
+  color: $white;
+}
+
+.wrapper {
+  padding: 0px;
+}
+
+
+#wrapper-static-hero {
+  background-color: transparent;
+  color: $white;
+  border-style: solid;
+  border-color: $white;
+}
+
+.widget-count-1 {
+  padding: 50px 0px;
+}
+
+.navbar {
+  padding: 0px;
+  @media (max-width: 1000px) {
+    padding-bottom: 10px;
+  }
+
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: $white;
+    transition:all ease .1s;
+}
+
+nav {
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+	background-color: transparent;
+  @media (max-width: 1000px) {
+      background-color: $white;
+  }
+
+  a {
+    text-align: center;
+    font-size: 14px !important;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+
+  }
+
+  .shrink-nav {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .logo img{
+    margin-top:5px; 
+    width:150px;
+    transition:width ease-in-out .2s;
+  }
+
+  .shrink-logo img {
+    transition:width ease-in-out .2s;
+    width:100px;
+  }
+
+  @media(max-width:767px){
+    .logo img{
+      width:120px;
+    }
+    .shrink-logo img {
+      margin-top:10px; 
+      width:180px;
+    }
+  }
+
+  .navbar-brand {
+    width: 90%;
+    padding: 10px 0px;
+    transition:all ease .2s;
+    @media screen and (max-width: 575px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 576px) {
+      width: 110%;
+
+    }
+
+    @media (max-width: 767px) {
+      width: 65%;
+    }
+
+    @media (min-width: 768px) {
+    width: 60%;
+    }
+
+    @media (max-width: 991px) {
+    }
+
+    @media (min-width: 992px) {
+    width: 100%;
+
+    }
+
+    @media (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+      width: 80%;
+
+    }
+  }
+
+  .nav-item {
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    box-shadow: none;
+  }
+
+	.nav-link {
+    color: $white;
+    &:hover {
+    color: lightgray;
+    box-shadow: 0 -2px $brandcolor inset;
+    transition: box-shadow 0.3s linear;
+    }
+
+    @media screen and (max-width: 575px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+    @media screen and (min-width: 576px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+    @media (max-width: 767px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+    @media (max-width: 991px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+    @media (min-width: 992px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      margin: 0px;
+      &:hover {
+      padding: auto;
+      margin: auto;
+      box-shadow: 0 -3px $brandcolor inset;
+      }
+    }
+
+	}
+
+  a.dropdown-item {
+    color: $darkgray !important;
+  }
+
+}
+
+.btn-primary {
+      cursor: pointer;
+    background-color: $brandcolor;
+    background-image: none;
+    border-color: gray; 
+      &:hover {
+    background-color: #901a1a;
+        border-color: lightgray;
+
+  }
+}
+
+.btn-primary:active, .btn-primary.active,
+  .show > .btn-primary.dropdown-toggle {
+    cursor: pointer;
+    background-color: $brandcolor;
+    background-image: none;
+    border-color: gray; 
+  &:hover {
+    background-color: #901a1a;
+    border-color: lightgray;
+  }
+  
+  }
+
+.btn-secondary {
+  cursor: pointer;
+    background-color: $white;
+    background-image: none;
+    border-color: gray; 
+    color: $darkgray;
+    &:hover {
+      background-color: $darkgray;
+    }
+}
+.navbar-toggler {
+  background-color: $brandcolor;
+}
+
+.header {
+  font-family: 'Lato', sans-serif;
+  color: $white;
+  background-color: #000;
+}
+
+
+
+  .navbar-dark {
+    .navbar-nav {
+      .nav-link {
+          color: $white;
+        @media (max-width: 1000px) {
+          color: gray;
+          font-weight: normal;
+          &:hover {
+            color: $darkgray;
+          }
+        }
+      }
+    }
+  }
+  .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus, .navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
+    color: $brandcolor;
+  }
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+   color: $brandcolor;
+  } 
+.navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {
+  background-color: $brandcolor;
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+  color: $brandcolor;
+  box-shadow: 0 -3px $brandcolor inset;
+}
+    .navbar-interior {
+      -webkit-box-shadow: 0px 5px 14px -2px rgba(0,0,0,0.30);
+      -moz-box-shadow: 0px 5px 14px -2px rgba(0,0,0,0.30);
+      box-shadow: 0px 5px 14px -2px rgba(0,0,0,0.30);
+    .navbar-nav {
+      .nav-link {
+          color: gray;
+          &:hover {
+            color: $brandcolor;
+          }
+        @media (max-width: 1000px) {
+          color: gray;
+          font-weight: normal;
+          &:hover {
+            color: $darkgray;
+          }
+        }
+      }
+    }
+  }
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+  padding-top: 35px;
+  background-color: #292c2f;
+  color: #bbb;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  padding-bottom: 2px;
+  text-decoration:none;
+  border-bottom:2px solid $brandcolor;
+}
+
+footer .form-control {
+    background-color: $white;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+.hero-banner-image {
+  min-height: 450px;
+  margin-bottom: 100px;
+}
+
+.hero-cta {
+  line-height: 50px;
+  font-size: 42px;
+  margin-top: 100px;
+  color: $white;
+  span {
+    font-weight: bolder;
+    font-style: italic;
+  }
+
+}
+
+.cta-switcher {
+  color: $white;
+  .cta-active {
+    padding: 10px;
+    border-style: solid;
+    border: transparent;
+    border-bottom: 3px solid $brandcolor;
+    font-weight: bolder;
+
+  }
+}
+
+
+.slider {
+  width: 100%;
+    input:[type="range"] {
+
+      -webkit-appearance: none !important; /*Needed to reset default slider styles */
+      width: 100%;
+      height: 15px;
+      background-color: green;
+      border: 1px solid darken($brandcolor, 4%);
+      radius: 10px;
+      margin: auto;
+      transition: all 0.3s ease;
+
+}
+
+}
+
+.container {
+  margin-top: 0px;
+}
+
+.component {
+  background-color: $white;
+  height: 100%;
+  padding: 80px 0px;
+}
+
+.component-red {
+  background-color: $brandcolor;
+  height: 100%;
+  padding: 80px 0px;
+
+}
+
+.component-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.component-trans {
+  background-color: transparent;
+  height: 100%;
+  padding: 40px 0px;
+}
+
+    .component-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(143,9,9, .5);
+
+    }
+
+.newsletter-cta {
+  height: 100%;
+    padding: 40px 0px;
+
+  background-color: $brandcolor;
+      @media (max-width: 768px) {
+      height: 200px;
+  }
+}
+
+    .header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, .5);
+  opacity: 0.85;
+
+    }
+.hero-interior {
+  position: relative;
+  height: 400px;
+     color: $white;
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: $darkgray;
+
+
+}
+
+.hero-interior-cta {
+  position: absolute;
+  z-index: 100;
+    line-height: 50px;
+    font-size: 42px;
+    padding-top: 100px;
+    padding-left: 100px;
+    color: white;
+    span {
+      font-weight: bolder;
+      font-style: italic;
+    }
+
+}
+
+.hero-interior-cta-center {
+  position: relative;
+  z-index: 100;
+    line-height: 50px;
+    font-size: 42px;
+    padding-top: 100px;
+    color: white;
+    span {
+      font-weight: bolder;
+      font-style: italic;
+    }
+
+}
+
+.hero-interior-cta-right {
+  position: relative;
+  z-index: 100;
+    line-height: 50px;
+    font-size: 42px;
+    padding-top: 100px;
+    color: white;
+    span {
+      font-weight: bolder;
+      font-style: italic;
+    }
+
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  color: lightgray;
+  box-sizing: border-box;
+  font-size: 18px;
+  height: 50px;
+  left: 50%;
+  margin: -25px 0 0 -100px;
+  padding: 10px 0px;
+  top: 50%;
+  width: 100%;
+
+  &:focus {
+    outline: none;    
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: $white;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: $brandcolor;
+}
+
+.input:focus+.underline {
+  transform: scale(1);
+}
+
+.underline {
+  background-color: $darkgray;
+  display: inline-block;
+  height: 2px;
+  left: -100px;
+  position: absolute;
+  top: 35px;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  width: 100%;
+}
+
+.underline-value {
+  left: -50px;
+  width: 100%;
+}
+
+
+.connect {
+  height: 150px;
+  border:2px solid $brandcolor;
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+  &:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #eeeeee;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+  > li {
+    margin-bottom: 20px;
+    position: relative;
+    &:before {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+    &:before {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+    > {
+      .timeline-panel {
+        width: 46%;
+        float: left;
+        border: 1px solid #d4d4d4;
+        background-color: white;
+        border-radius: 2px;
+        padding: 20px;
+        position: relative;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        &:before {
+          position: absolute;
+          top: 26px;
+          right: -15px;
+          display: inline-block;
+          border-top: 15px solid transparent;
+          border-left: 15px solid #ccc;
+          border-right: 0 solid #ccc;
+          border-bottom: 15px solid transparent;
+          content: " ";
+        }
+        &:after {
+          position: absolute;
+          top: 27px;
+          right: -14px;
+          display: inline-block;
+          border-top: 14px solid transparent;
+          border-left: 14px solid #fff;
+          border-right: 0 solid #fff;
+          border-bottom: 14px solid transparent;
+          content: " ";
+        }
+      }
+      .timeline-badge {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        text-align: center;
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        margin-left: -25px;
+        background-color: #999999;
+        z-index: 100;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+    }
+    &.timeline-inverted > .timeline-panel {
+      float: right;
+      &:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+      }
+      &:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+      }
+    }
+  }
+}
+
+.timeline-badge {
+  &.primary {
+    background-color: #2e6da4 !important;
+  }
+  &.success {
+    background-color: #3f903f !important;
+  }
+  &.warning {
+    background-color: #f0ad4e !important;
+  }
+  &.danger {
+    background-color: #d9534f !important;
+  }
+  &.info {
+    background-color: #5bc0de !important;
+  }
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > {
+  p, ul {
+    margin-bottom: 0;
+  }
+  p + p {
+    margin-top: 5px;
+  }
+}
+
+.card-custom {
+  overflow: hidden;
+  min-height: 450px;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+  height: 200px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 161px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+  }
+}
+
+/* First border-left-width setting is a fallback */
+
+.card-custom-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 100px;
+  left: 1.25rem;
+  width: 100px;
+  height: 100px;
+}
+
+.card-custom-img {
+  background-color: $brandcolor;
+}
+
+.card-title {
+  color: $darkgray;
+}
+
+
+// Styling for the portfolio section
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+  .portfolio-box-caption {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    background: fade-out($darkgray, .1);
+    transition: all ease .5s;
+    .portfolio-box-caption-content {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      text-align: center;
+      .project-category,
+      .project-name {
+        padding: 0 15px;
+      }
+      .project-category {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .project-name {
+        font-size: 18px;
+      }
+    }
+  }
+  &:hover {
+    .portfolio-box-caption {
+      opacity: .85;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  @media (min-width: 768px) {
+    .portfolio-box-caption {
+      .portfolio-box-caption-content {
+        .project-category {
+          font-size: 16px;
+        }
+        .project-name {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+    content: none;
+  }
+
+}
+
+.dropdown-menu {
+  padding: 10px 0px;
+  li {
+    white-space: nowrap; 
+  }
+  .nav-link {
+    color: $white;
+    &:hover {
+    color: lightgray;
+    box-shadow: none;
+    }
+  }
+}
+
+.my-shuffle {
+  position: relative;
+  overflow: hidden;
+}
+ 
+/* Make vertical gutters the same as the horizontal ones */
+.image-item {
+  margin-bottom: 30px;
+}
+ 
+/* Ensure images take up the same space when they load */
+/* https://vestride.github.io/Shuffle/images */
+.aspect {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+ 
+.aspect__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+ 
+.aspect--16x9 {
+  padding-bottom: 56.25%;
+}
+ 
+.aspect--9x80 {
+  padding-bottom: calc(112.5% + 30px);
+}
+ 
+.aspect--32x9 {
+  padding-bottom: calc(28.125% - 8px);
+}
+ 
+.image-item img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testimonial {
+  margin-bottom: 10px;
+}
+
+.testimonial-section {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #fff;
+  &:after {
+    top: 100%;
+    left: 50px;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
+    border-top-color: #fff;
+    border-width: 15px;
+    margin-left: -15px;
+  }
+}
+
+.testimonial-desc {
+  margin-top: 20px;
+  text-align: left;
+  padding-left: 15px;
+  img {
+    border: 1px solid #f5f5f5;
+    border-radius: 150px;
+    height: 70px;
+    padding: 3px;
+    width: 70px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.testimonial-writer {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+.testimonial-writer-name {
+  font-weight: bold;
+}
+
+.testimonial-writer-designation, .testimonial-writer-company {
+  font-size: 85%;
+}
+
+/*---- Outlined Styles ----*/
+
+.testimonial {
+ 
+  &.testimonial-info-filled {
+    .testimonial-section {
+      color: #fff;
+      background-color: #f0ad4e;
+      border-color: #eea236;
+      &:after {
+        border-top-color: #F0AD4E;
+      }
+    }
+    .testimonial-desc img {
+      border-color: #eea236;
+      background-color: #f0ad4e;
+    }
+    .testimonial-writer-name {
+      color: #F0AD4E;
+    }
+  }
+}
+
+section {
+  padding: 30px 0;
+  &#contact {
+    background-color: #222222;
+    background-position: center;
+    background-repeat: no-repeat;
+    .section-heading {
+      color: $white;
+    }
+    .form-group {
+      margin-bottom: 25px;
+      input {
+        padding: 20px;
+        &.form-control {
+          height: auto;
+        }
+      }
+      textarea {
+        padding: 20px;
+        &.form-control {
+          height: 236px;
+        }
+      }
+    }
+    ::-webkit-input-placeholder {
+      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
+    :-moz-placeholder {
+      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
+    ::-moz-placeholder {
+      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
+    :-ms-input-placeholder {
+      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #eeeeee;
+    }
+    .text-danger {
+      color: #e74c3c;
+    }
+    .form-control:focus {
+      border-color: #fed136;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none;
+    }
+  }
+}
+.about_our_company {
+  text-align: center;
+  h1 {
+    font-size: 25px;
+  }
+}
+
+.gellary_bg_none img {
+  width: 100%;
+  height: 250px;
+}
+
+#google-container {
+    width: 100%;
+    height: 400px;
+}
+
+#cd-google-map {
+
+  address {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 1em 1em;
+  }
+}
+
+#cd-zoom-in, #cd-zoom-out {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-size: 32px 64px;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-controller.svg');
+
+  .no-touch &:hover {
+  }
+
+}
+
+#cd-zoom-in {
+  background-position: 50% 0;
+  margin-top: 10px;
+  margin-bottom: 1px;
+
+}
+
+#cd-zoom-out {
+  background-position: 50% -32px;
+}
+
+.page-title {
+  padding: 40px 0px 20px 0px;
+}
+
+.tab-content {
+  display: inherit;
+  .active {
+  display: inline;
+  }
+}
+
+  .switch {
+    padding-right: 40px;
+  }
+
+.nav-tabs {
+  border: none;
+  a {
+     color: $white; 
+  }
+  .nav-link.active {
+    border-color: transparent;
+        box-shadow: 0 -2px $brandcolor inset;
+    transition: box-shadow 0.3s linear;
+    color: $white;
+    background-color: transparent;
+  }
+    .nav-link {
+      &:hover {
+        border-bottom: none;
+        border-color: transparent;
+        box-shadow: 0 -2px $brandcolor inset;
+    transition: box-shadow 0.3s linear;
+  }
+}
+}
+.form-inline {
+  width: 70%;
+  #custom-search-11 {
+    width: 100%;
+  }
+} 
+
+.pull-out {
+  color: $white;
+  padding: 20px;
+  background-color: $darkgray;
+  width: 100%;
+}
+
+}
