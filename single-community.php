@@ -27,6 +27,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		</div>	
 	</div>
 </div>	
+
 <div class="wrapper" id="single-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -34,6 +35,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		<div class="row">
 
 			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
 			<main class="site-main" id="main">
 
@@ -41,16 +43,22 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'single-community' ); ?>
 
-   					<a href="<?php echo get_post_type_archive_link( 'community' ); ?>">Go Back</a>
+						<?php understrap_post_nav(); ?>
 
 				<?php endwhile; // end of the loop. ?>
+
 
 			</main><!-- #main -->
 
 		</div><!-- #primary -->
 
-		<!-- Do the right sidebar check -->
+						<!-- Do the right sidebar check -->
 
+	<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+
+			<?php get_sidebar( 'community' ); ?>
+
+		<?php endif; ?>
 
 	</div><!-- .row -->
 

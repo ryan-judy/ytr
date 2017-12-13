@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 
 					<?php 
-					if ( is_page('sellers') ) {
+					if ( is_page('selling-your-home') ) {
 					  get_template_part( 'loop-templates/content', 'sellers' );
 					} else {
 					  get_template_part( 'loop-templates/content', 'page' );

@@ -9520,6 +9520,8 @@ body {
     /* Set a background color that will be displayed
      while the background image is loading */
     background-color: #292c2f; }
+  body .listings {
+    height: 600px; }
   body .hero-interior-cta {
     position: absolute;
     z-index: 100;
@@ -10043,6 +10045,67 @@ body {
     padding: 20px;
     background-color: #292c2f;
     width: 100%; }
+  body .listing-box {
+    background: #f2f4f4;
+    padding: 5px;
+    float: left;
+    width: 100%; }
+    body .listing-box h4 {
+      line-height: 30px;
+      color: #e55122; }
+    body .listing-box p {
+      font-size: 12px;
+      color: #838383; }
+    body .listing-box ul li a {
+      color: #e55122; }
+  body .poperty-details-iob {
+    border-top: #e5e5e5 1px solid;
+    border-bottom: #e5e5e5 1px solid; }
+    body .poperty-details-iob span {
+      font-size: 22px;
+      color: #000; }
+  body .cls-for-btn-listing {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 60px; }
+    body .cls-for-btn-listing li {
+      margin: 0;
+      padding: 0;
+      display: block; }
+      body .cls-for-btn-listing li a {
+        margin-top: 10px;
+        padding: 10px 15px;
+        display: block;
+        background: #751212;
+        border-radius: 5px;
+        color: #f5f5f5; }
+  body .star-list-iob {
+    margin: 16px 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    float: right; }
+    body .star-list-iob li {
+      margin: 0;
+      padding: 0 3px;
+      display: block; }
+  body #myCarousel .list-inline {
+    white-space: nowrap;
+    overflow-x: auto; }
+  body #myCarousel .carousel-indicators {
+    position: static;
+    left: initial;
+    width: 100%;
+    margin-left: initial; }
+    body #myCarousel .carousel-indicators > li {
+      width: initial;
+      height: initial;
+      text-indent: initial; }
+    body #myCarousel .carousel-indicators > li.active img {
+      opacity: 0.7; }
 
 /*
 * Use existing Bootstrap 4 classes and

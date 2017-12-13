@@ -9,10 +9,6 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class = "container mt-4">
-		<div class = "row">
-			<div class = "col-md-8">
-
 				<header class="entry-header">
 
 					<?php the_title( '<h1 class="entry-title text-uppercase">', '</h1>' ); ?>
@@ -50,8 +46,5 @@
 						) );
 					?>
 				</div><!-- .entry-content -->
-			</div>
-				<?php get_sidebar( 'community' ); ?>
-		</div>
-	</div>
+
 </article><!-- #post-## -->
