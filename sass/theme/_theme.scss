@@ -13,7 +13,13 @@ html {
   margin: 0px; 
   padding: 0px; 
 }
-
+a {
+    color: $brandcolor;
+    &:hover {
+      color: $darkgray;
+      text-decoration: none;
+    }
+}
 body {
 min-height: 100%;
  background-attachment: fixed;
@@ -48,6 +54,7 @@ font-family: 'Lato', sans-serif;
 .inline-block {
   display: inline-block;
 }
+
 
 
 h3 {
@@ -186,6 +193,16 @@ nav {
     padding: 0px 10px;
     letter-spacing: 1px;
     box-shadow: none;
+  }
+
+    .nav-item-community {
+    margin-right: 10px;
+    padding: 7px 20px;
+    letter-spacing: 1px;
+    box-shadow: none;
+    background-color: $brandcolor;
+    border-radius: 5px;
+    height: 35px;
   }
 
 	.nav-link {
@@ -1252,6 +1269,29 @@ section {
   }
 }
 }
+
+.nav-tabs-community {
+  border: none;
+  a {
+     color: $white; 
+  }
+  .nav-link.active {
+    border-color: transparent;
+        box-shadow: 0 -2px $brandcolor inset;
+    transition: box-shadow 0.3s linear;
+    color: $white;
+    background-color: $brandcolor;
+  }
+    .nav-link {
+      &:hover {
+        border-bottom: none;
+        border-color: transparent;
+        box-shadow: 0 -2px $brandcolor inset;
+    transition: box-shadow 0.3s linear;
+  }
+}
+}
+
 .form-inline {
   width: 70%;
   #custom-search-11 {
@@ -1555,6 +1595,7 @@ $color_8: #000000;
     }
   }
 }
+
 
 
 

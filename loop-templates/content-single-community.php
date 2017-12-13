@@ -15,17 +15,43 @@
 					<h3 class = "header-dark text-muted">The place to be yo</h3>
 
 				</header><!-- .entry-header -->
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="http://placehold.it/1200x480" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="http://placehold.it/1200x480" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="http://placehold.it/1200x480" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 				<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-				<div class="entry-content mt-5">
-
+				<div class="entry-content mt-3">
+	
 
 					<?php the_content(); ?>
-					<nav class="nav nav-tabs" id="myTab" role="tablist">
-  <a class="nav-item active text-dark" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-  <a class="nav-item text-dark" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-  <a class="nav-item text-dark" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+					<nav class="nav nav-tabs mb-3" id="myTab" role="tablist">
+  <a class="nav-item-community text-light" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+  <a class="nav-item-community text-light" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+  <a class="nav-item-community text-light" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Keffiyeh try-hard put a bird on it seitan, whatever fashion axe pinterest aesthetic prism. Gluten-free migas brunch meh PBR&B etsy forage YOLO hoodie. Williamsburg PBR&B enamel pin bespoke, poke jean shorts mlkshk gastropub af try-hard vaporware lo-fi whatever. Deep v man bun 3 wolf moon mustache forage franzen trust fund raw denim 8-bit messenger bag bushwick tousled semiotics. XOXO YOLO knausgaard butcher.
