@@ -1,3 +1,4 @@
+
 //the formula: c =  (r * p) / (1 - (Math.pow((1 + r), (-n))));
 //p is the amount borrowed
 //r is a percentatee

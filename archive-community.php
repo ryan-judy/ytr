@@ -36,20 +36,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-
-		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
-
 			<main class="site-main" id="main">
 
 
 				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header">
-					</header><!-- .page-header -->
-					<div class = "row">
 
 <div class="container mt-3">
 
@@ -127,7 +118,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		<!-- Do the right sidebar check -->
 		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
-			<?php get_sidebar( 'right' ); ?>
 
 		<?php endif; ?>
 
