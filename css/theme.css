@@ -10154,6 +10154,20 @@ body {
       margin: 0;
       padding: 0 3px;
       display: block; }
+  body #carousel .list-inline {
+    white-space: nowrap;
+    overflow-x: auto; }
+  body #carousel .carousel-indicators {
+    position: static;
+    left: initial;
+    width: 100%;
+    margin-left: initial; }
+    body #carousel .carousel-indicators > li {
+      width: initial;
+      height: initial;
+      text-indent: initial; }
+    body #carousel .carousel-indicators > li.active img {
+      opacity: 0.7; }
   body #myCarousel .list-inline {
     white-space: nowrap;
     overflow-x: auto; }
@@ -10168,6 +10182,8 @@ body {
       text-indent: initial; }
     body #myCarousel .carousel-indicators > li.active img {
       opacity: 0.7; }
+  body .listing-photo {
+    max-height: 244px; }
   body .post-module {
     position: relative;
     z-index: 1;
