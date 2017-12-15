@@ -23,3 +23,10 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 } // endif function_exists( 'understrap_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
+
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyCGuaBtAxCdHN7DHilvAQLFga9cfs3o5Sw');
+}
+
+add_action('acf/init', 'my_acf_init');

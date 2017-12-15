@@ -27,46 +27,50 @@
 <div class="wrapper" id="single-wrapper">
             <!-- Do the left sidebar check -->
 
-            <main class="site-main" id="main">
+<main class="site-main" id="main">
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
     <div class = "container mt-4">
         <div class = "row">
-            <div class = "col-md-12">
+            <div class = "col-md-12 my-2">
 
-                <header class="entry-header">
-
-                    <h3 class = "header-dark text-center">Tagline</h3>
-
-                </header><!-- .entry-header -->
-
-                <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                    <h3 class = "text-center">Tagline</h3>
 
                 <div class="entry-content mt-5">
                     <div class = "row text-center">
                         <div class = "col-md-2">
                             PRICE
+                            <h5 class="text-brand">$<?php the_field('price')?></h5>
                         </div>
                         <div class = "col-md-2">
                             BEDS
+                            <h5 class="text-brand"><?php the_field('beds')?></h5>
                         </div>
                         <div class = "col-md-2">
                             BATHS
+                            <h5 class="text-brand"><?php the_field('baths')?></h5>
                         </div>
                         <div class = "col-md-2">
-                            SQ FT
+                            SQ. FT
+                            <h5 class="text-brand"><?php the_field('sqft')?></h5>
                         </div>
                         <div class = "col-md-2">
                             ACRES
+                            <h5 class="text-brand"><?php the_field('acres')?></h5>
                         </div>
                         <div class = "col-md-2">
                             YBT
+                            <h5 class="text-brand"><?php the_field('year-built')?></h5>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="row">
-        <div class="col-lg-12 offset-lg-2" id="slider">
+ <div class="row text-center">
+    <div class="col-lg-12 offset-lg-2 mt-5" id="slider">
+        <h3>Gallery</h3>
 <?php 
 /* SLIDER CUSTOM FIELD FOR HOMEPAGE */
 $images = get_field('listing-photos');
@@ -77,7 +81,6 @@ $count2=0;
 if($images) : ?>
 <div class="col-lg-12 offset-lg-2" id="slider">
     <div id="carousel" class="carousel slide">
-
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <?php foreach( $images as $image ): ?>
@@ -90,7 +93,7 @@ if($images) : ?>
         ?>       
       </div><!-- carousel inner -->
 
-                            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
@@ -101,51 +104,47 @@ if($images) : ?>
 
       <!-- Indicators -->
            <div id="myCarousel2" class="carousel slide">
-                
-                <!-- Carousel items -->
+             <!-- Carousel items -->
                 <div class="carousel-inner">
 
+                    <?php $chunks = array_chunk($images, 3); ?>
+                    <?php foreach($chunks as $chunk): ?>
 
-        <?php $chunks = array_chunk($images, 3); ?>
+                    <div class="carousel-item<?php if($count2==0) : echo ' active'; endif; ?>">
+                        <ul class="carousel-indicators list-inline mt-3">
+                        
+                        <?php foreach($chunk as $image): ?>  
 
-        <?php foreach($chunks as $chunk): ?>
-                   <div class="carousel-item<?php if($count2==0) : echo ' active'; endif; ?>">
-      <ul class="carousel-indicators list-inline mt-3">
-    <?php foreach($chunk as $image): ?>  
-
-  <li class="list-inline-item">
-                            <a id="carousel-selector-<?php echo $count; ?>" data-target="#carousel" data-slide-to="<?php echo $count; ?>" <?php if($count==0) : ?>class="selected"<?php endif; ?>>
-         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid listing-photo"/>
-    <?php         $count++;
-                    $count2++;
-
- endforeach; ?>
+                            <li class="list-inline-item">
+                                <a id="carousel-selector-<?php echo $count; ?>" data-target="#carousel" data-slide-to="<?php echo $count; ?>" <?php if($count==0) : ?>class="selected"<?php endif; ?>>
+                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid listing-photo"/>
+                        <?php
+                        $count++;
+                        $count2++;
+                        endforeach; ?>
                                 </a> 
-            </li>
+                            </li>
 
-  </div>
-        <?php 
+                    </div>
+                    <?php 
+                    endforeach; ?>
+                        </ul>
 
+                    <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
 
-        endforeach; ?>
-      </ul>
-
-  <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-</div>
-</div>
+                </div>
+            </div>
 
     </div><!-- #carousel -->
 </div><!--#slider-->
 <?php endif; ?>
-
-
 </div>
 </div>
 <div class = "row text-center">
@@ -157,11 +156,17 @@ if($images) : ?>
         
     </div>
 </div>
-<div class = "row">
-                    <?php the_content(); ?>
+                </div><!-- .entry-content -->
 
+<section class="component-red mt-5">
+<div class = "row text-center">
+<div class = "col-md-12">
 
+                    <h3 class = "text-center">About This HOme</h3>
+
+      <?php the_content(); ?>
 </div>
+</section>
 
 
                         <?php
@@ -170,12 +175,8 @@ if($images) : ?>
                         'after'  => '</div>',
                         ) );
                     ?>
-                </div><!-- .entry-content -->
-            </div>
-        </div>
-    </div>
+
 </article><!-- #post-## -->
+</main>
 
-
-
-</div><!-- Container end -->
+<div>
