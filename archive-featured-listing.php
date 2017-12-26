@@ -88,7 +88,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
         </button>
       </div>
       <div class="modal-body">
-       <?php [contact-form-7 id="465" title="Untitled"] ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
