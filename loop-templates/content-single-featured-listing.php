@@ -6,17 +6,19 @@
  */
 
 ?>
-
-<div class = "hero-interior listings" style="background-image: url(<?php the_field('hero'); ?>);">
+<?php $images = get_field('listing-photos');?>
+<?php $image = $images[0]; ?>
+<div class = "hero-interior listings" style="background-image: url(<?php echo $image['url'] ?>);">
     <div class = "header-overlay">
     </div>  
     <div class = "row">
         <div class = "col-sm-12 text-center" style="position: absolute;">
             <div class = "hero-interior-cta-center">
-            <?php the_title( '<h1 class="entry-title text-uppercase">', '</h1>' ); ?>
+            <?php the_title( '<h1 class="address text-uppercase">', '</h1>' ); ?>
+        </div>
                 <div class="row">
                     <div class = "col-sm-12 text-center">
-                        <button class="btn btn-primary btn-lg active header mt-5">Learn more
+                        <button class="btn btn-primary btn-lg active header mt-5">View More
                         </button>
                     </div>
                 </div>
@@ -41,27 +43,27 @@
                     <div class = "row text-center">
                         <div class = "col-md-2">
                             PRICE
-                            <h5 class="text-brand">$<?php the_field('price')?></h5>
+                            <h3 class="text-brand">$<?php the_field('price')?></h3>
                         </div>
                         <div class = "col-md-2">
                             BEDS
-                            <h5 class="text-brand"><?php the_field('beds')?></h5>
+                            <h3 class="text-brand"><?php the_field('beds')?></h3>
                         </div>
                         <div class = "col-md-2">
                             BATHS
-                            <h5 class="text-brand"><?php the_field('baths')?></h5>
+                            <h3 class="text-brand"><?php the_field('baths')?></h3>
                         </div>
                         <div class = "col-md-2">
                             SQ. FT
-                            <h5 class="text-brand"><?php the_field('sqft')?></h5>
+                            <h3 class="text-brand"><?php the_field('sqft')?></h3>
                         </div>
                         <div class = "col-md-2">
                             ACRES
-                            <h5 class="text-brand"><?php the_field('acres')?></h5>
+                            <h3 class="text-brand"><?php the_field('acres')?></h3>
                         </div>
                         <div class = "col-md-2">
                             YBT
-                            <h5 class="text-brand"><?php the_field('year-built')?></h5>
+                            <h3 class="text-brand"><?php the_field('year-built')?></h3>
                         </div>
                     </div>
                 </div>
@@ -70,6 +72,7 @@
 
  <div class="row text-center">
     <div class="col-lg-12 offset-lg-2 mt-5" id="slider">
+<div class = "component-red">
         <h3>Gallery</h3>
 <?php 
 /* SLIDER CUSTOM FIELD FOR HOMEPAGE */
@@ -129,18 +132,12 @@ if($images) : ?>
                     <?php 
                     endforeach; ?>
                         </ul>
-
-                    <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                         <a class="left slide-control" href="#myCarousel2" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+    <a class="right slide-control" href="#myCarousel2" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
 
                 </div>
             </div>
+        </div>
 
     </div><!-- #carousel -->
 </div><!--#slider-->

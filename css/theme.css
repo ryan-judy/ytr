@@ -9587,6 +9587,9 @@ body {
     font-size: 42px;
     padding-top: 100px;
     color: white; }
+    body .hero-interior-cta-center .address {
+      margin-top: 100px;
+      letter-spacing: 4px; }
     body .hero-interior-cta-center span {
       font-weight: bolder;
       font-style: italic; }
@@ -9919,8 +9922,6 @@ body {
     color: #F0AD4E; }
   body .modal {
     margin-top: 30px; }
-  body .modal-backdrop {
-    position: relative; }
   body section {
     padding: 30px 0; }
     body section#contact {
@@ -10124,22 +10125,24 @@ body {
     border-top: #e5e5e5 1px solid;
     border-bottom: #e5e5e5 1px solid; }
     body .poperty-details-iob span {
-      font-size: 22px;
+      font-size: 21px;
       color: #000; }
+    body .poperty-details-iob .price {
+      font-size: 24px; }
   body .cls-for-btn-listing {
     margin: 0;
     padding: 0;
     display: block;
     text-align: center;
     width: 100%;
-    margin-top: 60px; }
+    margin-top: 40px; }
     body .cls-for-btn-listing li {
       margin: 0;
       padding: 0;
       display: block; }
       body .cls-for-btn-listing li a {
         margin-top: 10px;
-        padding: 10px 15px;
+        padding: 14px 15px;
         display: block;
         background: #751212;
         border-radius: 5px;
@@ -10333,6 +10336,23 @@ body {
         text-decoration: none; }
       body .container .info span .fa {
         color: #f2b202; }
+  body .slide-control {
+    color: #fff;
+    font-size: 80px;
+    left: 30px;
+    margin-top: -70px;
+    position: absolute;
+    top: 50%; }
+  body .slide-control.right {
+    left: auto;
+    right: 30px; }
+  body .carousel-control-next, body .carousel-control-prev {
+    opacity: 1;
+    color: #751212;
+    margin-bottom: 200px; }
+  body .carousel-control-next-icon, body .carousel-control-prev-icon {
+    width: 100%;
+    height: 50px; }
 
 /*
 * Use existing Bootstrap 4 classes and

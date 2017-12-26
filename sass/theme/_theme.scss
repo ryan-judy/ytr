@@ -635,12 +635,14 @@ footer .form-control {
     font-size: 42px;
     padding-top: 100px;
     color: white;
+    .address {
+      margin-top: 100px;
+      letter-spacing: 4px;
+    }
     span {
       font-weight: bolder;
       font-style: italic;
     }
-
-
 }
 
 .hero-interior-cta-right {
@@ -1116,9 +1118,6 @@ input:focus::-webkit-input-placeholder {
   margin-top: 30px;
 }
 
-.modal-backdrop {
-  position: relative;
-}
 
 
 
@@ -1180,6 +1179,8 @@ section {
     }
   }
 }
+
+
 .about_our_company {
   text-align: center;
   h1 {
@@ -1338,9 +1339,12 @@ $font_family_1: 'Roboto';
   border-top: #e5e5e5 1px solid;
   border-bottom: #e5e5e5 1px solid;
     span {
-      font-size: 22px;
+      font-size: 21px;
       color: $color_3;
     }
+          .price {
+        font-size: 24px;
+      }
 }
 
 
@@ -1350,14 +1354,14 @@ $font_family_1: 'Roboto';
   display: block;
   text-align: center;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 40px;
   li {
     margin: 0;
     padding: 0;
     display: block;
     a {
       margin-top: 10px;
-      padding: 10px 15px;
+      padding: 14px 15px;
       display: block;
       background: $brandcolor;
       border-radius: 5px;
@@ -1621,9 +1625,20 @@ $color_8: #000000;
     }
   }
 }
+.slide-control{color:#fff;font-size:80px;left:30px;margin-top:-70px;position:absolute;top:50%;}
+.slide-control.right{left:auto;right:30px;}
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+  color: $brandcolor;
+  margin-bottom: 200px;
 
+}
 
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 100%;
+  height: 50px;
 
+}
 
 }
 

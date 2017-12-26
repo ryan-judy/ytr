@@ -11,42 +11,44 @@
  <section class="listing-page-builing">
       <div class="container">
          <div class="row">
-               <div class="col-md-3">
-
-				  
-				  <div style="background: url('https://content.makaan.com/16/6109519/274/6863152.jpeg?width=360&height=270') 0 0 no-repeat; height:30vh; background-size:cover; 
-				  background-position:center; border:#ccc 1px solid"></div>
-				 
-					
+               <div class="col-xl-3">
+				  <?php $images = get_field('listing-photos');?>
+              <?php $image = $images[0]; ?>
+				  <a href= <?php
+               the_permalink(); ?>><div style="background: url(<?php echo $image['url'] ?>) 0 0 no-repeat; height:35vh; background-size:cover; 
+				  background-position:center; border:#ccc 1px solid"></div>	</a>
 				</div>
-               <div class="col-md-6">
+               <div class="col-xl-6">
                   <h4><strong><a href=<?php
 					the_permalink()?>><?php the_title()?></a></strong>
                   </h4>
                   <div class="row poperty-details-iob text-center">
-                     <div class = "col-sm-3"><span>$100,000</span><br/>
+                     <div class = "col-xl-3 py-2"><span class = "price">$<?php the_field('price')?></span><br/>
                      </div>
-                      <div class = "col-sm-3"><span>2050</span><br/>
+                      <div class = "col-xl-3"><span><?php the_field('sqft')?></span><br/>
                        Sq Ft
                      </div>
-                      <div class = "col-sm-3"><span>Beds</span><br/>
-                        4
+                      <div class = "col-xl-3"><span><?php the_field('beds')?></span><br/>
+                        Beds
                      </div>
-                     <div class = "col-sm-3"><span>Baths</span><br/>
-                        4
+                     <div class = "col-xl-3"><span><?php the_field('baths')?></span><br/>
+                        Baths
                      </div>
                   </div>
-                
-                  <p class= "mt-3">4 BHK Property for sale in Tollygunge:Ideal Greens Kolkata is a premium residential project offering luxuriously designed flat to buyers. Ideal Greens Tollygunge is located along the Motilal Gupta Road in Purba Barisha and is well connect...
-                     <a href="">More</a>
+                  <?php $desc = get_field('description');?>
+                  <?php $truncated = substr($desc, 0, 140) . '...'?>
+                  <p class= "mt-3">
+                     <?php echo $truncated ?>
+                     <a href=<?php
+               the_permalink()?>>More</a>
                   </p>
                </div>
-               <div class="col-md-3">
+               <div class="col-xl-3">
                   <ul class="cls-for-btn-listing">
                      <li>
                         <a href=<?php
 					the_permalink(); ?>>View Details</a>
-                        <a href="">Enquiry</a>
+                        <a class = "text-light" data-toggle="modal" data-target="#exampleModal">Schedule a Showing</a>
 						 </li>
 						    
                   </ul>
@@ -56,3 +58,4 @@
             </div>
       </div>
    </section>
+
