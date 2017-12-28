@@ -14,12 +14,13 @@ get_header();
 <?php
 $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+
 ?>
 
 <div class="wrapper" id="archive-wrapper">
-	        <div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
+	        <div class = "hero-interior" style="background-image: url(<?php the_field('hero', 121); ?>);">
           <div class = "hero-interior-cta">
-            <?php the_field('hero_cta_interior'); ?>
+            <?php the_field('hero_cta_interior', 121); ?>
             
           </div>
         </div>  
@@ -78,3 +79,25 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 
 <?php get_footer(); ?>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <?php the_field('agent_contact', 121); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
