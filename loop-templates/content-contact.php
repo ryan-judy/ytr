@@ -24,7 +24,8 @@
   </div>
 </div>  
 
-       <div class = "component-form">         
+       <div class = "component-form">    
+       <div class = "container">     
                 <div class="row">
                     <div class="col-md-8">
                               <div class = "component-form">
@@ -35,7 +36,6 @@
                                     <?php the_field('contact_form'); ?>
                                   </div>
                      </div>
-
                     <div class="col-md-4 mt-5">
                         <p>
                             <strong><i class="fa fa-map-marker"></i> Address</strong><br>
@@ -51,6 +51,7 @@
   <div id="cd-zoom-in"></div>
   <div id="cd-zoom-out"></div>
                 </div>
+              </div>
               </div>
 
   

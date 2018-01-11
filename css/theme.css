@@ -9771,7 +9771,8 @@ body {
   body .card-custom {
     overflow: hidden;
     min-height: 450px;
-    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3); }
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    margin-bottom: 75px; }
   body .card-custom-img {
     height: 200px;
     min-height: 200px;
@@ -10355,8 +10356,8 @@ body {
   body .component-form {
     background: #ffffff;
     box-sizing: border-box;
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 30px 0px 5px 0px;
     padding-bottom: 40px;
     border-radius: 3px;
     margin-left: 0px; }
@@ -10383,6 +10384,9 @@ body {
       background-repeat: no-repeat;
       color: #292c2f;
       border-radius: 0em; }
+      @media screen and (max-width: 575px) {
+        body .component-form .wpcf7 input, body .component-form .wpcf7 textarea {
+          margin-left: 0px; } }
     body .component-form .wpcf7 textarea {
       border-bottom: 0px;
       height: 100px;
@@ -10426,6 +10430,9 @@ body {
   body input.active[type=submit] {
     margin-left: 200px;
     width: 40% !important; }
+    @media screen and (max-width: 575px) {
+      body input.active[type=submit] {
+        margin-left: 120px; } }
 
 /*
 * Use existing Bootstrap 4 classes and
