@@ -27,10 +27,10 @@
                 <?php echo types_render_field( "profile-image", array( "alt" => "blue bird", "width" => "300", "height" => "200", "proportional" => "true" ) ) ; ?>
               </div>
                           <div class="d-flex flex-column">
-                            <div class="p-1"><?php the_title( sprintf( '<h1>', esc_url( get_permalink() ) ),
+                            <div class="pl-1 agent-title"><?php the_title( sprintf( '<h1>', esc_url( get_permalink() ) ),
           '</h1>' ); ?></div>
-  <div class="pl-1"><span>Buyers Agent</span></div>
-  <div class="pl-1">Flex item 3</div>
+  <div class="pl-1"><span class = 'agent'>Buyers Agent</span></div>
+  <div class="pt-2 pl-1"><?php echo(types_render_field( 'tagline', array() ));?></div>
         </div>
       </div>
           		<div class="card-body" style="overflow-y: auto">

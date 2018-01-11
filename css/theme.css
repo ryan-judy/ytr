@@ -9768,6 +9768,8 @@ body {
     margin-bottom: 0; }
   body .timeline-body > p + p {
     margin-top: 5px; }
+  body .agent span {
+    font-style: italic; }
   body .card-custom {
     overflow: hidden;
     min-height: 450px;
@@ -9775,10 +9777,12 @@ body {
     margin-bottom: 75px; }
   body .card-custom-bio {
     overflow: hidden;
-    min-height: 450px;
+    min-height: 350px;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
     margin-bottom: 75px;
     padding: 30px; }
+  body .agent-title {
+    margin-bottom: -10px; }
   body .card-custom-img {
     height: 200px;
     min-height: 200px;
@@ -9819,7 +9823,7 @@ body {
     width: 150px;
     height: 150px;
     border-style: solid;
-    border-width: 10px;
+    border-width: 8px;
     border-color: #751212; }
   body .card-custom-img {
     background-color: #751212; }
