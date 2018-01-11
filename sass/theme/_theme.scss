@@ -8,6 +8,7 @@ $white: #f5f5f5;
 $brandcolor: #751212;
 $darkgray: #292c2f;
 
+
 // in SCSS we nest
 html { 
   margin: 0px; 
@@ -549,6 +550,13 @@ footer .form-control {
   height: 100%;
   padding: 80px 0px;
 }
+
+.component-dark {
+  background-color: $darkgray;
+  height: 100%;
+  padding: 80px 0px;
+}
+
 
 .component-red {
   background-color: $brandcolor;
@@ -1674,10 +1682,9 @@ textarea {
   border-bottom: 0px;
   height: 100px;
   resize: none;
-  background-size: 800px 30px;
+  background-size: 900px 30px;
     background-position: -300px 30px;
       -webkit-transition: all 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-
 
 
 }
@@ -1694,10 +1701,14 @@ input:focus, textarea:focus  {
  outline: none;
     background-position: 0 100%; 
       border-color: transparent;
-  border-bottom: solid 1px $brandcolor;
-
 
 }
+
+textarea:focus {
+  border-bottom: solid 2px $brandcolor;
+
+}
+
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
  color: $brandcolor;
  font-size: 15px;

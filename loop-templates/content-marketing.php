@@ -29,7 +29,7 @@
 <div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
 
 <div class= "row text-center">
-	<div class = "col-md-12">
+	<div class = "col-md-12 text-center">
 		Nobody Does More to market Your Home
 	</div>
 		<div class = "col-md-4">
@@ -124,15 +124,15 @@
 			</div>
 		</div>
 </div>	
-<div class = "component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+<div class = "component component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-5 pl-5">
-				<h2 class = "header-white">Reach Buyers Everywhere
+				<h2 class = "header-dark">Reach Buyers Everywhere
 </h2>
-					<h4 class="pt-3 text-white">WE DON'T RELY ON THE INTERNET ALONE.</h4>
-					<h4 class="pt-3 text-white">Buyers still find homes through other channels, so we also use proven real-world marketing techniques. Our for sale signs feature a unique keyword that buyers can text to get your listing instantly sent to their phone. When they text, we instantly get their contact information and follow up immediately to schedule a showing..</h4>					
+					<h4 class="pt-3 text-dark">WE DON'T RELY ON THE INTERNET ALONE.</h4>
+					<h4 class="pt-3 text-dark">Buyers still find homes through other channels, so we also use proven real-world marketing techniques. Our for sale signs feature a unique keyword that buyers can text to get your listing instantly sent to their phone. When they text, we instantly get their contact information and follow up immediately to schedule a showing..</h4>					
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
@@ -141,7 +141,7 @@
 		</div>
 </div>	
 <div class = "component-form">
-	<h1>Get Started Today</h1>
+	<h1 class = "text-center">Get Started Today</h1>
            <?php the_field('contact_form', 262); ?>
 </div>
 </div>

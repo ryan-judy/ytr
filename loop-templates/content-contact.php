@@ -24,7 +24,7 @@
   </div>
 </div>  
 
-                
+       <div class = "component-form">         
                 <div class="row">
                     <div class="col-md-8">
                               <div class = "component-form">
@@ -53,14 +53,11 @@
                 </div>
               </div>
 
-</div>
   
-</article>
-
 <input class = "lat" value = "<?php the_field('address_lat');?>" type="hidden">
 <input class = "lon" value = "<?php the_field('address_lon');?>" type="hidden">
 <input class = "loc" value = "<?php the_field('business_name');?>" type="hidden">
-
+</div>
 <script>
 var newArr = [];
 var locations = [[1]];
