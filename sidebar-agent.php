@@ -16,10 +16,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 <?php if ( 'both' === $sidebar_pos ) : ?>
 <div class="col-md-3 widget-area" id="right-sidebar" role="complementary">
 	<?php else : ?>
-<div class="col-md-4 widget-area mt-5" id="right-sidebar" role="complementary">
+<div class="col-md-4 widget-area" id="right-sidebar" role="complementary">
 	<?php endif; ?>
 
-<h5>Our Agents</h5>
+<h5>Meet Our Team</h5>
+<hr>
 
 <!-- begin custom related loop, isa -->
  
@@ -53,8 +54,6 @@ endif;
 <!-- end custom related loop, isa -->
 
 
-<hr>
-<h5>Search Homes for Sale</h5>
 
 <?php /* Start the Loop */ ?>
 

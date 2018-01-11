@@ -10,30 +10,39 @@
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
+<div class = "card-custom-bio">
 	<div class="entry-content">
 
-          			<div class = "text-center text-white pt-4">
-          				<p><?php echo(types_render_field( 'tagline', array() ));?></p>
-          			</div>
-          			<?php echo types_render_field( "profile-image", array( "alt" => "blue bird", "width" => "300", "height" => "200", "proportional" => "true" ) ) ; ?>
+
+
+
+
+
+                            <div class="d-flex align-items-center">
+                                            <div class="card-custom-avatar-full mr-3">
+                <?php echo types_render_field( "profile-image", array( "alt" => "blue bird", "width" => "300", "height" => "200", "proportional" => "true" ) ) ; ?>
+              </div>
+                          <div class="d-flex flex-column">
+                            <div class="p-1"><?php the_title( sprintf( '<h1>', esc_url( get_permalink() ) ),
+          '</h1>' ); ?></div>
+  <div class="pl-1"><span>Buyers Agent</span></div>
+  <div class="pl-1">Flex item 3</div>
+        </div>
+      </div>
           		<div class="card-body" style="overflow-y: auto">
 
 					<p class="card-text text-muted"><?php echo(types_render_field( 'bio', array() ));?>
 					</p>
           		</div>
-          		<div class="card-footer" style="background: inherit; border-color: inherit;">
 
             		<a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Contact</a>
             		<a href= <?php
 					the_permalink();
 					?> class="btn btn-outline-primary">Learn Moree</a>
-          		</div>
 			  
 
 		<?php
@@ -42,10 +51,11 @@
 			'after'  => '</div>',
 		) );
 		?>
-                <?php understrap_post_nav(); ?>
 
 
 	</div><!-- .entry-content -->
+</div>
+                <?php understrap_post_nav(); ?>
 
 </article><!-- #post-## -->
 
