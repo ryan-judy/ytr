@@ -101,7 +101,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					?>
 					<?php 
-					if ( is_page('love-it-or-leave-it') ) {
+					if ( is_page('love-it-or-leave-it-program') ) {
 					  get_template_part( 'loop-templates/content', 'love-leave' );
 					} else {
 					  get_template_part( 'loop-templates/content', 'page' );

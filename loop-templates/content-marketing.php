@@ -142,6 +142,6 @@
 </div>	
 <div class = "component-form">
 	<h1 class = "text-center">Get Started Today</h1>
-           <?php the_field('contact_form', 262); ?>
+           <?php the_field('marketing_contact', 262); ?>
 </div>
 </div>

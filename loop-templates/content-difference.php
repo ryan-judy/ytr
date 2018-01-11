@@ -37,6 +37,7 @@
 </h2>
 </div>
 		</div>
+		<div class = "container">
 		<div class = "row">
 
 			<div class = "col-md-6">
@@ -53,6 +54,7 @@
 
 </h4>								</div>			
 		</div>
+	</div>
 		<div class = "row">
 	<div class = "col-md-12 text-center">
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>

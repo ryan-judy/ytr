@@ -9892,7 +9892,7 @@ body {
   body .testimonial {
     margin-bottom: 10px; }
   body .testimonial-section {
-    width: 100px;
+    width: 100%;
     height: auto;
     padding: 15px;
     -webkit-border-radius: 5px;
@@ -10358,7 +10358,8 @@ body {
     width: 90%;
     margin: 30px auto;
     padding-bottom: 40px;
-    border-radius: 3px; }
+    border-radius: 3px;
+    margin-left: 0px; }
     body .component-form .wpcf7 h1, body .component-form .wpcf7 input::-webkit-input-placeholder, body .component-form .wpcf7 textarea::-webkit-input-placeholder, body .component-form .wpcf7 button {
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }

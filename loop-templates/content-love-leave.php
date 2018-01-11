@@ -46,3 +46,39 @@
 			</div>			
 		</div>
 </div>	
+<section class = "component">
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12 text-center">
+				<h1 class = "text-center mb-5">Why We Offer This</h1>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-md-3 text-center">
+				<i class= "fa fa-user  fa-inverse"></i>
+				<h4 class = "text-dark">What We Do</h4>
+				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>
+			</div>
+			<div class = "col-md-3 text-center">
+				<i class= "fa fa-user fa-inverse"></i>
+				<h4 class = "text-dark">Next Level</h4>
+				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>				
+			</div>
+			<div class = "col-md-3 text-center">
+				<i class= "fa fa-user fa-inverse"></i>
+				<h4 class = "text-dark">Technology Driven</h4>
+				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>				
+			</div>
+			<div class = "col-md-3 text-center">
+				<i class= "fa fa-user fa-inverse"></i>
+				<h4 class = "text-dark">Client Focused</h4>
+				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>					
+			</div>
+
+		</div>
+	</div>
+</section>
+<div class = "component-form">
+	<h1 class = "text-center mt-5">Get Started Today</h1>
+           <?php the_field('marketing_contact', 262); ?>
+</div>

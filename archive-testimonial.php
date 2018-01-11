@@ -22,24 +22,23 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                         
                     </div>
                 </div>  
+<section class = "component">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 
-		<div class="row">
-
 			<!-- Do the left sidebar check -->
-			
-			<main class="site-main" id="main">
 
 
 				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header">
-						<h1 class="page-title">Our Featured Listings</h1>
-					</header><!-- .page-header -->
-					<div class = "container">
+					<div class = "row text-center">
+						<div class = "col-md-12">
+						<h1 class = "mb-5">What Our Clients Have to Say</h1>
+					</div>
+					</div>
 					<div class = "row">
+
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
@@ -55,46 +54,21 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php endwhile; ?>
 				</div>
-</div>
+</section>
 				<?php else : ?>
 
 					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
-
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-		</div><!-- #primary -->
-
 		<!-- Do the right sidebar check -->
 
-	</div> <!-- .row -->
 
 </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
-
-   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
