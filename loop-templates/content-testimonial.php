@@ -7,8 +7,8 @@
 
 ?>
 
-<div class="col-sm-6">
 
+<div class="col-sm-6">
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
             <div id="tb-testimonial" class="testimonial testimonial-info-filled">
@@ -22,9 +22,7 @@
                       <div class="testimonial-writer-designation"><?php echo(types_render_field( 'client-address', array() ));?></div>
                     </div>
                 </div>
-            </div>   
-    </div>
-        
+            </div>           
 
 </article><!-- #post-## -->
-
+</div>
