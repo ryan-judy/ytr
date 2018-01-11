@@ -6,46 +6,55 @@
  */
 
 ?>
+<div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
+  <div class = "header-overlay">
+  </div>  
+  <div class = "row">
+    <div class = "col-sm-12 text-center" style="position: absolute;">
+      <div class = "hero-interior-cta-center">
+      <?php the_field('hero_cta_interior'); ?>
+        <div class="row">
+          <div class = "col-sm-12 text-center">
+            <button class="btn btn-primary btn-lg active header mt-5">Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>  
 
-<section id="contact" style="">
-            <div class="container">
-                <div class="row">
-                  <div class= "col-md-8">
-                    <div class="about_our_company" style="margin-bottom: 20px;">
-                        <h1 style="color:#fff;">Write Your Message</h1>
-                        <p style="color:#fff;">Lorem Ipsum is simply dummy text of the printing and typesetting </p>
-                    </div>
-                  </div>
-                  <div class= "col-md-4">
-                  </div>
-                </div>
+                
                 <div class="row">
                     <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-6">
-                                <div class="form-group">
-                                    <?php the_field('contact_form'); ?>
+                              <div class = "component-form">
+                                <div class="about_our_company" style="margin-bottom: 20px;">
+                        <h1>Write Your Message</h1>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
                     </div>
-                    <div class="col-md-4 pl-5">
-                        <p style="color:#fff;">
+                                    <?php the_field('contact_form'); ?>
+                                  </div>
+                     </div>
+
+                    <div class="col-md-4 mt-5">
+                        <p>
                             <strong><i class="fa fa-map-marker"></i> Address</strong><br>
                             <?php the_field('address');?>
-                        </p>
-                        <p style="color:#fff;"><strong><i class="fa fa-phone"></i> Phone Number</strong><br>
+                        </p> 
+                        <p><strong><i class="fa fa-phone"></i> Phone Number</strong><br>
                             <?php the_field('number');?></p>
-                        <p style="color:#fff;">
+                        <p>
                             <strong><i class="fa fa-envelope"></i>  Email Address</strong><br>
                             <?php the_field('email');?></p>
                         <p></p>
-                    </div>
-                </div>
-            </div>
-</section>
-
-</div>
-  <div id="google-container" style="height:300px;"></div>
+                          <div id="google-container" style="height:250px;"></div>
   <div id="cd-zoom-in"></div>
   <div id="cd-zoom-out"></div>
+                </div>
+              </div>
+
+</div>
+  
 </article>
 
 <input class = "lat" value = "<?php the_field('address_lat');?>" type="hidden">

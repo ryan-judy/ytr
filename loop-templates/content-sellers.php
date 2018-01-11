@@ -68,7 +68,6 @@
 		</div>
 	</div>
 </div>	
-
 <section class = "component">
 	<div class="container">
 		<div class = "row no-gutter">
@@ -136,7 +135,23 @@
 		</div>
 	</div>
 </section>
-
+<div class = "component-red component-background");">
+		<div class = "row">
+			<div class = "col-md-1">
+			</div>
+			<div class = "col-md-5 pl-5">
+				<h2 class = "header-white">Our Pricing Strategy
+</h2>
+					<h4 class="pt-3 text-white">OUR REAL ESTATE EXPERTS WILL USE THE MOST ACCURATE METHOD TO PRICE YOUR HOME
+</h4>
+					<h4 class="pt-3 text-white">The right price for your property is not determined by any agent or seller - it's determined by current market conditions. We plug into rich, up-to-date MLS data to select 5 active, 5 pending, and 5 sold properties that are comparable to your home. Combined with our in-depth knowledge of market statistics, this method assures we market your property correctly so that your listing sells when you want for the price you deserve.</h4>					
+				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
+			</div>
+			<div class = "col-md-6 text-center d-flex align-items-center">
+				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
+			</div>			
+		</div>
+</div>	
 <section class = "component-red">
 	<div class="container">
 		<div class = "row no-gutter">

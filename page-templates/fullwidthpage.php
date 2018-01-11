@@ -22,6 +22,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php 
 					if ( is_page('young-team-difference') ) {
+					  get_template_part( 'loop-templates/content', 'difference' );
+					} else {
+					  get_template_part( 'loop-templates/content', 'page' );
+					}
+
+					?>
+
+					<?php 
+					if ( is_page('about') ) {
 					  get_template_part( 'loop-templates/content', 'about' );
 					} else {
 					  get_template_part( 'loop-templates/content', 'page' );
@@ -74,6 +83,31 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 
 					?>
+
+					<?php 
+					if ( is_page('marketing-plan') ) {
+					  get_template_part( 'loop-templates/content', 'marketing' );
+					} else {
+					  get_template_part( 'loop-templates/content', 'page' );
+					}
+
+					?>
+					<?php 
+					if ( is_page('guaranteed-sold') ) {
+					  get_template_part( 'loop-templates/content', 'guaranteed-sold' );
+					} else {
+					  get_template_part( 'loop-templates/content', 'page' );
+					}
+
+					?>
+					<?php 
+					if ( is_page('love-it-or-leave-it') ) {
+					  get_template_part( 'loop-templates/content', 'love-leave' );
+					} else {
+					  get_template_part( 'loop-templates/content', 'page' );
+					}
+
+					?>					
 
 				</main><!-- #main -->
 

@@ -9334,7 +9334,11 @@ body {
     border-color: gray; }
     body .btn-primary:hover {
       background-color: #901a1a;
-      border-color: lightgray; }
+      border-color: lightgray;
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
   body .btn-outline-primary, body .wpcf7 input[type=submit], .wpcf7 body input[type=submit] {
     cursor: pointer;
     background-color: transparent;
@@ -9343,7 +9347,11 @@ body {
     color: #751212; }
     body .btn-outline-primary:hover, body .wpcf7 input[type=submit]:hover, .wpcf7 body input[type=submit]:hover {
       background-color: #751212;
-      border-color: lightgray; }
+      border-color: lightgray;
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
   body .btn-outline-primary.active, body .wpcf7 input.active[type=submit], .wpcf7 body input.active[type=submit] {
     color: #f5f5f5;
     background-color: #751212;
@@ -9377,7 +9385,11 @@ body {
     body .btn-primary:active:hover, body .btn-primary.active:hover,
     body .show > .btn-primary.dropdown-toggle:hover {
       background-color: #901a1a;
-      border-color: lightgray; }
+      border-color: lightgray;
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
   body .btn-secondary {
     cursor: pointer;
     background-color: #f5f5f5;
@@ -9385,7 +9397,11 @@ body {
     border-color: gray;
     color: #292c2f; }
     body .btn-secondary:hover {
-      background-color: #292c2f; }
+      background-color: #292c2f;
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
   body .navbar-toggler {
     background-color: #751212; }
   body .header {
@@ -9972,26 +9988,6 @@ body {
           .wpcf7 textarea,
           .wpcf7 body section#contact .form-group textarea, body section#contact .wpcf7 .wpcf7-form p textarea, .wpcf7 .wpcf7-form body section#contact p textarea {
             height: 236px; }
-      body section#contact ::-webkit-input-placeholder {
-        font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee; }
-      body section#contact :-moz-placeholder {
-        font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee; }
-      body section#contact ::-moz-placeholder {
-        font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee; }
-      body section#contact :-ms-input-placeholder {
-        font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #eeeeee; }
       body section#contact .text-danger {
         color: #e74c3c; }
       body section#contact .form-control:focus, body section#contact .wpcf7 input[type=text]:focus, .wpcf7 body section#contact input[type=text]:focus, body section#contact
@@ -10029,7 +10025,6 @@ body {
       .wpcf7 body section#contact select:focus, body section#contact
       .wpcf7 textarea:focus,
       .wpcf7 body section#contact textarea:focus, body section#contact .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 body section#contact .wpcf7-validation-errors:focus {
-        border-color: #fed136;
         box-shadow: none; }
   body .about_our_company {
     text-align: center; }
@@ -10353,6 +10348,78 @@ body {
   body .carousel-control-next-icon, body .carousel-control-prev-icon {
     width: 100%;
     height: 50px; }
+  body .component-form {
+    background: #ffffff;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 30px auto;
+    padding-bottom: 40px;
+    border-radius: 3px; }
+    body .component-form .wpcf7 h1, body .component-form .wpcf7 input::-webkit-input-placeholder, body .component-form .wpcf7 textarea::-webkit-input-placeholder, body .component-form .wpcf7 button {
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    body .component-form .wpcf7 h1 {
+      box-sizing: border-box;
+      padding: 10px;
+      color: #292c2f; }
+    body .component-form .wpcf7 input, body .component-form .wpcf7 textarea {
+      width: 100%;
+      margin: 20px 25px;
+      display: block;
+      border: none;
+      padding: 15px 0;
+      border-bottom: solid 1px #751212;
+      -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+      transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #751212 4%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #751212 4%);
+      background-position: -300px 0;
+      background-size: 700px 60px;
+      background-repeat: no-repeat;
+      color: #292c2f;
+      border-radius: 0em; }
+    body .component-form .wpcf7 textarea {
+      border-bottom: 0px;
+      height: 100px;
+      resize: none;
+      background-size: 800px 30px;
+      background-position: -300px 30px;
+      -webkit-transition: all 0.2s cubic-bezier(0.64, 0.09, 0.08, 1); }
+    body .component-form .wpcf7 textarea.active[type=submit] {
+      width: 40%; }
+    body .component-form .wpcf7 input::-webkit-input-placeholder, body .component-form .wpcf7 textarea::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #751212; }
+    body .component-form .wpcf7 input:focus, body .component-form .wpcf7 textarea:focus {
+      box-shadow: none;
+      outline: none;
+      background-position: 0 100%;
+      border-color: transparent;
+      border-bottom: solid 1px #751212; }
+    body .component-form .wpcf7 input:focus::-webkit-input-placeholder, body .component-form .wpcf7 textarea:focus::-webkit-input-placeholder {
+      color: #751212;
+      font-size: 15px;
+      -webkit-transform: translateY(-40px);
+      transform: translateY(-20px);
+      visibility: visible !important; }
+    body .component-form .wpcf7 input.active[type=submit], body .component-form .wpcf7 textarea.active[type=submit] {
+      border: none;
+      background: #751212;
+      cursor: pointer;
+      border-radius: 3px;
+      padding: 12px;
+      width: 150px;
+      color: #ffffff;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+      width: 100%; }
+    body .component-form .wpcf7 input.active[type=submit]:hover, body .component-form .wpcf7 textarea.active[type=submit]:hover {
+      -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
+  body input.active[type=submit] {
+    margin-left: 200px;
+    width: 40% !important; }
 
 /*
 * Use existing Bootstrap 4 classes and

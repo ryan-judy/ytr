@@ -37,7 +37,7 @@
         <div class = "row">
             <div class = "col-md-12 my-2">
 
-                    <h3 class = "text-center">Tagline</h3>
+                    <h3 class = "text-center"><?php the_field('tagline')?></h3>
 
                 <div class="entry-content mt-5">
                     <div class = "row text-center">
@@ -72,7 +72,6 @@
 
  <div class="row text-center">
     <div class="col-lg-12 offset-lg-2 mt-5" id="slider">
-<div class = "component-red">
         <h3>Gallery</h3>
 <?php 
 /* SLIDER CUSTOM FIELD FOR HOMEPAGE */
@@ -143,7 +142,6 @@ if($images) : ?>
 </div><!--#slider-->
 <?php endif; ?>
 </div>
-</div>
 <div class = "row text-center">
     <div class = "col-md-6">
         <iframe width='100%' height='400' src=<?php the_field('matterport-link'); ?> frameborder='0' allowfullscreen></iframe>
@@ -155,7 +153,6 @@ if($images) : ?>
 </div>
                 </div><!-- .entry-content -->
 
-<section class="component-red mt-5">
 <div class = "row text-center">
 <div class = "col-md-12">
 
@@ -163,7 +160,6 @@ if($images) : ?>
 
       <?php the_content(); ?>
 </div>
-</section>
 
 
                         <?php

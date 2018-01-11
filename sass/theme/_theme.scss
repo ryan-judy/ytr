@@ -301,6 +301,10 @@ nav {
       &:hover {
     background-color: #901a1a;
         border-color: lightgray;
+        -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 
   }
 }
@@ -313,6 +317,10 @@ nav {
       &:hover {
     background-color: $brandcolor;
         border-color: lightgray;
+        -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 
   }
 
@@ -369,6 +377,10 @@ nav {
   &:hover {
     background-color: #901a1a;
     border-color: lightgray;
+    -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
   }
   
   }
@@ -381,6 +393,10 @@ nav {
     color: $darkgray;
     &:hover {
       background-color: $darkgray;
+      -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
     }
 }
 .navbar-toggler {
@@ -1145,35 +1161,11 @@ section {
         }
       }
     }
-    ::-webkit-input-placeholder {
-      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #eeeeee;
-    }
-    :-moz-placeholder {
-      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #eeeeee;
-    }
-    ::-moz-placeholder {
-      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #eeeeee;
-    }
-    :-ms-input-placeholder {
-      font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #eeeeee;
-    }
+    
     .text-danger {
       color: #e74c3c;
     }
     .form-control:focus {
-      border-color: #fed136;
       //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
       box-shadow: none;
     }
@@ -1639,6 +1631,107 @@ $color_8: #000000;
   height: 50px;
 
 }
+
+.component-form {
+    background: #ffffff;
+  box-sizing: border-box;
+  width: 90%;
+  margin: 30px auto;
+  padding-bottom: 40px;
+  border-radius: 3px;
+
+  .wpcf7 {
+h1, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, button {
+ -webkit-transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
+}
+
+
+h1 {
+  box-sizing: border-box;
+  padding: 10px;
+    color: $darkgray;
+
+}
+input, textarea, {
+  width: 100%;
+  margin: 20px 25px;
+  display: block;
+  border: none;
+  padding: 15px 0;
+  border-bottom: solid 1px $brandcolor;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, $brandcolor 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, $brandcolor 4%);
+  background-position: -300px 0;
+  background-size: 700px 60px;
+  background-repeat: no-repeat;
+  color: $darkgray;
+  border-radius: 0em;
+}
+textarea {
+  border-bottom: 0px;
+  height: 100px;
+  resize: none;
+  background-size: 800px 30px;
+    background-position: -300px 30px;
+      -webkit-transition: all 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+
+
+}
+
+textarea.active[type=submit] {
+  width: 40%;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $brandcolor;
+}
+input:focus, textarea:focus  {
+ box-shadow: none;
+ outline: none;
+    background-position: 0 100%; 
+      border-color: transparent;
+  border-bottom: solid 1px $brandcolor;
+
+
+}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+ color: $brandcolor;
+ font-size: 15px;
+ -webkit-transform: translateY(-40px);
+ transform: translateY(-20px);
+ visibility: visible !important;
+
+}
+input.active[type=submit], textarea.active[type=submit] {
+  border: none;
+  background: $brandcolor;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 12px;
+  width: 150px;
+  color: #ffffff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+input.active[type=submit]:hover, textarea.active[type=submit]:hover  {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+}
+}
+
+
+input.active[type=submit] {
+  margin-left: 200px;
+  width: 40%!important;
+}
+
 
 }
 

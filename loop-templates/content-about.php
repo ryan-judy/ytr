@@ -12,6 +12,7 @@
 						
 					</div>
 				</div>	
+
 <section class = "component">
 	<div class="container">
 	  <div class="page-header">
