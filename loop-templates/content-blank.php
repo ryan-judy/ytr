@@ -323,42 +323,187 @@
 		</div>
 		<div class = "row align-center">
 			<div class="col-md-2 connect">
-				
+				<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://localhost:8888/wp-content/uploads/2017/09/placeimg_410_280_any.jpg" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	              	  <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Southside
+                  </div>
+                </div>
+              </div>
+            </a>
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	   <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Westside
+                  </div>
+                </div>
+              </div>
+            </a>
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	    <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+                </div>
+              </div>
+            </a>	
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	   <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+                </div>
+              </div>
+            </a>	
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	   <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+                </div>
+              </div>
+            </a>	
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	   <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+                </div>
+              </div>
+            </a>	
 			</div>
 		</div>
 		<div class="row align-center mt-4">
-			<div class="col-md-2 connect">
-				
+		<div class="col-md-2 connect">
+		<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://localhost:8888/wp-content/uploads/2017/09/placeimg_410_280_any.jpg" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	  <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Southside
+                  </div>
+                </div>
+              </div>
+            </a>
 			</div>
 			<div class="col-md-2 connect">
-				
+				 <a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	 <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Westside
+                  </div>
+                </div>
+              </div>
+            </a>
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	              	  <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+                </div>
+              </div>
+            </a>	
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	              	  <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+                </div>
+              </div>
+            </a>	
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	 <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+                </div>
+              </div>
+            </a>	
 			</div>
 			<div class="col-md-2 connect">
-				
+			<a class="portfolio-box" href="#">
+              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+              	  <div class="project-icon">
+                    <i class = "fa fa-user"></i>
+                  </div>
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    souithside
+                  </div>
+
+                </div>
+              </div>
+            </a>	
 			</div>
 		</div>
 	</div>

@@ -9334,11 +9334,10 @@ body {
     border-color: gray; }
     body .btn-primary:hover {
       background-color: #901a1a;
-      border-color: lightgray;
-      -webkit-transform: translateY(-3px);
-      -ms-transform: translateY(-3px);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
+      border-color: lightgray; }
+      body .btn-primary:hover:focus {
+        outline: 0 !important;
+        box-shadow: 0px !important; }
   body .btn-outline-primary, body .wpcf7 input[type=submit], .wpcf7 body input[type=submit] {
     cursor: pointer;
     background-color: transparent;
@@ -9347,6 +9346,17 @@ body {
     color: #751212; }
     body .btn-outline-primary:hover, body .wpcf7 input[type=submit]:hover, .wpcf7 body input[type=submit]:hover {
       background-color: #751212;
+      border-color: lightgray; }
+    body .btn-outline-primary:focus, body .wpcf7 input[type=submit]:focus, .wpcf7 body input[type=submit]:focus {
+      outline: 0 !important;
+      box-shadow: 0 0 0 0; }
+  body .btn-primary-cta {
+    cursor: pointer;
+    background-color: #751212;
+    background-image: none;
+    border-color: gray; }
+    body .btn-primary-cta:hover {
+      background-color: #901a1a;
       border-color: lightgray;
       -webkit-transform: translateY(-3px);
       -ms-transform: translateY(-3px);
@@ -9623,6 +9633,8 @@ body {
     body .hero-interior-cta-right span {
       font-weight: bolder;
       font-style: italic; }
+  body .img-fluid .thumbnail {
+    max-height: 150px; }
   body .input {
     background-color: transparent;
     border: none;
@@ -9661,7 +9673,8 @@ body {
     width: 100%; }
   body .connect {
     height: 150px;
-    border: 2px solid #751212; }
+    border: 2px solid #751212;
+    max-height: 150px; }
   body .timeline {
     list-style: none;
     padding: 20px 0 20px;
@@ -9845,6 +9858,9 @@ body {
       color: white;
       background: rgba(41, 44, 47, 0.9);
       transition: all ease .5s; }
+      body .portfolio-box .portfolio-box-caption .project-icon {
+        text-align: right;
+        margin-right: 10px; }
       body .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
         position: absolute;
         top: 50%;

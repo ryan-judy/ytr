@@ -302,10 +302,10 @@ nav {
       &:hover {
     background-color: #901a1a;
         border-color: lightgray;
-        -webkit-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    &:focus {
+    outline:0!important;
+    box-shadow: 0px!important;
+    }
 
   }
 }
@@ -318,15 +318,30 @@ nav {
       &:hover {
     background-color: $brandcolor;
         border-color: lightgray;
-        -webkit-transform: translateY(-3px);
+  }
+    &:focus {
+    outline:0!important;
+    box-shadow: 0 0 0 0;
+    }
+
+}
+
+.btn-primary-cta {
+      cursor: pointer;
+    background-color: $brandcolor;
+    background-image: none;
+    border-color: gray; 
+      &:hover {
+    background-color: #901a1a;
+        border-color: lightgray;
+-webkit-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
   transform: translateY(-3px);
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 
   }
-
 }
-
+  
 .btn-outline-primary.active {
   color: $white;
   background-color: $brandcolor;
@@ -683,6 +698,12 @@ footer .form-control {
 
 }
 
+.img-fluid {
+  .thumbnail {
+    max-height: 150px;
+  }
+}
+
 .input {
   background-color: transparent;
   border: none;
@@ -737,6 +758,7 @@ input:focus::-webkit-input-placeholder {
 .connect {
   height: 150px;
   border:2px solid $brandcolor;
+  max-height: 150px;
 }
 
 .timeline {
@@ -975,6 +997,10 @@ input:focus::-webkit-input-placeholder {
     color: white;
     background: fade-out($darkgray, .1);
     transition: all ease .5s;
+          .project-icon {
+        text-align: right;
+        margin-right: 10px;
+      }
     .portfolio-box-caption-content {
       position: absolute;
       top: 50%;
