@@ -52,13 +52,13 @@
 		<div class = "row">
 			<div class = "col-md-6">
 				<h2 class = "header-white text-center"><?php the_field('gsp_header'); ?></h2>
-				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
+				<div class="d-flex align-items-center"><i class = "fa <?php the_field('gsp_subhead_1_icon'); ?> fa-inverse fa-3x pr-3"></i>
 					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_1'); ?></h4>
 				</div>
-				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
+				<div class="d-flex align-items-center"><i class = "fa <?php the_field('gsp_subhead_2_icon'); ?> fa-inverse fa-3x pr-3"></i>
 					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_2'); ?></h4>
 				</div>
-				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
+				<div class="d-flex align-items-center"><i class = "fa <?php the_field('gsp_subhead_3_icon'); ?> fa-inverse fa-3x pr-3"></i>
 					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_3'); ?></h4>
 				</div>				
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('gsp_button'); ?></a>
@@ -79,7 +79,7 @@
 		<div class = "row">
 			<div class = "col-md-4">
 				<div class="d-flex align-items-top">
-					<i class = "fa fa-user fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline">Heading 1</h4>
+					<i class = "fa <?php the_field('module_1_icon'); ?> fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline"><?php the_field('module_1_header'); ?></h4>
 				</div>
 				<p class = "paragraph pl-5">
 					<?php the_field('module_1'); ?>
@@ -87,7 +87,7 @@
 			</div>
 			<div class = "col-md-4">
 				<div class="d-flex align-items-top">
-					<i class = "fa fa-user fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline">Heading 2</h4>
+					<i class = "fa <?php the_field('module_2_icon'); ?> fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline"><?php the_field('module_2_header'); ?></h4>
 				</div>
 				<p class = "paragraph pl-5">
 					<?php the_field('module_2'); ?>
@@ -95,7 +95,7 @@
 			</div>
 			<div class = "col-md-4">
 				<div class="d-flex align-items-top">
-					<i class = "fa fa-user fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline">Heading 3</h4>
+					<i class = "fa <?php the_field('module_3_icon'); ?> fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline"><?php the_field('module_3_header'); ?></h4>
 				</div>
 				<p class = "paragraph pl-5">
 					<?php the_field('module_3'); ?>
@@ -105,7 +105,7 @@
 		<div class = "row mt-5">
 			<div class = "col-md-4">
 				<div class="d-flex align-items-top">
-					<i class = "fa fa-user fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline">Heading 4</h4>
+					<i class = "fa <?php the_field('module_4_icon'); ?> fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline"><?php the_field('module_4_header'); ?></h4>
 				</div>
 				<p class = "paragraph pl-5">
 					<?php the_field('module_4'); ?>
@@ -113,7 +113,7 @@
 			</div>
 			<div class = "col-md-4">
 				<div class="d-flex align-items-top">
-					<i class = "fa fa-user fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline">Heading 5</h4>
+					<i class = "fa <?php the_field('module_5_icon'); ?> fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline"><?php the_field('module_5_header'); ?></h4>
 				</div>
 				<p class = "paragraph pl-5">
 					<?php the_field('module_5'); ?>
@@ -121,7 +121,7 @@
 			</div>
 			<div class = "col-md-4">
 				<div class="d-flex align-items-top">
-					<i class = "fa fa-user fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline">Heading 6</h4>
+					<i class = "fa <?php the_field('module_6_icon'); ?> fa-2x pr-4 mb-3"></i><h4 class ="text-dark inline"><?php the_field('module_6_header'); ?></h4>
 				</div>
 				<p class = "paragraph pl-5">
 					<?php the_field('module_6'); ?>

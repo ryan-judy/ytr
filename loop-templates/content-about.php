@@ -14,10 +14,10 @@
 				</div>	
 <section class = "component text-center">
 
-<h2 class = "text-dark">Hello! This could be a CTA text box or nice intro after the Hero.</h2>
-
-<h4 class = "text-dark">Hello! This could be a CTA text box or nice intro after the Hero.</h4>
-
+<h2 class = "text-dark"><?php the_field('header_cta'); ?></h2>
+<div class = "container">
+<h4 class = "text-dark"><?php the_field('subheader_content'); ?></h4>
+</div>
 </section>
 <section class = "component">
 	<div class="container">
@@ -26,7 +26,7 @@
 	  </div>
 	  <ul class="timeline">
 	    <li>
-	      <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+	      <div class="timeline-badge"><i class="fa fa-check"></i></div>
 	      <div class="timeline-panel">
 	        <div class="timeline-heading">
 	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_1'); ?></h4>
@@ -107,21 +107,21 @@
 	</div>
 </section>
 <div class = "component-dark component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
-					<h2 class = "header-white text-center">Careers</h2>
+					<h2 class = "header-white text-center"><?php the_field('careers_heading'); ?></h2>
 
 	<div class="container">
 		<div class = "row">
 			<div class = "col-md-6">
 				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
-					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_1'); ?></h4>
+					<h4 class="pt-3 text-white"><?php the_field('career_content_1'); ?></h4>
 				</div>
 				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
-					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_2'); ?></h4>
+					<h4 class="pt-3 text-white"><?php the_field('career_content_1'); ?></h4>
 				</div>
 				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
-					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_3'); ?></h4>
+					<h4 class="pt-3 text-white"><?php the_field('career_content_1'); ?></h4>
 				</div>				
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('gsp_button'); ?></a>
+				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center">
 			</div>			
@@ -132,14 +132,14 @@
 	<div class = "container">
 		<div class = "row no-gutter">
 			<div class = "col-md-6">
-				<h6 class= "pt-2"><?php the_field('newsletter_cta'); ?></h6>
+				<h6 class= "pt-2"><?php the_field('newsletter_content'); ?></h6>
 			</div>
 			<div class = "col-md-4">
 				<input type = "text" class = "input" placeholder="Enter Your Email">
 				<span class="underline"></span>
 			</div>
 			<div class = "col-md-2">
-				<button class = "btn btn-secondary"><?php the_field('newsletter_button'); ?></button>
+				<button class = "btn btn-secondary"><?php the_field('Newsletter_button_CTA'); ?></button>
 			</div>
 		</div>
 	</div>

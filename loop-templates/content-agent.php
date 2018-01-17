@@ -13,16 +13,16 @@
 	    	<div class="card card-custom bg-white border-white border-0">
           		<div class="card-custom-img">
           			<div class = "text-center text-white pt-4">
-          				<p><?php echo(types_render_field( 'tagline', array() ));?></p>
+          				<p><?php the_field('agent_tagline'); ?></p>
           			</div>
           		</div>
           		<div class="card-custom-avatar"><img/>
-          			<?php echo types_render_field( "profile-image", array( "alt" => "blue bird", "width" => "300", "height" => "200", "proportional" => "true" ) ) ; ?>
+          		<img src="<?php the_field('agent_picture'); ?>">
           		</div>
           		<div class="card-body" style="overflow-y: auto">
 					<?php the_title( sprintf( '<h4 class="card-title">', esc_url( get_permalink() ) ),
 					'</h4>' ); ?>
-					<p class="card-text text-muted"><?php echo(types_render_field( 'bio', array() ));?>
+					<p class="card-text text-muted"><?php the_field('agent_bio'); ?>
 					</p>
           		</div>
           		<div class="card-footer" style="background: inherit; border-color: inherit;">

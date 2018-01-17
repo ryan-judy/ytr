@@ -13,13 +13,14 @@
 
             <div id="tb-testimonial" class="testimonial testimonial-info-filled">
                 <div class="testimonial-section">
-                    <?php echo(types_render_field( 'testimonial-content', array() ));?>
+                    <h3 class= "text-center"><?php the_field('testimonial_pull_quote'); ?></h3>
+                    <?php the_field('testimonial_content'); ?>
                 </div>
                 <div class="testimonial-desc">
-                <?php echo types_render_field( "client-image", array( "alt" => "blue bird", "width" => "300", "height" => "200", "proportional" => "true" ) ) ; ?>
+                <img src="<?php the_field('testimonial_picture'); ?>">
                     <div class="testimonial-writer">
-                      <div class="testimonial-writer-name"><?php echo(types_render_field( 'client-name', array() ));?></div>
-                      <div class="testimonial-writer-designation"><?php echo(types_render_field( 'client-address', array() ));?></div>
+                      <div class="testimonial-writer-name"><?php the_field('testimonial_author'); ?></div>
+                      <div class="testimonial-writer-designation"><?php the_field('testimonial_city'); ?></div>
                     </div>
                 </div>
             </div>   
