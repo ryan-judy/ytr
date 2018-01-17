@@ -33,9 +33,8 @@
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-5 pl-5">
-				<h2 class = "header-white">Start Your Home Search</h2>
-					<h4 class="pt-3 text-white">When buying a home, start by making a wish list and setting a budget. We can help you choose a lender to get you pre-approved for a loan, and then you're ready to start house hunting. Search for your dream home from any device on our website. You can even compare walk scores, school ratings, and neighborhood demographics for different listings.</h4>
-					<h4 class="pt-3 text-white">When buying a home, start by making a wish list and setting a budget. We can help you choose a lender to get you pre-approved for a loan, and then you're ready to start house hunting. Search for your dream home from any device on our website. You can even compare walk scores, school ratings, and neighborhood demographics for different listings.</h4>					
+				<h2 class = "header-white"><?php the_field('search_header'); ?></h2>
+					<h4 class="pt-3 text-white"><?php the_field('search_content'); ?>		
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
@@ -49,10 +48,9 @@
 				<img src="<?php the_field('find_agent'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
 			<div class = "col-md-5 text-right pr-5">
-				<h2 class = "header-white">Find the Right Agent To Guide You</h2>
+				<h2 class = "header-white"><?php the_field('agent_header'); ?></h2>
 
-				<h4 class="pt-3 text-white">When buying a home, start by making a wish list and setting a budget. We can help you choose a lender to get you pre-approved for a loan, and then you're ready to start house hunting. Search for your dream home from any device on our website. You can even compare walk scores, school ratings, and neighborhood demographics for different listings.</h4>
-					<h4 class="pt-3 text-white">When buying a home, start by making a wish list and setting a budget. We can help you choose a lender to get you pre-approved for a loan, and then you're ready to start house hunting. Search for your dream home from any device on our website. You can even compare walk scores, school ratings, and neighborhood demographics for different listings.</h4>					
+				<h4 class="pt-3 text-white"><?php the_field('agent_content'); ?>			
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>	
 			<div class = "col-md-1">

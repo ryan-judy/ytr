@@ -30,21 +30,20 @@
 
 <div class= "row text-center">
 	<div class = "col-md-12 text-center">
-		Nobody Does More to market Your Home
+		<?php the_field('statistic_header_1'); ?>
 	</div>
 		<div class = "col-md-4">
-			<h2>242</h2>
-			Homes Sold Last Year
+			<h2><?php the_field('statistic_header_1'); ?></h2>
+			<?php the_field('statistic_subhead_1'); ?>
 		</div>
 		<div class = "col-md-4">
-			<h2>$1 million+</h2>
-			Spend on marketing
+			<h2><?php the_field('statistic_header_2'); ?></h2>
+			<?php the_field('statistic_subhead_2'); ?>
 		</div>
 		<div class = "col-md-4">
-			<h2>95%</h2>
-			More Impressions 
+			<h2><?php the_field('statistic_header_3'); ?></h2>
+			<?php the_field('statistic_subhead_3'); ?>
 		</div>
-
 </div>
 
 <div class = "row text-center">
@@ -59,9 +58,9 @@
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-5 pl-5">
-				<h2 class = "header-dark">Innovative Internet Marketing</h2>
-					<h4 class="pt-3 text-dark">WE KNOW HOW TO REACH THE 92% OF BUYERS WHO SEARCH ONLINE.</h4>
-					<h4 class="pt-3 text-dark">WWe target our marketing strategy and resources to match where buyers are finding homes right now. The more places your property is marketed, the more buyers see your property, the faster it sells, period. We will market your listing with high-converting content in multiple places, including our website, home search portals, search engines, and social media sites.
+				<h2 class = "header-dark"><?php the_field('digital_header'); ?></h2>
+					<h4 class="pt-3 text-dark"><?php the_field('digital_subhead'); ?></h4>
+					<h4 class="pt-3 text-dark"><?php the_field('digital_content'); ?>
 
 </h4>					
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
@@ -72,10 +71,11 @@
 		</div>
 </div>	
 <div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+		<div class = "container">
 		<div class = "row text-center">
 			<div class = "col-md-12">
-				<h2 class = "header-white">We Make Your Listing Shine</h2>
-					<h4 class="pt-3 text-white">PHOTOGRAPHS, VIRTUAL TOURS, 3D WALKTHROUGHS AND VIDEOS</h4>
+				<h2 class = "header-white"><?php the_field('marketing_tactics_header'); ?></h2>
+					<h4 class="pt-3 text-white"><?php the_field('marketing_tactics_subhead'); ?></h4>
 					<div class = "row">
 					<div class= "col-md-2">
 </div>
@@ -119,20 +119,22 @@
 <div class= "col-md-2">
 </div>
 </div>
-					<h4 class="pt-3 text-white">Today's home buyers are armed with more information than ever. They tell their agents which homes they want to see - and they've already rejected listings with too few, or poor quality photos. It is absolutely vital that your online listing has high-impact photos to make a lasting first impression and create a desire to see more.</h4>					
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
+					<h4 class="pt-3 text-white"><?php the_field('listing_marketing_content'); ?></h4>					
+				
 			</div>
 		</div>
 </div>	
+</div>
+
 <div class = "component component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-5 pl-5">
-				<h2 class = "header-dark">Reach Buyers Everywhere
+				<h2 class = "header-dark"><?php the_field('offline_header'); ?>
 </h2>
-					<h4 class="pt-3 text-dark">WE DON'T RELY ON THE INTERNET ALONE.</h4>
-					<h4 class="pt-3 text-dark">Buyers still find homes through other channels, so we also use proven real-world marketing techniques. Our for sale signs feature a unique keyword that buyers can text to get your listing instantly sent to their phone. When they text, we instantly get their contact information and follow up immediately to schedule a showing..</h4>					
+					<h4 class="pt-3 text-dark"><?php the_field('offline_subhead'); ?></h4>
+					<h4 class="pt-3 text-dark"><?php the_field('offline_content'); ?></h4>					
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
@@ -141,7 +143,9 @@
 		</div>
 </div>	
 <div class = "component-form">
-	<h1 class = "text-center">Get Started Today</h1>
-           <?php the_field('marketing_contact', 262); ?>
-</div>
+	<h1 class = "text-center"><?php the_field('marketing_contact_header'); ?></h1>
+	<div class = "col-md-12">
+           <?php the_field('marketing_contact_form'); ?>
+    </div>
+
 </div>

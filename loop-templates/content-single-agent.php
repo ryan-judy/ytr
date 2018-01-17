@@ -24,7 +24,7 @@
 
                             <div class="d-flex align-items-center">
                                             <div class="card-custom-avatar-full mr-3">
-                <img src="<?php the_field('agent_picture'); ?>"">
+                <img src="<?php the_field('agent_picture'); ?>">
               </div>
                           <div class="d-flex flex-column">
                             <div class="pl-1 agent-title"><?php the_title( sprintf( '<h1>', esc_url( get_permalink() ) ),
