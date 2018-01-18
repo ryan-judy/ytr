@@ -245,9 +245,13 @@ require get_template_directory() . '/inc/editor.php';
 function set_posts_per_page_for_communities( $query ) {
   if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'community' ) ) {
     $query->set( 'posts_per_page', '50' );
+    $query->set( 'orderby', 'title' );
+    $query->set( 'order', 'ASC' );
   }
 }
 add_action( 'pre_get_posts', 'set_posts_per_page_for_communities' );
+
+
 
 function my_theme_add_scripts() {
  wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCGuaBtAxCdHN7DHilvAQLFga9cfs3o5Sw', array(), '3', true );

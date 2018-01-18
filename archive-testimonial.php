@@ -16,12 +16,17 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
-					<div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
-                    <div class = "hero-interior-cta">
-                        <?php the_field('hero_cta_interior'); ?>
-                        
-                    </div>
-                </div>  
+<div class = "hero-interior" style="background-image: url(<?php the_field('hero', 246); ?>);">
+  <div class = "header-overlay">
+  </div>  
+  <div class = "row">
+    <div class = "col-sm-12 text-center" style="position: absolute;">
+      <div class = "hero-interior-cta-center mt-5">
+      <?php the_field('hero_cta_interior', 246); ?>
+      </div>
+    </div>  
+  </div>
+</div>  
 <section class = "component">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">

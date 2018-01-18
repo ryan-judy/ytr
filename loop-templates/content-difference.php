@@ -5,13 +5,25 @@
  * @package understrap
  */
 
-?>
-				<div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
-					<div class = "hero-interior-cta">
-						<?php the_field('hero_cta_interior'); ?>
-						
-					</div>
-				</div>	
+?><div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
+  <div class = "header-overlay">
+  </div>  
+  <div class = "row">
+    <div class = "col-sm-12 text-center" style="position: absolute;">
+      <div class = "hero-interior-cta-right">
+      <?php the_field('hero_cta_interior'); ?>
+      </div>
+              <div class="row">
+          <div class = "col-sm-8">
+          </div>
+          <div class = "col-sm-4">
+          	<button class="btn btn-primary btn-lg active header mt-5 mr-5">Learn more
+            </button>
+          </div>
+        </div>
+    </div>  
+  </div>
+</div>  
 				<div class = "component-red component-background");">
 		<div class = "row">
 			<div class = "col-md-1">

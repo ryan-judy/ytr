@@ -8,7 +8,7 @@
 ?>
 
 <div class="hfeed site" id="page">
-
+<div class = "hero-banner-image" style="background-image: url(<?php the_field('hero_image'); ?>" alt="<?php echo $image['alt']; ?>");">
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
     <div class="d-flex justify-content-end header px-5 p-2">
@@ -139,7 +139,8 @@
 		</div>
 	</div>
 </section>
-
+</div>
+</div>
 <section class = "component text-center">
 
 <h2 class = "header-dark">Hello! This could be a CTA text box or nice intro after the Hero.</h2>

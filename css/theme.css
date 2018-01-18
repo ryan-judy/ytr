@@ -9157,6 +9157,8 @@ body {
   /* Ensure images take up the same space when they load */
   /* https://vestride.github.io/Shuffle/images */
   /*---- Outlined Styles ----*/ }
+  body .fa-envelope, body .fa-map-marker, body .fa-phone {
+    color: gray; }
   body .no-gutter > [class*=col-] {
     padding-right: 0;
     padding-left: 0; }
@@ -9541,6 +9543,8 @@ body {
     background-color: #f5f5f5;
     height: 100%;
     padding: 80px 0px; }
+  body .component-secondary {
+    background-color: #f1f1f0; }
   body .component-dark {
     background-color: #292c2f;
     height: 100%;
@@ -9611,6 +9615,7 @@ body {
       font-weight: bolder;
       font-style: italic; }
   body .hero-interior-cta-center {
+    font-weight: lighter;
     position: relative;
     z-index: 100;
     line-height: 50px;
@@ -9624,6 +9629,9 @@ body {
       font-weight: bolder;
       font-style: italic; }
   body .hero-interior-cta-right {
+    font-weight: lighter;
+    text-align: right;
+    margin-right: 40px;
     position: relative;
     z-index: 100;
     line-height: 50px;
@@ -9929,6 +9937,8 @@ body {
   body .testimonial {
     margin-bottom: 30px; }
   body .testimonial-section {
+    font-weight: lighter;
+    line-height: 25px;
     width: 100%;
     height: auto;
     padding: 15px;
