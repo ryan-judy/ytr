@@ -4,6 +4,7 @@
  *
  * @package understrap
  */
+  wp_enqueue_script( 'card', get_template_directory_uri() . '/js/card.js');
 
 ?>
 <div class = "col-md-3">
@@ -22,7 +23,12 @@
           		<div class="card-body" style="overflow-y: auto">
 					<?php the_title( sprintf( '<h4 class="card-title">', esc_url( get_permalink() ) ),
 					'</h4>' ); ?>
-					<p class="card-text text-muted"><?php the_field('agent_bio'); ?>
+					<p class="card-text text-muted">
+             <?php $desc = get_field('agent_bio');?>
+             <?php $truncated = substr($desc, 0, 140) . '...'?>
+            <?php echo $truncated ?>  <a href= <?php
+          the_permalink();
+          ?>>Read More</a>
 					</p>
           		</div>
           		<div class="card-footer" style="background: inherit; border-color: inherit;">

@@ -251,13 +251,25 @@ function set_posts_per_page_for_communities( $query ) {
 }
 add_action( 'pre_get_posts', 'set_posts_per_page_for_communities' );
 
-
+function set_posts_per_page_for_agents( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'agent' ) ) {
+    $query->set( 'posts_per_page', '50' );
+    $query->set( 'orderby', 'title' );
+    $query->set( 'order', 'ASC' );
+  }
+}
+add_action( 'pre_get_posts', 'set_posts_per_page_for_agents' );
 
 function my_theme_add_scripts() {
  wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCGuaBtAxCdHN7DHilvAQLFga9cfs3o5Sw', array(), '3', true );
  wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/google-maps.js', array('google-map', 'jquery'), '0.1', true );
 	}
 
- 
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 300 );
+
 add_action( 'wp_enqueue_scripts', 'my_theme_add_scripts' );
  

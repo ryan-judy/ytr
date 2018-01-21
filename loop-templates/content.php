@@ -34,7 +34,6 @@ $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 
 ?>
 
-
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 <div class="row">
@@ -50,8 +49,10 @@ $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
               <div class="category"><?php echo $actors; ?></div>
               <h1 class="title"><?php the_title()?></h1>
               <h2 class="sub_title"> <?php the_author(); ?> </h2>
-              <p class="description">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
-              <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i><?php the_date();?></span><span class="comments"><i class="fa fa-comments"></i><a href=<?php the_permalink();?>><?php comments_number();?></span><span class="timestamp ml-2"><i class="fa fa-arrow-right"></i>Read More</a></span></div>
+              <div class="description">
+                           <?php $desc = the_excerpt();?>
+              </div>
+              <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-"></i><?php the_date();?></span><span class="comments"><i class="fa fa-comments"></i><a href=<?php the_permalink();?>><?php comments_number();?></span><span class="timestamp ml-2"><i class="fa fa-arrow-right"></i>Read More</a></span></div>
             </div>
           </div>
         </div>
