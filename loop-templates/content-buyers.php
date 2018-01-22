@@ -50,25 +50,13 @@
 			<div class = "col-md-5 text-right pr-5">
 				<h2 class = "header-white"><?php the_field('agent_header'); ?></h2>
 
-				<h4 class="pt-3 text-white"><?php the_field('agent_content'); ?>			
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
+				<h4 class="pt-3 text-white"><?php the_field('agent_content'); ?></h4>			
+				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('agent_button_cta'); ?></a>
 			</div>	
 			<div class = "col-md-1">
 			</div>		
 		</div>
 </div>	
-
-<div class = "component-red component-background" style="background-image: url(<?php the_field('cta_background'); ?>);">
-	<div class = "container">
-		<div class = "row">
-			<div class = "col-md-12">
-				<div class = "pull-out text-center">
-				dfklasjf
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 <section class = "component">
 	<div class="container">
@@ -101,8 +89,34 @@
 			<div class = "col-md-2">
 			</div>
 		</div>
-		<p><button id="btncalculate">Calculate Payments</button>
-		<hr>
-		<p><b>TOTAL MONTHLY PAYMENT: <span id="outmonthly"></span></br> </p>
+		<div class ="row text-center">
+			<div class = "col-md-12">
+				<a id="btncalculate" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true">Calculate</a>
+				<hr>
+			</div>
+		</div>
+		<div class ="row text-center">
+			<div class = "col-md-12">
+				TOTAL MONTHLY PAYMENT: <span id="outmonthly"></span></br>
+			</div>
+		</div>		
 	</div>
 </section>
+<div class = "component component-background" style="background-image: url(<?php the_field('cta_popout_image'); ?>);">
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12">
+				<div class = "pull-out text-center">
+				<h2><?php the_field('cta_popout_text'); ?></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class = "component-form mt-5">
+	<h1 class = "text-center"><?php the_field('buyer_contact_header'); ?></h1>
+	<div class = "col-md-12">
+           <?php the_field('buyer_contact_form'); ?>
+    </div>
+
+</div>

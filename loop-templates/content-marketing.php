@@ -26,7 +26,7 @@
 	</div>
 </div>	
 
-<div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+<div class = "component-red component-background" style="background-image: url(<?php the_field('statistic_background'); ?>);">
 
 <div class= "row text-center">
 	<div class = "col-md-12 text-center">
@@ -114,7 +114,7 @@
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
-				<img src="<?php the_field('computer_image'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img class = "marketing-module" src="<?php the_field('computer_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>
 </div>	
@@ -122,7 +122,7 @@
 <div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
 			<div class = "col-md-6">
-				<img src="<?php the_field('offline_image'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img class = "marketing-module-2" src="<?php the_field('offline_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
 <div class = "col-md-5 pl-5">
 				<h2 class = "header-white"><?php the_field('offline_header'); ?>
@@ -137,7 +137,7 @@
 </div>	
 
 </div>	
-<div class = "component-form">
+<div class = "component-form mt-5">
 	<h1 class = "text-center"><?php the_field('marketing_contact_header'); ?></h1>
 	<div class = "col-md-12">
            <?php the_field('marketing_contact_form'); ?>

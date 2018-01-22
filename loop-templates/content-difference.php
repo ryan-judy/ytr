@@ -42,10 +42,10 @@
 			</div>			
 		</div>
 </div>	
-<div class = "component component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+<div class = "component component-background" style="background-image: url(<?php the_field('comparison_background'); ?>);">
 		<div class = "row text-center">
 			<div class = "col-md-12">
-											<h2 class = "header-dark"><?php the_field('Comparison Header'); ?>
+											<h2 class = "header-white"><?php the_field('Comparison Header'); ?>
 </h2>
 </div>
 		</div>
@@ -54,22 +54,22 @@
 
 			<div class = "col-md-6">
 
-					<h4 class="pt-3 text-dark"><?php the_field('left_header'); ?></h4>
-					<h4 class="pt-3 text-dark"><?php the_field('left_content'); ?>
+					<h3 class="pt-3 text-light text-center"><?php the_field('left_header'); ?></h3>
+					<h4 class="pt-3 text-light comparison-paragraph"><?php the_field('left_content'); ?>
 
 </h4>					
 			</div>
 			<div class = "col-md-6">
-													<h4 class="pt-3 text-dark"><?php the_field('right_header'); ?></h4>
+													<h3 class="pt-3 text-light text-center"><?php the_field('right_header'); ?></h3>
 
-<h4 class="pt-3 text-dark"><h4 class="pt-3 text-dark"><?php the_field('right_content'); ?>
+<h4 class="pt-3 text-light comparison-paragraph"><?php the_field('right_content'); ?>
 
 </h4>								</div>			
 		</div>
 	</div>
 		<div class = "row">
 	<div class = "col-md-12 text-center">
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('comparison_button'); ?></a>
+				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('comparison_button'); ?></a>
 	</div>
 </div>
 </div>	
@@ -79,7 +79,7 @@
 				<img src="<?php the_field('agent_picture'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
 			<div class = "col-md-5 text-right pr-5">
-				<h2 class = "header-white"><h4 class="pt-3 text-dark"><?php the_field('communication_header'); ?></h2>
+				<h2 class = "header-white"><?php the_field('communication_header'); ?></h2>
 
 				<h4 class="pt-3 text-white"><?php the_field('communication_content'); ?></h4>		
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
@@ -88,7 +88,7 @@
 			</div>		
 		</div>
 </div>	
-<div class = "component-form">
+<div class = "component-form mt-5">
 	<h1 class = "text-center">Get Started Today</h1>
           	<?php the_field('difference_contact'); ?>
 

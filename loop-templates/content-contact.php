@@ -18,10 +18,10 @@
   </div>
 </div>  
 
-       <div class = "component-form">    
+       <section class = "component-form">    
        <div class = "container">     
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 mt-5">
                               <div class = "component-form">
                                 <div class="about_our_company" style="margin-bottom: 20px;">
                         <h1> <?php the_field('contact_header'); ?></h1>

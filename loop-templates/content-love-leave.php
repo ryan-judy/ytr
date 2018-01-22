@@ -31,18 +31,18 @@
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-5 pl-5">
-				<h2 class = "header-white">Our Buyers Guarantee
+				<h2 class = "header-white"><?php the_field('component_1_heading'); ?>
 </h2>
-					<h4 class="pt-3 text-white">If you don't love your home, you can leave it.
+					<h4 class="pt-3 text-white"><?php the_field('component_1_subhead'); ?>
 </h4>
-					<h4 class="pt-3 text-white">If You Purchase A Home With The Graham Real Estate Group And Don’t Absolutely Love It After You Move In, We Will Sell It For FREE. That’s right, we will waive our portion of the commission for listing your home.
+					<h4 class="pt-3 text-white"><?php the_field('component_1_content'); ?>
 
 
 </h4>					
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
-			<div class = "col-md-6 text-center d-flex align-items-center">
-				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
+			<div class = "col-md-6 text-center d-flex align-items-center pl-5">
+				<img src="<?php the_field('component_1_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>
 </div>	
@@ -50,35 +50,35 @@
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-12 text-center">
-				<h1 class = "text-center mb-5">Why We Offer This</h1>
+				<h2 class = "text-center mb-5"><?php the_field('component_2_heading'); ?></h2>
 			</div>
 		</div>
 		<div class = "row">
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user  fa-inverse"></i>
-				<h4 class = "text-dark">What We Do</h4>
-				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>
+				<i class= "fa fa-percent fa-3x"></i>
+				<h4 class = "text-dark font-weight-light"><?php the_field('module_1_heading'); ?></h4>
+				<p class= "text-dark"><?php the_field('module_1_subhead'); ?></p>
 			</div>
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user fa-inverse"></i>
-				<h4 class = "text-dark">Next Level</h4>
-				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>				
+				<i class= "fa fa-briefcase fa-3x"></i>
+				<h4 class = "text-dark font-weight-light"><?php the_field('module_2_heading'); ?></h4>
+				<p class= "text-dark"><?php the_field('module_2_subhead'); ?></p>				
 			</div>
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user fa-inverse"></i>
-				<h4 class = "text-dark">Technology Driven</h4>
-				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>				
+				<i class= "fa fa-user fa-3x"></i>
+				<h4 class = "text-dark font-weight-light"><?php the_field('module_3_heading'); ?></h4>
+				<p class= "text-dark"><?php the_field('module_3_subhead'); ?></p>				
 			</div>
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user fa-inverse"></i>
-				<h4 class = "text-dark">Client Focused</h4>
-				<p class= "text-dark">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>					
+				<i class= "fa fa-handshake-o fa-3x"></i>
+				<h4 class = "text-dark font-weight-light"><?php the_field('module_4_heading'); ?></h4>
+				<p class= "text-dark"><?php the_field('module_4_subhead'); ?></p>					
 			</div>
 
 		</div>
 	</div>
 </section>
-<div class = "component-form">
-	<h1 class = "text-center mt-5">Get Started Today</h1>
-           <?php the_field('marketing_contact', 262); ?>
+<div class = "component-form mt-5">
+	<h2 class = "text-center mt-5">Get Started Today</h2>
+           <?php the_field('contact_form'); ?>
 </div>

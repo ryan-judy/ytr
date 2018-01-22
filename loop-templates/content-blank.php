@@ -147,33 +147,39 @@
 
 </section>
 
-<section class = "component-red">
-	<div class = "container">
 		<div class = "row">
-			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user  fa-inverse"></i>
-				<h4>What We Do</h4>
-				<p class= "text-light">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>
+			<div class = "col-md-6 text-left component-red">
+				<div class = "container">
+					<div class ="row px-3">
+						<div class = "col-md-2">
+						</div>
+						<div class = "col-md-8">
+							<h2 class ="text-light"><?php the_field('sell_heading'); ?></h2>
+							<p class= "text-light"><?php the_field('sell_cta'); ?></p>	
+							<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('sell_button_cta'); ?></a>
+						</div>	
+						<div class = "col-md-2">
+						</div>					
+					</div>
+				</div>
 			</div>
-			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user fa-inverse"></i>
-				<h4>Next Level</h4>
-				<p class= "text-light">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>				
-			</div>
-			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user fa-inverse"></i>
-				<h4>Technology Driven</h4>
-				<p class= "text-light">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>				
-			</div>
-			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user fa-inverse"></i>
-				<h4>Client Focused</h4>
-				<p class= "text-light">Macaroon caramels liquorice. Oat cake gingerbread liquorice brownie lemon drops chupa chups oat cake.</p>					
+			<div class = "col-md-6 text-left component-dark">
+				<div class = "container">
+					<div class ="row px-3">
+						<div class = "col-md-2">
+						</div>
+						<div class = "col-md-8">
+							<h2 class ="text-light"><?php the_field('buy_heading'); ?></h2>
+							<p class= "text-light"><?php the_field('buy_cta'); ?></p>	
+							<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('buy_button_cta'); ?></a>
+						</div>	
+						<div class = "col-md-2">
+						</div>					
+					</div>
+				</div>
 			</div>
 
 		</div>
-	</div>
-</section>
 
 <section class = "component team">
 	<div class = "container">
@@ -184,7 +190,7 @@
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center">
-				<img src="<?php the_field('team_image'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img class="team-image" src="<?php the_field('team_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>
 	</div>
@@ -250,7 +256,7 @@
 				</div>
 					<h4 class="pt-3 text-dark"><?php the_field('client_subhead'); ?></h4>
 					<div class="img-wrapper text-center">
-						<img src= "./wp-content/uploads/2017/10/zillow-logo-5-star-e1507134842280.png" class="responsive">
+						<img src= "<?php the_field('zillow_review_logo'); ?>" class="responsive">
 					</div>
 					<a href="<?php the_field('client_review_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('client_review_button'); ?></a>
 			</div>			
@@ -269,70 +275,82 @@
 			<div class ="col-md-1">
 			</div>
 			<div class = "col-md-10 text-center">
-				<h4 class="pt-3"><?php the_field('communities_subhead'); ?></h4>
+				<h4 class="pt-1 communities-subhead"><?php the_field('communities_subhead'); ?></h4>
 			</div>	
 			<div class ="col-md-1">
 			</div>
 		</div>
 		<div class="row no-gutter mt-4">
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://localhost:8888/wp-content/uploads/2017/09/placeimg_410_280_any.jpg" alt="" style = "width: 100%;">
+              <img class="img-fluid community" src="<?php the_field('communities_module_1_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Eastside
+                    <?php the_field('communities_module_1_caption'); ?>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://localhost:8888/wp-content/uploads/2017/09/placeimg_410_280_any.jpg" alt="" style = "width: 100%;">
+              <img class="img-fluid community" src="<?php the_field('communities_module_2_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Westside
+                    <?php the_field('communities_module_2_caption'); ?>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://localhost:8888/wp-content/uploads/2017/09/placeimg_410_280_any.jpg" alt="" style = "width: 100%;">
+              <img class="img-fluid community" src="<?php the_field('communities_module_3_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Southside
+                    <?php the_field('communities_module_3_caption'); ?>
                   </div>
                 </div>
               </div>
             </a>
           </div>
+          <div class="col-lg-3 col-sm-6">
+            <a class="portfolio-box" href="#">
+              <img class="img-fluid community" src="<?php the_field('communities_module_4_image'); ?>" alt="" style = "width: 100%;">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    <?php the_field('communities_module_4_caption'); ?>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>          
         </div>
 	</div>
 </section>
 
 <section class = "component-trans">
-	<div class = "container">
+	<div class = "container mb-5">
 		<div class="row">
 			<div class = "col-md-12 text-center">
-				<h2 class = "header-white"><?php the_field('social_heading'); ?></h2>
+				<h2 class = "header-dark mb-5"><?php the_field('social_heading'); ?></h2>
 			</div>
 		</div>
 		<div class = "row align-center">
 			<div class="col-md-2 connect">
 				<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://localhost:8888/wp-content/uploads/2017/09/placeimg_410_280_any.jpg" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_1_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	              	  <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Southside
+                    <?php the_field('module_1_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -340,14 +358,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_2_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Westside
+                    <?php the_field('module_2_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -355,14 +373,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_3_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	    <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                     <?php the_field('module_3_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -370,14 +388,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_4_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                     <?php the_field('module_4_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -385,14 +403,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_5_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                     <?php the_field('module_5_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -400,14 +418,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_6_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                     <?php the_field('module_6_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -417,14 +435,14 @@
 		<div class="row align-center mt-4">
 		<div class="col-md-2 connect">
 		<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://localhost:8888/wp-content/uploads/2017/09/placeimg_410_280_any.jpg" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_7_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	  <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Southside
+                     <?php the_field('module_7_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -432,14 +450,14 @@
 			</div>
 			<div class="col-md-2 connect">
 				 <a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_8_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	 <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Westside
+                     <?php the_field('module_8_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -447,14 +465,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_9_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	              	  <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                     <?php the_field('module_9_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -462,14 +480,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_10_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	              	  <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                     <?php the_field('module_10_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -477,14 +495,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_11_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	 <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                    <?php the_field('module_11_caption'); ?>
                   </div>
                 </div>
               </div>
@@ -492,14 +510,14 @@
 			</div>
 			<div class="col-md-2 connect">
 			<a class="portfolio-box" href="#">
-              <img class="img-fluid" src="http://via.placeholder.com/350x250" alt="" style = "width: 100%;">
+              <img class="img-fluid" src="<?php the_field('module_12_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	  <div class="project-icon">
                     <i class = "fa fa-user"></i>
                   </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    souithside
+                     <?php the_field('module_12_caption'); ?>
                   </div>
 
                 </div>
