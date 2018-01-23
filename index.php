@@ -22,13 +22,13 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 <?php endif; ?>
 
 <div class="wrapper" id="wrapper-index">
-	<div class = "hero-interior mb-3" style="background-image: url(<?php the_field('hero'); ?>);">
+	<div class = "hero-interior mb-3" style="background-image: url(<?php the_field('hero', 693); ?>);">
 	<div class = "header-overlay">
 	</div>	
 	<div class = "row">
 		<div class = "col-sm-12 text-center" style="position: absolute;">
 			<div class = "hero-interior-cta-center">
-			<?php the_field('hero_cta_interior'); ?>
+			<?php the_field('hero_cta_interior', 693); ?>
 				<div class="row">
 					<div class = "col-sm-12 text-center">
 						<button class="btn btn-primary btn-lg active header mt-5">Learn more
@@ -50,12 +50,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 			<main class="site-main" id="main">
 				
-					<header class="page-header">
-						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-					</header><!-- .page-header -->
 
 				<?php if ( have_posts() ) : ?>
 

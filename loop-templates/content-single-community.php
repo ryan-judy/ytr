@@ -49,9 +49,9 @@
 
 					<?php the_content(); ?>
 					<nav class="nav nav-tabs mb-3" id="myTab" role="tablist">
-  <a class="nav-item-community text-light" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-  <a class="nav-item-community text-light" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-  <a class="nav-item-community text-light" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+  <a class="nav-item-community text-light" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About</a>
+  <a class="nav-item-community text-light" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Statistics</a>
+  <a class="nav-item-community text-light" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Community Information</a>
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">Keffiyeh try-hard put a bird on it seitan, whatever fashion axe pinterest aesthetic prism. Gluten-free migas brunch meh PBR&B etsy forage YOLO hoodie. Williamsburg PBR&B enamel pin bespoke, poke jean shorts mlkshk gastropub af try-hard vaporware lo-fi whatever. Deep v man bun 3 wolf moon mustache forage franzen trust fund raw denim 8-bit messenger bag bushwick tousled semiotics. XOXO YOLO knausgaard butcher.

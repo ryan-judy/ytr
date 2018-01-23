@@ -9133,6 +9133,9 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+a:not([href]):not([tabindex]) {
+  color: #f5f5f5; }
+
 html {
   margin: 0px;
   padding: 0px; }
@@ -9337,7 +9340,8 @@ body {
     cursor: pointer;
     background-color: #751212;
     background-image: none;
-    border-color: gray; }
+    border-color: gray;
+    color: #f5f5f5; }
     body .btn-primary:hover {
       background-color: #901a1a;
       border-color: lightgray; }
@@ -9360,7 +9364,8 @@ body {
     cursor: pointer;
     background-color: #751212;
     background-image: none;
-    border-color: gray; }
+    border-color: gray;
+    color: #f5f5f5; }
     body .btn-primary-cta:hover {
       background-color: #901a1a;
       border-color: lightgray;
@@ -9595,7 +9600,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(20, 20, 20, 0.5);
-    opacity: 0.85; }
+    opacity: 0.95; }
   body .hero-interior {
     position: relative;
     height: 400px;
@@ -9810,10 +9815,13 @@ body {
     min-height: 350px;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
     margin-bottom: 75px;
-    padding: 30px; }
+    padding: 30px;
+    background-color: #751212;
+    color: #f5f5f5; }
   body .agent-title {
     font-weight: lighter;
-    margin-bottom: -10px; }
+    margin-bottom: -10px;
+    color: #f5f5f5; }
   body .card-custom-img {
     height: 200px;
     min-height: 200px;
@@ -9855,7 +9863,7 @@ body {
     height: 150px;
     border-style: solid;
     border-width: 8px;
-    border-color: #751212; }
+    border-color: #f5f5f5; }
   body .card-custom-img {
     background-color: #751212; }
   body .card-title {
@@ -10261,7 +10269,7 @@ body {
     display: block;
     background: #FFFFFF;
     min-width: 270px;
-    height: 350px;
+    height: 400px;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
@@ -10275,13 +10283,14 @@ body {
       -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
       box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3); }
       body .post-module:hover .thumbnail img {
+        text-align: center;
         -webkit-transform: scale(1.1);
         -moz-transform: scale(1.1);
         transform: scale(1.1);
         opacity: .6; }
     body .post-module .thumbnail {
       background: #000000;
-      height: 350px;
+      height: 400px;
       overflow: hidden;
       padding: 0; }
       body .post-module .thumbnail .date {
@@ -10311,7 +10320,7 @@ body {
           text-transform: uppercase; }
       body .post-module .thumbnail img {
         display: block;
-        width: 120%;
+        width: 100%;
         -webkit-transition: all 0.3s linear 0s;
         -moz-transition: all 0.3s linear 0s;
         -ms-transition: all 0.3s linear 0s;
@@ -10496,6 +10505,18 @@ body {
     @media screen and (max-width: 575px) {
       body input.active[type=submit] {
         margin-left: 120px; } }
+  body .page-link {
+    color: #751212;
+    height: 34px; }
+    body .page-link:hover {
+      color: #1d1919; }
+    body .page-link:active {
+      color: #1d1919; }
+  body .page-item.active .page-link {
+    background-color: #751212;
+    border-color: gray; }
+  body .community-transform {
+    text-transform: capitalize; }
 
 /*
 * Use existing Bootstrap 4 classes and

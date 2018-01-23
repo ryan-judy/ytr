@@ -36,7 +36,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-<div class="row">
+<div class="row px-2">
           <div class="post-module my-3"> 
             <!-- Thumbnail-->
             <div class="thumbnail">
