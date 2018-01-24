@@ -6,6 +6,7 @@
  *
  * @package understrap
  */
+  wp_enqueue_script( 'google-maps', get_template_directory_uri() . '/js/google-maps.js', array ( 'jquery' ), 1.1, true);
 
 get_header();
 ?>
@@ -134,7 +135,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
     <script src='https://unpkg.com/shufflejs@5'></script>
 
 <script>
-  var Count = $(".countPost").val();
+var Count = $(".countPost").val();
 
 Count = parseInt(Count);
 

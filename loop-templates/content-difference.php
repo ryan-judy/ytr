@@ -35,7 +35,7 @@
 					<h4 class="pt-3 text-white"><?php the_field('team_content'); ?>
 
 </h4>					
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button_cta'); ?></a>
+				<a href="<?php the_field('team_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button_cta'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
 				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
@@ -69,7 +69,7 @@
 	</div>
 		<div class = "row">
 	<div class = "col-md-12 text-center">
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('comparison_button'); ?></a>
+				<a href="<?php the_field('comparison_button_link'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('comparison_button'); ?></a>
 	</div>
 </div>
 </div>	

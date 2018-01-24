@@ -121,7 +121,7 @@
 				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
 					<h4 class="pt-3 text-white"><?php the_field('career_content_1'); ?></h4>
 				</div>				
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
+				<a href="<?php the_field('career_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center">
 			</div>			
@@ -139,7 +139,7 @@
 				<span class="underline"></span>
 			</div>
 			<div class = "col-md-2">
-				<button class = "btn btn-secondary"><?php the_field('Newsletter_button_CTA'); ?></button>
+				<a href="<?php the_field('Newsletter_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
 			</div>
 		</div>
 	</div>

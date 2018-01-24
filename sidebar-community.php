@@ -6,7 +6,7 @@
  */
 
 if ( ! is_active_sidebar( 'right-sidebar' ) ) {
-	return;
+    return;
 }
 
 // when both sidebars turned on reduce col size to 3 from 4.
@@ -15,9 +15,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <?php if ( 'both' === $sidebar_pos ) : ?>
 <div class="col-md-3 widget-area" id="right-sidebar" role="complementary">
-	<?php else : ?>
+    <?php else : ?>
 <div class="col-md-4 widget-area" id="right-sidebar" role="complementary">
-	<?php endif; ?>
+    <?php endif; ?>
 
 
 <!-- begin custom related loop, isa -->
@@ -44,7 +44,7 @@ $args = array(
 );
 
 ?>
-<h5 class = "community-transform"><?php $terms = get_the_terms($post->ID, 'locations');foreach($terms as $term){echo $term->name;} ?>
+<h5 class = "community-transform mt-4"><?php $terms = get_the_terms($post->ID, 'locations');foreach($terms as $term){echo $term->name;} ?>
  Communities</h5>
 
 
@@ -76,4 +76,4 @@ wp_reset_postdata();
 
 </div><!-- #secondary -->
 
-					
+                    

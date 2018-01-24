@@ -1,6 +1,8 @@
 jQuery(document).ready(function($){
 	//set your google maps parameters
 
+	var archiveMap = function () {
+
 	var $latitude = 51.5255069,
 		$longitude = -0.0836207,
 		$map_zoom = 11;
@@ -197,8 +199,20 @@ jQuery(document).ready(function($){
       	scrollwheel: false,
       	styles: style,
     }
+    var map_options_2 = {
+      	center: new google.maps.LatLng(41.474981, -81.685681),
+      	zoom: 17,
+      	panControl: false,
+      	zoomControl: false,
+      	mapTypeControl: false,
+      	streetViewControl: false,
+      	mapTypeId: google.maps.MapTypeId.ROADMAP,
+      	scrollwheel: false,
+      	styles: style,
+    }
     //inizialize the map
 	var map = new google.maps.Map(document.getElementById('google-container'), map_options);
+
 	//add a custom marker to the map				
 	//var marker = new google.maps.Marker({
 	//  	position: new google.maps.LatLng($latitude, $longitude),
@@ -206,6 +220,8 @@ jQuery(document).ready(function($){
 	//    visible: true,
 	// 	icon: $marker_url,
 	//});
+
+
     var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
@@ -247,6 +263,11 @@ jQuery(document).ready(function($){
   	//insert the zoom div on the top left of the map
   	map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
 
+};
+
+archiveMap();
+
 
 });
+
 

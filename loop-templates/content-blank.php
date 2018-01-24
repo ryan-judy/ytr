@@ -342,7 +342,7 @@
 		</div>
 		<div class = "row align-center">
 			<div class="col-md-2 connect">
-				<a class="portfolio-box" href="#">
+				<a class="portfolio-box" href="<? the_field('module_1_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_1_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	              	  <div class="project-icon">
@@ -357,7 +357,7 @@
             </a>
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_2_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_2_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
@@ -372,7 +372,7 @@
             </a>
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_3_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_3_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	    <div class="project-icon">
@@ -387,7 +387,7 @@
             </a>	
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_4_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_4_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
@@ -402,7 +402,7 @@
             </a>	
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_5_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_5_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
@@ -417,7 +417,7 @@
             </a>	
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_6_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_6_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	   <div class="project-icon">
@@ -434,7 +434,7 @@
 		</div>
 		<div class="row align-center mt-4">
 		<div class="col-md-2 connect">
-		<a class="portfolio-box" href="#">
+		<a class="portfolio-box" href="<? the_field('module_7_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_7_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	  <div class="project-icon">
@@ -449,7 +449,7 @@
             </a>
 			</div>
 			<div class="col-md-2 connect">
-				 <a class="portfolio-box" href="#">
+				 <a class="portfolio-box" href="<? the_field('module_8_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_8_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	 <div class="project-icon">
@@ -464,7 +464,7 @@
             </a>
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_9_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_9_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	              	  <div class="project-icon">
@@ -479,7 +479,7 @@
             </a>	
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_10_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_10_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	              	  <div class="project-icon">
@@ -494,7 +494,7 @@
             </a>	
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_11_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_11_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	 <div class="project-icon">
@@ -509,7 +509,7 @@
             </a>	
 			</div>
 			<div class="col-md-2 connect">
-			<a class="portfolio-box" href="#">
+			<a class="portfolio-box" href="<? the_field('module_12_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_12_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
               	  <div class="project-icon">

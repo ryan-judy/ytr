@@ -12,6 +12,16 @@
 
 $terms = get_the_terms( $post->ID, 'locations' );
 
+$image = get_field('gallery_image_1');
+$url = $image['url'];
+  $title = $image['title'];
+  $alt = $image['alt'];
+  $caption = $image['caption'];
+
+  // thumbnail
+  $size = 'medium';
+  $thumb = $image['sizes'][ $size ];
+
 if ( $terms && ! is_wp_error( $terms ) ) :
 
    $actors = array();
@@ -34,7 +44,7 @@ if ( $terms && ! is_wp_error( $terms ) ) :
           <div class="aspect aspect--16x9">
 
         <div class="aspect__inner">
-          <img src="https://images.unsplash.com/photo-1430026996702-608b84ce9281?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=600&amp;h=338&amp;fit=crop&amp;s=363a88755a7b87635641969a8d66f7aa" obj.alt="obj.alt"/></div>
+          <img src="<?php echo $thumb; ?>"/></div>
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">

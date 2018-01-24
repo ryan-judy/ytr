@@ -22,16 +22,15 @@
           <div class = "col-sm-6">
           </div>
           <div class = "col-sm-6">
-          	<button class="btn btn-primary btn-lg active header mt-5 ml-4">Learn more
-            </button>
+				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
           </div>
         </div>
     </div>  
   </div>
+
 </div>  
 
-
-<section class = "component">
+<section class = "component" id="about">
 	<div class="container">
 		<div class = "row no-gutter">
 			<div class = "col-md-12 text-center">
@@ -63,7 +62,7 @@
 				<div class="d-flex align-items-center"><i class = "fa <?php the_field('gsp_subhead_3_icon'); ?> fa-inverse fa-3x pr-3"></i>
 					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_3'); ?></h4>
 				</div>				
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('gsp_button'); ?></a>
+				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header sr-button mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('gsp_button'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center">
 			</div>			
@@ -132,7 +131,7 @@
 		</div>
 		<div class = "row">
 			<div class = "col-md-12 text-center">
-			<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('selling_process_button'); ?></a>	
+			<a href="<?php the_field('selling_process_link'); ?>" class="btn btn-primary btn-lg active header sr-button mt-4" role="button" aria-pressed="true"><?php the_field('selling_process_button'); ?></a>	
 			</div>
 		</div>
 	</div>
@@ -162,7 +161,7 @@
 					<h4 class="pt-3 text-white"><?php the_field('pricing_subhead'); ?>
 </h4>
 					<h4 class="pt-3 text-white"><?php the_field('pricing_content'); ?></h4>					
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('pricing_button_cta'); ?></a>
+				<a href="<?php the_field('pricing_button_link'); ?>" class="btn btn-secondary btn-lg active header  sr-button mt-4" role="button" aria-pressed="true"><?php the_field('pricing_button_cta'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
 				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
@@ -184,7 +183,7 @@
 				<span class="underline underline-value"></span>
 			</div>
 			<div class = "col-md-3">
-								<button class = "btn btn-secondary"><?php the_field('home_value_button'); ?></button>			
+				<a href="<?php the_field('newsletter_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('newsletter_button_CTA'); ?></a>
 
 			</div>
 		</div>

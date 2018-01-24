@@ -4,31 +4,32 @@
  *
  * @package understrap
  */
+  wp_enqueue_script( 'google-maps-ind', get_template_directory_uri() . '/js/google-maps-ind.js', array ( 'jquery' ), 1.1, true);
 
 get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
+<?php 
 
-<div class = "hero-interior mb-4" style="background-image: url(<?php the_field('hero'); ?>);">
-	<div class = "header-overlay">
-	</div>	
-	<div class = "row">
-		<div class = "col-sm-12 text-center" style="position: absolute;">
-			<div class = "hero-interior-cta-center">
-			<?php the_field('hero_cta_interior'); ?>
-				<div class="row">
-					<div class = "col-sm-12 text-center">
-						<button class="btn btn-primary btn-lg active header mt-5">Learn more
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>	
-	</div>
-</div>	
+$countPosts = $wp_the_query->post_count;
 
-<div class="wrapper" id="single-wrapper">
+
+?>
+
+<input class = countPost value=<?php echo $countPosts ?> type="hidden">
+
+ <article id="cd-google-map">
+
+  <div class = "container">
+                <h1 class="page-title mt-5 text-light" style="position:absolute; z-index:5;"><?php the_field('header'); ?></h1>
+</div>
+  <div id="google-container"></div>
+  <div id="cd-zoom-in"></div>
+  <div id="cd-zoom-out"></div>
+</article>
+
+<div class="wrapper mt-4" id="single-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -43,7 +44,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'single-community' ); ?>
 
-						<?php understrap_post_nav(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
@@ -67,3 +67,44 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
+
+<script>
+
+
+var Count = $(".countPost").val();
+
+Count = parseInt(Count);
+
+console.log(Count);
+
+var newArr = [];
+var locations = [];
+
+newArr = new Array(Count).fill([]);
+
+for(var i=0;i<newArr.length;i++){
+  console.log([i+1])
+  locations.push([i+1]);
+}
+
+
+$('.lon').each(function(index,data) {
+   var lon = $(this).val().trim();
+   console.log(lon);
+    locations[index].unshift(lon);
+});
+
+$('.lat').each(function(index,data) {
+   var lat = $(this).val().trim();
+   console.log(lat);
+    locations[index].unshift(lat);
+});
+  
+$('.loc').each(function(index,data) {
+   var name = $(this).val();
+   console.log(name);
+    locations[index].unshift(name);
+});
+
+</script>
+

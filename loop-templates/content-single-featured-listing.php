@@ -4,9 +4,8 @@
  *
  * @package understrap
  */
-
 ?>
-<?php $images = get_field('listing-photos');?>
+<?php $images = get_field('listing_photos');?>
 <?php $image = $images[0]; ?>
 <div class = "hero-interior listings" style="background-image: url(<?php echo $image['url'] ?>);">
     <div class = "header-overlay">
@@ -18,8 +17,9 @@
         </div>
                 <div class="row">
                     <div class = "col-sm-12 text-center">
-                        <button class="btn btn-primary btn-lg active header mt-5">View More
-                        </button>
+                <a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true">Learn More</a>
+                <a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">Request a Showing</a>
+
                     </div>
                 </div>
             </div>
@@ -32,54 +32,53 @@
 <main class="site-main" id="main">
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-    <div class = "container mt-4">
+<section class = "component-red">
+    <div class = "container">
         <div class = "row">
-            <div class = "col-md-12 my-2">
+            <div class = "col-md-12">
 
-                    <h3 class = "text-center"><?php the_field('tagline')?></h3>
+                    <h3 class = "listing-tagline text-center text-light"><?php the_field('tagline')?></h3>
 
                 <div class="entry-content mt-5">
                     <div class = "row text-center">
                         <div class = "col-md-2">
-                            PRICE
-                            <h3 class="text-brand">$<?php the_field('price')?></h3>
+                            <p class = "text-white">PRICE</p>
+                            <h3 class="text-white">$<?php the_field('price')?></h3>
                         </div>
                         <div class = "col-md-2">
                             BEDS
-                            <h3 class="text-brand"><?php the_field('beds')?></h3>
+                            <h3 class="text-white"><?php the_field('beds')?></h3>
                         </div>
                         <div class = "col-md-2">
                             BATHS
-                            <h3 class="text-brand"><?php the_field('baths')?></h3>
+                            <h3 class="text-white"><?php the_field('baths')?></h3>
                         </div>
                         <div class = "col-md-2">
                             SQ. FT
-                            <h3 class="text-brand"><?php the_field('sqft')?></h3>
+                            <h3 class="text-white"><?php the_field('sqft')?></h3>
                         </div>
                         <div class = "col-md-2">
                             ACRES
-                            <h3 class="text-brand"><?php the_field('acres')?></h3>
+                            <h3 class="text-white"><?php the_field('acres')?></h3>
                         </div>
                         <div class = "col-md-2">
                             YBT
-                            <h3 class="text-brand"><?php the_field('year-built')?></h3>
+                            <h3 class="text-white"><?php the_field('year-built')?></h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
- <div class="row text-center">
-    <div class="col-lg-12 offset-lg-2 mt-5" id="slider">
-        <h3>Gallery</h3>
+</section>
+ <div class="row text-center mt-3">
+    <div class="col-lg-12 offset-lg-2 my-5" id="slider">
+        <h3 class = "mb-4">Gallery</h3>
 <?php 
 /* SLIDER CUSTOM FIELD FOR HOMEPAGE */
-$images = get_field('listing-photos');
+$images = get_field('listing_photos');
 $count=0;
 $count1=0;
 $count2=0;
-
 if($images) : ?>
 <div class="col-lg-12 offset-lg-2" id="slider">
     <div id="carousel" class="carousel slide">
@@ -142,33 +141,38 @@ if($images) : ?>
 </div><!--#slider-->
 <?php endif; ?>
 </div>
-<div class = "row text-center">
+<div class = "container">
+<div class = "row text-center mb-5">
     <div class = "col-md-6">
-        <iframe width='100%' height='400' src=<?php the_field('matterport-link'); ?> frameborder='0' allowfullscreen></iframe>
+        <h3 class = "text-dark mb-4">Virtual Tour</h3>
+        <?php the_field('matterport_link'); ?>
     </div>
     <div class = "col-md-6">
-        <iframe width="100%" height="400" src=<?php the_field('video-link'); ?> frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <h3 class = "text-dark mb-4">Video Guide</h3>
+        <?php the_field('matterport_link_copy'); ?>
         
     </div>
 </div>
+</div>
                 </div><!-- .entry-content -->
-
+            </div>
+                <section class= "component">
+<div class = "container">
 <div class = "row text-center">
 <div class = "col-md-12">
 
-                    <h3 class = "text-center">About This HOme</h3>
+    <h3 class = "text-center">About This Home</h3>
+    <div class = listing-description>
+      <?php the_field('description'); ?>
+    </div>
+                    <a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true">Inquire About This Home</a>
 
-      <?php the_content(); ?>
 </div>
+</div>
+</div>
+</section>
 
-
-                        <?php
-                        wp_link_pages( array(
-                        'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-                        'after'  => '</div>',
-                        ) );
-                    ?>
-
+                       
 </article><!-- #post-## -->
 </main>
 

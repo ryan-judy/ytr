@@ -1,36 +1,29 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying archive pages.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package understrap
  */
+  wp_enqueue_script( 'google-maps', get_template_directory_uri() . '/js/google-maps.js', array ( 'jquery' ), 1.1, true);
 
 get_header();
+?>
+<?php 
+
+$countPosts = $wp_the_query->post_count;
+
 
 ?>
 
+<input class = countPost value=<?php echo $countPosts ?> type="hidden">
 
 
 <?php
-
-$terms = get_the_terms( $post->ID, 'locations' );
-
-if ( $terms && ! is_wp_error( $terms ) ) :
-
-   $actors = array();
-
-   foreach ( $terms as $term ) {
-      $actors[] = $term->name;
-   }
-
-   $actors = join( ", ", $actors );
-
-   ?>
-
-
-   
-<?php endif; ?>
-
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+?>
 
 <div class="wrapper" id="archive-wrapper">
  <article id="cd-google-map">
@@ -42,55 +35,83 @@ if ( $terms && ! is_wp_error( $terms ) ) :
   <div id="cd-zoom-out"></div>
 </article>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+  <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-			<main class="site-main" id="main">
+      <main class="site-main" id="main">
+
+
+        <?php if ( have_posts() ) : ?>
 
 
 <div class="container mt-3">
 
-  
+          <?php /* Start the Loop */ ?>
+          <?php while ( have_posts() ) : the_post(); ?>
+
+            <?php
+
+            /*
+             * Include the Post-Format-specific template for the content.
+             * If you want to override this in a child theme, then include a file
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+             */
+            get_template_part( 'loop-templates/content', 'location' );
+            ?>
+
+          <?php endwhile; ?>
+
   <div class="row mb-3">
     <div class="col">
       <div class="btn-group">
-      	        <a href="/communities" class="btn btn-outline-primary" role="button" aria-pressed="true">All Communities</a>
-        <a href="/communities/locations/eastside" class="btn btn-outline-primary" role="button" aria-pressed="true">Eastside</a>
-        <a href="/communities/locations/westside" class="btn btn-outline-primary" role="button" aria-pressed="true">Westside</a>
+        <a href="/communities" class="btn btn-outline-primary" role="button" aria-pressed="true">All Communities</a>
+        <a href="/locations/eastside" class="btn btn-outline-primary" role="button" aria-pressed="true">Eastside</a>
+        <a href="/locations/westside" class="btn btn-outline-primary" role="button" aria-pressed="true">Westside</a>
 
-        <a href="/communities/locations/southside" class="btn btn-outline-primary" role="button" aria-pressed="true">Southside</a>
+        <a href="/locations/southside" class="btn btn-outline-primary" role="button" aria-pressed="true">Southside</a>
       </div>
     </div>
   </div>
-
   <div class="row my-shuffle">
 
-					
-       <figure class="image-item col-3" data-groups="[&quot;<?php echo $actors; ?>&quot;]">
-  		<a class="portfolio-box" href=<?php the_permalink(); ?>>
-          <div class="aspect aspect--16x9">
+    <div class="col-1 my-sizer-element"></div>
 
-        <div class="aspect__inner">
-          <img src="https://images.unsplash.com/photo-1430026996702-608b84ce9281?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=600&amp;h=338&amp;fit=crop&amp;s=363a88755a7b87635641969a8d66f7aa" obj.alt="obj.alt"/></div>
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    <?php the_title()?>
-                  </div>
-                </div>
-              </div>
-                    </div>
+          <?php /* Start the Loop */ ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-            </a>
+            <?php
+
+            /*
+             * Include the Post-Format-specific template for the content.
+             * If you want to override this in a child theme, then include a file
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+             */
+            get_template_part( 'loop-templates/content', 'community' );
+            ?>
+
+          <?php endwhile; ?>
+        </div>
+
+        <?php else : ?>
+
+          <?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+        <?php endif; ?>
+
+      </main><!-- #main -->
+
+      <!-- The pagination component -->
+      <?php understrap_pagination(); ?>
+
+    </div><!-- #primary -->
+
+    <!-- Do the right sidebar check -->
+    <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
 
+    <?php endif; ?>
 
-    </figure>
-
-
-
-
-	</div> <!-- .row -->
-	  </div>
+  </div> <!-- .row -->
+    </div>
 </div>
 
 </div><!-- Container end -->
@@ -102,7 +123,7 @@ if ( $terms && ! is_wp_error( $terms ) ) :
     <script src='https://unpkg.com/shufflejs@5'></script>
 
 <script>
-  var Count = $(".countPost").val();
+var Count = $(".countPost").val();
 
 Count = parseInt(Count);
 
@@ -145,7 +166,8 @@ var myShuffle = new Shuffle(document.querySelector('.my-shuffle'), {
   sizer: '.my-sizer-element',
   buffer: 1,
 });
- 
+
+
 window.jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
   var input = evt.currentTarget;
   if (input.checked) {
@@ -153,6 +175,4 @@ window.jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
   }
 });
 </script>
-
-
 

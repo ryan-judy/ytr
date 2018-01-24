@@ -29,9 +29,9 @@
                           <div class="d-flex flex-column">
                             <div class="pl-1 agent-title"><?php the_title( sprintf( '<h1>', esc_url( get_permalink() ) ),
           '</h1>' ); ?></div>
-  <div class="pl-1 font-weight-light"><span class = 'agent'><?php the_field('agent_position'); ?></span></div>
-  <div class="pt-2 pl-1"><h4 class ="text-light"><?php the_field('agent_tagline'); ?></h4></div>
-                  <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Contact</a>
+  <div class="pl-1 font-weight-light"><span class = 'agent text-muted'><?php the_field('agent_position'); ?></span></div>
+  <div class="pt-1 pl-1"><h4 class ="text-dark font-weight-light"><?php the_field('agent_tagline'); ?></h4></div>
+                  <a class="btn btn-primary agent-contact" data-toggle="modal" data-target="#exampleModal">Contact</a>
 
         </div>
       </div>

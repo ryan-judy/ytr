@@ -16,8 +16,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'single-featured-listing' ); ?>
 
-   					<a href="<?php echo get_post_type_archive_link( 'featured-listing' ); ?>">Go Back</a>
-
 				<?php endwhile; // end of the loop. ?>
 
 
