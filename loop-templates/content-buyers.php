@@ -19,8 +19,7 @@
 			<?php the_field('hero_cta_interior'); ?>
 				<div class="row">
 					<div class = "col-sm-12 text-center">
-						<button class="btn btn-primary btn-lg active header mt-5">Learn more
-						</button>
+				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
 					</div>
 				</div>
 			</div>
@@ -28,14 +27,14 @@
 	</div>
 </div>	
 
-<div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+<div class = "component-red component-background" id = "about" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-5 pl-5">
 				<h2 class = "header-white"><?php the_field('search_header'); ?></h2>
 					<h4 class="pt-3 text-white"><?php the_field('search_content'); ?>		
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
+				<a href="<?php the_field('search_homes_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('search_homes_CTA') ?></a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
 				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
@@ -51,7 +50,7 @@
 				<h2 class = "header-white"><?php the_field('agent_header'); ?></h2>
 
 				<h4 class="pt-3 text-white"><?php the_field('agent_content'); ?></h4>			
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('agent_button_cta'); ?></a>
+				<a href="<?php the_field('agent_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('agent_button_cta'); ?></a>
 			</div>	
 			<div class = "col-md-1">
 			</div>		

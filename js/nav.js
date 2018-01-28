@@ -10,7 +10,7 @@ $(window).scroll( function(){
  
 	if ( scrollPos >= headerHeight && windowWidth > 480 ) {
 		$('.navbar').addClass('nav-fixed');
-		$('.navbar').addClass('navbar-light');
+		//$('.navbar').addClass('navbar-light');
 		//$('.container').css('margin-top', navHeight);
 		$('.navbar').removeClass('navbar-dark');
 		$('.navbar-brand').addClass('shrink-nav');
@@ -18,9 +18,9 @@ $(window).scroll( function(){
 
 	} else {
 		$('.navbar').removeClass('nav-fixed');
-		$('.navbar').removeClass('navbar-light');
+		//$('.navbar').removeClass('navbar-light');
 		//$('.container').css('margin-top', '0');
-		$('.navbar').addClass('navbar-dark');
+		//$('.navbar').addClass('navbar-dark');
 		$(".navbar-brand").removeClass("shrink-nav");
       	$(".navbar-brand").removeClass("shrink-logo");
 	}

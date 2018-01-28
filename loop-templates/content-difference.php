@@ -17,14 +17,14 @@
           <div class = "col-sm-8">
           </div>
           <div class = "col-sm-4">
-          	<button class="btn btn-primary btn-lg active header mt-5 mr-5">Learn more
+				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
             </button>
           </div>
         </div>
     </div>  
   </div>
 </div>  
-				<div class = "component-red component-background");">
+				<div id = "about" class = "component-red component-background");">
 		<div class = "row">
 			<div class = "col-md-1">
 			</div>

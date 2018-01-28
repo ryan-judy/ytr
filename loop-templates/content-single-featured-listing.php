@@ -17,8 +17,8 @@
         </div>
                 <div class="row">
                     <div class = "col-sm-12 text-center">
-                <a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true">Learn More</a>
-                <a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">Request a Showing</a>
+                <a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
+                <a class="btn btn-primary agent-contact" data-toggle="modal" data-target="#exampleModal">Request a Showing</a>
 
                     </div>
                 </div>
@@ -32,7 +32,7 @@
 <main class="site-main" id="main">
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-<section class = "component-red">
+<section class = "component-red" id= "about">
     <div class = "container">
         <div class = "row">
             <div class = "col-md-12">
@@ -81,7 +81,7 @@ $count1=0;
 $count2=0;
 if($images) : ?>
 <div class="col-lg-12 offset-lg-2" id="slider">
-    <div id="carousel" class="carousel slide">
+    <div id="carousel" class=carousel slide">
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <?php foreach( $images as $image ): ?>
@@ -172,8 +172,35 @@ if($images) : ?>
 </div>
 </section>
 
-                       
+                        <?php
+                        wp_link_pages( array(
+                        'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                        'after'  => '</div>',
+                        ) );
+                    ?>
+
 </article><!-- #post-## -->
 </main>
 
 <div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Connect with an Agent Today</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class = "component-form">
+         <?php the_field('agent_contact'); ?>
+          </div>
+     </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

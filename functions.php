@@ -269,6 +269,26 @@ function set_posts_per_page_for_locations( $query ) {
 }
 add_action( 'pre_get_posts', 'set_posts_per_page_for_locations' );
 
+function rudr_mch_subscribe(){
+    $list_id = 'a75e3d52c6';
+    $api_key = '839b3fa974c710a124592e3a03d4a319-us9';
+    $result = json_decode( rudr_mailchimp_subscriber_status($_POST['email'], 'subscribed', $list_id, $api_key, array('FNAME' => $_POST['fname'],'LNAME' => $_POST['lname']) ) );
+    // print_r( $result ); 
+    if( $resul->status == 400 ){
+        foreach( $result->errors as $error ) {
+            echo '<p>Error: ' . $error->message . '</p>';
+        }
+    } elseif( $result->status == 'subscribed' ){
+        echo 'Thank you, ' . $result->merge_fields->FNAME . '. You have subscribed successfully';
+    }
+    // $result['id'] - Subscription ID
+    // $result['ip_opt'] - Subscriber IP address
+    die;
+}
+ 
+add_action('wp_ajax_mailchimpsubscribe','rudr_mch_subscribe');
+add_action('wp_ajax_nopriv_mailchimpsubscribe','rudr_mch_subscribe');
+
 
 function my_theme_add_scripts() {
  wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCGuaBtAxCdHN7DHilvAQLFga9cfs3o5Sw', array(), '3', true );

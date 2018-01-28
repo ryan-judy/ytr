@@ -39,9 +39,9 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
                     <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
                     <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
                 </ul>
                 <br>

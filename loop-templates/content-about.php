@@ -9,10 +9,11 @@
 				<div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
 					<div class = "hero-interior-cta">
 						<?php the_field('hero_cta_interior'); ?>
-						
+										<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
+
 					</div>
 				</div>	
-<section class = "component text-center">
+<section class = "component text-center" id="about">
 
 <h2 class = "text-dark"><?php the_field('header_cta'); ?></h2>
 <div class = "container">

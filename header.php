@@ -34,8 +34,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
     <div class="d-flex justify-content-end header px-5 p-2">
-    <div class="mr-5 pt-1"><i class = "fa fa-phone"></i> 216-378-9618</div>
-    <button href="#" class="btn btn-primary btn-sm active header mr-3" role="button" aria-pressed="true">Sign In/Sign Up</button>
+    <div class="mr-5 pt-2"><i class = "fa fa-phone"></i> 216-378-9618</div>
+       <ul class="nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+    </ul>
     </div>
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>

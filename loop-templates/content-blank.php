@@ -4,6 +4,7 @@
  *
  * @package understrap
  */
+  wp_enqueue_script( 'header', get_template_directory_uri() . '/js/header.js', array ( 'jquery' ), 1.1, true);
 
 ?>
 
@@ -11,9 +12,14 @@
 <div class = "hero-banner-image" style="background-image: url(<?php the_field('hero_image'); ?>" alt="<?php echo $image['alt']; ?>");">
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-    <div class="d-flex justify-content-end header px-5 p-2">
-    <div class="mr-5 pt-1"><i class = "fa fa-phone"></i> 216-378-9618</div>
-    <button href="#" class="btn btn-primary btn-sm active header mr-3" role="button" aria-pressed="true">Sign In/Sign Up</button>
+    <div class="d-flex justify-content-end header-home px-5 p-2">
+    <div class="mr-5 pt-2"><i class = "fa fa-phone"></i> 216-378-9618</div>
+   <ul class="nav">
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+    </ul>
     </div>
 
 
@@ -33,7 +39,8 @@
             
           
           <?php } else { ?>
-            <a href="/" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img width="200" height="73" src="<?php the_field('white_logo'); ?>" class="navbar-brand" alt="Young Team Realtors" itemprop="logo"></a>
+            <a href="/" class="navbar-brand custom-logo-link home-logo" rel="home" itemprop="url"><img width="200" height="73" src="<?php the_field('white_logo'); ?>" class="navbar-brand" alt="Young Team Realtors" itemprop="logo"></a>
+                        <a href="/" class="navbar-brand custom-logo-link image2" rel="home" itemprop="url"><img width="200" height="73" src="<?php the_field('color_logo'); ?>" class="navbar-brand mobile image2" alt="Young Team Realtors" itemprop="logo"></a>
           <?php } ?><!-- end custom logo -->
   <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -142,10 +149,62 @@
 </div>
 </div>
 <section class = "component text-center">
+	<div class = "featured-listings-car">
+<div class="container-fluid">
+	<h2 class = "mb-4">Featured Listings</h2>
+    <div id="carouselExample2" class="carousel slide" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner row w-100 mx-2" role="listbox">
+				
 
-<h2 class = "header-dark">Hello! This could be a CTA text box or nice intro after the Hero.</h2>
+             <!-- Carousel items -->
+<?php
+$count2=0;
+ $loop = new WP_Query( array( 'post_type' => 'featured-listing', 'posts_per_page' => 10) ); ?>
+		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		               <div class="carousel-item col-md-4<?php if($count2==0) : echo ' active'; endif; ?>">
 
+		   <div class="img-fluid d-block card-custom-listing">
+	
+        	<a href="<?php the_permalink(); ?>">
+        				<?php 
+			$photosValues = get_post_meta( $post->ID, 'listing_photos');
+			$first = true;
+				foreach ( $photosValues as $photoItem) { 
+				foreach ( $photoItem as $photoID) { 
+					if ( $first )
+   					 {				
+        				$photoURL = wp_get_attachment_url($photoID); // gets photo URL
+						echo "<img src=" . $photoURL . ">"; 
+						$first = false;
+   					 }	
+					
+				} 
+			}
+			?>
+			<h4 class = "text-dark mt-2"><?php echo get_the_title(); ?></h4>
+        	<?php $price = get_post_meta(get_the_ID(),'price',true);?>
+			$<?php echo $price ?>
+			                </div></a>
+            </div>
+<?php $count2++; ?>
+<?php endwhile; wp_reset_query(); ?>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample2" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+</div>
 </section>
+
+
+
 
 		<div class = "row">
 			<div class = "col-md-6 text-left component-red">
@@ -200,44 +259,7 @@
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-6">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-				  <ol class="carousel-indicators">
-				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				  </ol>
-				  <div class="carousel-inner">
-				    <div class="carousel-item active">
-				      <img class="d-block w-100" src="<?php the_field('client_review_image_1'); ?>" alt="First slide">
-				        <div class="carousel-caption d-none d-md-block">
-				    		<h3><?php the_field('client_review_head_1'); ?></h3>
-				    		<p><?php the_field('client_review_subhead_1'); ?></p>
-				  		</div>
-				    </div>
-				    <div class="carousel-item">
-				      <img class="d-block w-100" src="<?php the_field('client_review_image_2'); ?>" alt="Second slide">
-				      	<div class="carousel-caption d-none d-md-block">
-				    		<h3><?php the_field('client_review_head_2'); ?></h3>
-				    		<p><?php the_field('client_review_subhead_2'); ?></p>
-				  		</div>
-				    </div>
-				    <div class="carousel-item">
-				      <img class="d-block w-100" src="<?php the_field('client_review_image_3'); ?>" alt="Third slide">
-				      	<div class="carousel-caption d-none d-md-block">
-				    		<h3><?php the_field('client_review_head_3'); ?></h3>
-				    		<p><?php the_field('client_review_subhead_3'); ?></p>
-				  		</div>
-				    </div>
-				  </div>
-				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				    <span class="sr-only">Previous</span>
-				  </a>
-				  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				    <span class="sr-only">Next</span>
-				  </a>
-				</div>
+				<?php the_field('testimonial_video') ?>
 			</div>
 			<div class = "col-md-6 text-center">
 				<div class = "row">
@@ -251,14 +273,14 @@
 					</div>
 					<div class = "col-sm-4">
 						<h2 class = "text-brand "><span class="count"><?php the_field('client_experience'); ?></span></h2>
-						Years of Experience
+						Combined Years of Experience
 					</div>
 				</div>
 					<h4 class="pt-3 text-dark"><?php the_field('client_subhead'); ?></h4>
-					<div class="img-wrapper text-center">
-						<img src= "<?php the_field('zillow_review_logo'); ?>" class="responsive">
+					<div class = testimonial>
+						<?php the_field('client_testimonials_content') ?>
 					</div>
-					<a href="<?php the_field('client_review_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('client_review_button'); ?></a>
+					<a href="<?php the_field('client_review_button_page'); ?>" class="btn btn-primary btn-lg active header" role="button" aria-pressed="true"><?php the_field('client_review_button'); ?></a>
 			</div>			
 		</div>
 	</div>
@@ -535,13 +557,18 @@
 			<div class = "col-md-6">
 				<h6 class= "pt-2"><?php the_field('newsletter_cta'); ?></h6>
 			</div>
-			<div class = "col-md-4">
-				<input type = "text" class = "input" placeholder="Enter Your Email">
-				<span class="underline"></span>
-			</div>
-			<div class = "col-md-2">
-				<button class = "btn btn-secondary"><?php the_field('newsletter_button'); ?></button>
-			</div>
+<form action="/wp-admin/admin-ajax.php" id="mailchimp">
+	<!-- for my website the site_url() function returns https://rudrastyh.com -->
+	<input type="text" name="fname" placeholder="First name" />
+	<input type="text" name="lname" placeholder="Last name" />
+	<input type="email" name="email" placeholder="Email *" required />
+ 
+	<input type="hidden" name="action" value="mailchimpsubscribe" />
+	<!-- we need action parameter to receive ajax request in WordPress -->
+ 
+	<button>Subscribe</button>
+</form>
+
 		</div>
 	</div>
 </section>
@@ -560,3 +587,42 @@
 		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-footer -->
+
+<script type="text/javascript">
+
+$('#carouselExample2').on('slide.bs.carousel', function (e) {
+
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 3;
+    var totalItems = $('.carousel-item').length;
+    
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
+
+$(function($){
+	$('#mailchimp').submit(function(){
+		var mailchimpform = $(this);
+		$.ajax({
+			url:mailchimpform.attr('action'),
+			type:'POST',
+			data:mailchimpform.serialize(),
+			success:function(data){
+				alert(data);
+			}
+		});
+		return false;
+	});
+});
+</script>

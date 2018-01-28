@@ -17,8 +17,7 @@
 			<?php the_field('hero_cta_interior'); ?>
 				<div class="row">
 					<div class = "col-sm-12 text-center">
-						<button class="btn btn-primary btn-lg active header mt-5">Learn more
-						</button>
+				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
 					</div>
 				</div>
 			</div>
@@ -26,7 +25,7 @@
 	</div>
 </div>	
 
-<div class = "component-red component-background" style="background-image: url(<?php the_field('statistic_background'); ?>);">
+<div id = "about" class = "component-red component-background" style="background-image: url(<?php the_field('statistic_background'); ?>);">
 
 <div class= "row text-center">
 	<div class = "col-md-12 text-center">
