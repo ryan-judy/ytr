@@ -1,6 +1,21 @@
 $(document).ready(function(){
 
-	console.log("loaded")
+	    $(".btn-search").on("click", function () {
+	    	var min = $(".min-price").val();
+	    		console.log(min)
+	    	var max = $(".max-price").val();
+	    		console.log(max)
+	    	var beds = $(".beds").val();
+	    		console.log(beds)
+	    	var baths = $(".baths").val();
+	    		console.log(baths)
+
+	    window.open('http://www.clevelandhotproperties.com/search/criteria/ba_' + baths + '/br_' + beds + '/px_' + max + '/pm_' +  min + '/s_2',
+	    	'_blank');
+
+	});
+
+
 
 $(window).scroll( function(){
 	var headerHeight = $('.header').outerHeight();
@@ -47,9 +62,7 @@ $('.count').each(function () {
 
 $('.carousel').carousel({
   interval: 1000
-})
-
-
-
+});
 
 });
+
