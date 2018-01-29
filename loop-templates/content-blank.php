@@ -112,8 +112,10 @@
                                 </div>
                              </form>	
 					  	</div>
-					  	<div role="tabpanel" class="tab-pane fade" id="buzz">	
-			          <select ng-model='minPriceSelect' class='form-control min-price'>
+					  	<div role="tabpanel" class="tab-pane fade" id="buzz">
+            <div class = "select-drops scrollable-menu">
+
+			          <select ng-model='minPriceSelect' class='min-price'>
             <option value='total'>Min Price</option>
             <option value='50000'>$50,000</option>
             <option value='75000'>$75,000</option>
@@ -202,7 +204,8 @@
             <option value='4.5'>4.5+</option>
             <option value='5'>5+</option>            
           </select>
-           <button class="btn btn-primary btn-md btn-search" type="submit" style="outline: none; cursor: inherit;" data-selector="a.btn, button.btn, button">SEE YOUR EVALUATION</button>
+      </div>
+           <button class="btn btn-primary btn-md btn-search" type="submit" style="outline: none; cursor: inherit;" data-selector="a.btn, button.btn, button">Search Homes Now</button>
 					  	</div>
 					  	<div role="tabpanel" class="tab-pane fade" id="references">
 					  		<div class="container-fluid mt-4">
