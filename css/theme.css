@@ -10660,7 +10660,7 @@ body {
     height: 35px;
     margin-top: 5px;
     margin-bottom: 9px;
-    margin-right: 5px; }
+    margin-right: 20px; }
   body .select-styled {
     position: absolute;
     top: 0;
@@ -10717,6 +10717,15 @@ body {
         display: none; }
   body .select-drops {
     margin-top: 20px; }
+  body #wpcf7-f1267-o1 {
+    max-width: 100%; }
+  body .wpcf7 input[type=submit] {
+    background-color: #751212 !important;
+    color: #f5f5f5; }
+  body .footing {
+    width: 22%; }
+  body .footer-form {
+    height: 80px; }
 
 /*
 * Use existing Bootstrap 4 classes and

@@ -36,10 +36,10 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="d-flex justify-content-end header px-5 p-2">
     <div class="mr-5 pt-2"><i class = "fa fa-phone"></i> 216-378-9618</div>
        <ul class="nav">
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://twitter.com/YoungTeamSells/" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.youtube.com/channel/UCJGFnReXndjiS5LVXzM8YAw" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.instagram.com/youngteamrealtors/" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
     </ul>
     </div>
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',

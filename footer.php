@@ -19,49 +19,40 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <h5>Young Team Realtors</h5>
                 <div class="row">
                     <div class="col-6">
-                        <ul class="list-unstyled">
-                            <li><a href="">About</a></li>
-                            <li><a href="">Agents</a></li>
-                            <li><a href="">Testimonials</a></li>
-                            <li><a href="">Contact</a></li>
-                        </ul>
+                    <img src="//localhost:3000/wp-content/uploads/2018/01/KellerWilliams_Greater_Cleveland_Logo_rev-W.png" class="mb-3">
+                                    <ul class="nav mt-5">
+                    <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://twitter.com/YoungTeamSells/" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.youtube.com/channel/UCJGFnReXndjiS5LVXzM8YAw" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.instagram.com/youngteamrealtors/" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 pl-4">
                         <ul class="list-unstyled">
-                            <li><a href="">Search Homes For Sale</a></li>
-                            <li><a href="">Featured Listings</a></li>
-                            <li><a href="">Guaranteed Sale Program</a></li>
-                            <li><a href="">Home Evaluaton</a></li>
+                            <li><a href="/about/">About</a></li>
+                            <li><a href="/about/agents/">Agents</a></li>
+                            <li><a href="/about/client-testimonials/">Testimonials</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                            <li><a href="http://www.clevelandhotproperties.com/">Search Homes For Sale</a></li>
+                            <li><a href="/featured-listings/">Featured Listings</a></li>
+                            <li><a href="https://www.itrustryan.com">Guaranteed Sale Program</a></li>
+                            <li><a href="http://www.clevelandhotproperties.com/what-is-my-home-worth">Home Evaluaton</a></li>
                         </ul>
                     </div>
                 </div>
-                <ul class="nav">
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
-                </ul>
-                <br>
             </div>
-            <div class="col-md-2">
-                <h5 class="text-md-right">Contact Us</h5>
+            <div class="col-md-3">
+                <h2 class="text-md-right">Contact Us</h5>
+                <p class="text-md-right">
+                216-378-9618<br>
+                info@youngteamrealtors.com<br>
+                29225 Chagrin Blvd. #300,<br> Pepper Pike, OH 44122<br>
                 <hr>
             </div>
-            <div class="col-md-5">
-                <form>
-                    <fieldset class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    </fieldset>
-                    <fieldset class="form-group">
-                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
-                    </fieldset>
-                    <fieldset class="form-group text-xs-right">
-                        <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
-                    </fieldset>
-                </form>
+            <div class="col-md-4">
+            <?php echo do_shortcode("[contact-form-7 id='1278' title='Footer Form']");?>
             </div>
         </div>
     </div>

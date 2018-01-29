@@ -2095,7 +2095,7 @@ $select-height: 35px;
   height: $select-height;
   margin-top: 5px;
   margin-bottom: 9px;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 .select-styled {
   position: absolute; 
@@ -2166,7 +2166,22 @@ $select-height: 35px;
 
 
 }
+#wpcf7-f1267-o1 {
+  max-width: 100%;
+}
 
+.wpcf7 input[type=submit] {
+  background-color: $brandcolor!important;
+  color: $white;
+}
+
+.footing {
+  width: 22%;
+}
+
+.footer-form {
+  height: 80px;
+}
 
 }
 

@@ -136,12 +136,7 @@
 				<h6 class= "pt-2"><?php the_field('newsletter_content'); ?></h6>
 			</div>
 			<div class = "col-md-4">
-				<input type = "text" class = "input" placeholder="Enter Your Email">
-				<span class="underline"></span>
-			</div>
-			<div class = "col-md-2">
-				<a href="<?php the_field('Newsletter_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
-			</div>
+				 <?php echo do_shortcode("[acme_mailchimp_form]"); ?>
 		</div>
 	</div>
 </section>

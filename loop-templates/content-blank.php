@@ -15,10 +15,10 @@
     <div class="d-flex justify-content-end header-home px-5 p-2">
     <div class="mr-5 pt-2"><i class = "fa fa-phone"></i> 216-378-9618</div>
    <ul class="nav">
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://twitter.com/YoungTeamSells/" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.youtube.com/channel/UCJGFnReXndjiS5LVXzM8YAw" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.instagram.com/youngteamrealtors/" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
     </ul>
     </div>
 
@@ -90,28 +90,10 @@
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane fade in active" id="profile">
-							<form id="form-contact1" method="post" class="form form-contact mt-4" role="form">
-                           		<div class="row">
-                                    <div class="col-xs-6 col-md-6 form-group">
-                                    	<input class="form-control contact_street_address" id="contact1_street_address" name="contact1_street_address" placeholder="Address, City, Zip" required="" autofocus="" type="text">
-									</div>
-                                    <div class="col-xs-6 col-md-6 form-group">
-                                    	<input class="form-control contact_email" id="contact1_email" name="contact1_email" placeholder="Email" required="" type="email">
-									</div>
-                               	</div>
-                                <div class="row">
-                                    <div class="col-xs-8 col-md-8 form-group">
-                                    	<input class="form-control contact_fullname" id="contact1_fullname" name="contact1_fullname" placeholder="Name" required="" autofocus="" type="text">
-									</div>
-                                    <div class="col-xs-4 col-md-4 form-group">
-                                        <input class="form-control contact_phone" id="contact1_phone" name="contact1_phone" placeholder="Phone Number" required="" type="phone">
-									</div>
-                                </div>
-                                <div class="footing">
-                                    <button class="btn btn-primary btn-md" type="submit" style="outline: none; cursor: inherit;" data-selector="a.btn, button.btn, button">NEXT STEP</button>
-                                </div>
-                             </form>	
-					  	</div>
+                            <div class = "mt-4">
+                                <?php the_field('sell_form');?>
+                            </div>
+    					  	</div>
 					  	<div role="tabpanel" class="tab-pane fade" id="buzz">
             <div class = "select-drops scrollable-menu">
 
@@ -205,7 +187,7 @@
             <option value='5'>5+</option>            
           </select>
       </div>
-           <button class="btn btn-primary btn-md btn-search" type="submit" style="outline: none; cursor: inherit;" data-selector="a.btn, button.btn, button">Search Homes Now</button>
+           <button class="btn btn-primary btn-md btn-search" type="submit" style="outline: none; cursor: inherit;" data-selector="a.btn, button.btn, button"><?php the_field('buy_form_button');?></button>
 					  	</div>
 					  	<div role="tabpanel" class="tab-pane fade" id="references">
 					  		<div class="container-fluid mt-4">
@@ -646,17 +628,8 @@ $count2=0;
 			<div class = "col-md-6">
 				<h6 class= "pt-2"><?php the_field('newsletter_cta'); ?></h6>
 			</div>
-<form action="/wp-admin/admin-ajax.php" id="mailchimp">
-	<!-- for my website the site_url() function returns https://rudrastyh.com -->
-	<input type="text" name="fname" placeholder="First name" />
-	<input type="text" name="lname" placeholder="Last name" />
-	<input type="email" name="email" placeholder="Email *" required />
- 
-	<input type="hidden" name="action" value="mailchimpsubscribe" />
-	<!-- we need action parameter to receive ajax request in WordPress -->
- 
-	<button>Subscribe</button>
-</form>
+            <div class = "col-md-4">
+                <?php echo do_shortcode("[acme_mailchimp_form]"); ?>
 
 		</div>
 	</div>

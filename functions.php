@@ -269,31 +269,105 @@ function set_posts_per_page_for_locations( $query ) {
 }
 add_action( 'pre_get_posts', 'set_posts_per_page_for_locations' );
 
-function rudr_mch_subscribe(){
-    $list_id = 'a75e3d52c6';
-    $api_key = '839b3fa974c710a124592e3a03d4a319-us9';
-    $result = json_decode( rudr_mailchimp_subscriber_status($_POST['email'], 'subscribed', $list_id, $api_key, array('FNAME' => $_POST['fname'],'LNAME' => $_POST['lname']) ) );
-    // print_r( $result ); 
-    if( $resul->status == 400 ){
-        foreach( $result->errors as $error ) {
-            echo '<p>Error: ' . $error->message . '</p>';
-        }
-    } elseif( $result->status == 'subscribed' ){
-        echo 'Thank you, ' . $result->merge_fields->FNAME . '. You have subscribed successfully';
+function acme_process_newsletter_subscription() {
+    // Block spam bots
+    if ( ! empty( $_POST['pooh_hundred_acre_wood_field'] ) ) {
+        return false;
     }
-    // $result['id'] - Subscription ID
-    // $result['ip_opt'] - Subscriber IP address
-    die;
+    if ( empty( $_POST['EMAIL'] ) ) {
+        return;
+    }
+ 
+    // Configure --------------------------------------
+    $api_key = '';
+    $list_id = 'a75e3d52c6';
+ 
+    // STOP Configuring -------------------------------
+
+        $redirect_to = isset( $_POST['redirect_to'] ) ? $_POST['redirect_to'] : home_url();
+    $msg = 'error';
+    $api_endpoint = 'https://<dc>.api.mailchimp.com/3.0/';
+    list(, $datacenter) = explode( '-', $api_key );
+    $api_endpoint = str_replace( '<dc>', $datacenter, $api_endpoint );
+    $url = $api_endpoint.'/lists/' . $list_id . '/members/';
+    $body = array(
+        'email_address' => sanitize_email( $_POST['EMAIL'] ),
+        'status' => 'subscribed'
+    );
+    $request_args = array(
+        'method'      => 'POST',
+        'timeout'     => 20,
+        'headers'     => array(
+            'Content-Type' => 'application/json',
+            'Authorization' => 'apikey ' . $api_key
+        ),
+        'body'        => json_encode( $body ),
+    );
+    $request = wp_remote_post( $url, $request_args );
+    $subscribe = is_wp_error( $request ) ? false : json_decode( wp_remote_retrieve_body( $request ) );
+    if ( $subscribe ) {
+        if ( isset( $subscribe->title ) && 'Member Exists' == $subscribe->title ) {
+            $msg = 'exists';
+        } elseif ( 'subscribed' == $subscribe->status ) {
+            $msg = 'success';
+        }
+    }
+    wp_redirect( esc_url_raw( add_query_arg( 'acme_signup', $msg, $redirect_to ) ) );
+    exit;
 }
  
-add_action('wp_ajax_mailchimpsubscribe','rudr_mch_subscribe');
-add_action('wp_ajax_nopriv_mailchimpsubscribe','rudr_mch_subscribe');
+add_action( 'admin_post_nopriv_acme_newsletter_subscription', 'acme_process_newsletter_subscription' );
+add_action( 'admin_post_acme_newsletter_subscription', 'acme_process_newsletter_subscription' );
 
+
+function acme_mailchimp_form_shortcode( $atts ) {
+ 
+    $out = '';
+ 
+
+    $submit_text = 'Sign me up!';
+ 
+    global $post;
+    $redirect_to = get_permalink( $post->ID ) . '#acme-newsletter-wrap';
+ 
+    // Display possible messages to the visitor.
+    $message = '';
+    if ( isset( $_GET['acme_signup'] ) ) {
+        $class = 'success';
+        if ( 'success' == $_GET['acme_signup'] ) {
+            $response   = 'Subscription successful.';
+        } elseif ( 'exists' == $_GET['acme_signup'] ) {
+            $response   = 'Your email address was already subscribed.';     
+        } else {
+            $response   = 'Sorry, subscription was not successful. Please try again.';
+            $class      = 'error';
+        }
+        $message = '<p class="acme-alert acme-alert-' . $class . '">' . $response . '</p>'; 
+    }
+    $out .= 
+        '<form action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" method="post" id="acme-mc-subscribe-form" name="acme-mc-subscribe-form">' . $message . '<div class="mc-email clear">
+        <input type = "email" name="EMAIL" id="mce-EMAIL" class = "input" placeholder="Enter Your Email">
+                <span class="underline"></span>
+                </div>
+                </div>
+            <div class = "col-md-2">
+    <input type="submit" value="' . $submit_text . '" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-lg header"></div>            </div>
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="pooh_hundred_acre_wood_field" tabindex="-1" value=""></div>
+        <input type="hidden" name="action" value="acme_newsletter_subscription">
+        <input type="hidden" name="redirect_to" value="' . $redirect_to . '"></form></div>';
+ 
+    return $out;
+}
+add_shortcode( 'acme_mailchimp_form', 'acme_mailchimp_form_shortcode' );
+add_filter('widget_text', 'do_shortcode');// Enable shortcodes in widgets
 
 function my_theme_add_scripts() {
  wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCGuaBtAxCdHN7DHilvAQLFga9cfs3o5Sw', array(), '3', true );
 
 	}
+
+
+
 
 function wpb_adding_scripts() {
     wp_register_script('scrollreveal', get_template_directory_uri() . '/js/scrollreveal.js', array('jquery'),'1.1', true);
