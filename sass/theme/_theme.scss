@@ -306,6 +306,7 @@ nav {
 
 }
 
+
 .btn-primary {
       cursor: pointer;
     background-color: $brandcolor;
@@ -313,6 +314,7 @@ nav {
     border-color: gray; 
     color: $white;
       &:hover {
+        color: $white!important;
     background-color: #901a1a;
         border-color: lightgray;
     &:focus {
@@ -360,6 +362,9 @@ nav {
   color: $white;
   background-color: $brandcolor;
   border-color: $brandcolor;
+  &:hover {
+    color: $white;
+  }
 }
 .btn-outline-primary {
   &:active {
@@ -416,21 +421,23 @@ nav {
   }
 
   .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
-    background-color: $white;
+    background-color: transparent;
     border-width: 3px;
-    color: $black;
-    border-color: $black;
+    color: $white;
+    border-color: $white;
 
 }
 
 .btn-secondary {
   cursor: pointer;
-    background-color: $black;
+    background-color: $white;
     background-image: none;
     border-color: gray; 
     color: $brandcolor;
     &:hover {
       background-color: $white;
+      border-color: $darkgray;
+      color: $darkgray;
       -webkit-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
   transform: translateY(-3px);
@@ -1511,6 +1518,9 @@ section {
 }
 }
 
+.featured-community {
+  max-height: 180px;
+}
 
 .nav-tabs-community {
   border: none;
@@ -1671,6 +1681,13 @@ $font_family_1: 'Roboto';
 
 .listing-photo {
   max-height: 244px;
+  border: 2px solid $white;
+}
+
+.gallery-photo{
+  max-height: 850px;
+  width: 77%;
+  border: 5px solid $darkgray;  
 }
 
 .listing-tagline {
@@ -1936,14 +1953,166 @@ $color_8: #000000;
     }
   }
 }
-.slide-control{color:#fff;font-size:80px;left:30px;margin-top:-70px;position:absolute;top:50%;}
-.slide-control.right{left:auto;right:30px;}
 
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  width: 100%;
-  height: 50px;
+.carousel-control-prev .carousel-control-next {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.6);
+}
+.carousel-control-next:hover,
+.carousel-control-next:focus,
+.carousel-control-next:active {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.95);
+}
+.carousel-control-prev {
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.0001) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.0001) 100%);
+}
+.carousel-control-next {
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.25) 100%);
+}
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:active {
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.0001) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.0001) 100%);
+}
+.carousel-control-next:hover,
+.carousel-control-next:focus,
+.carousel-control-next:active {
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.4) 100%);
+}
 
+.carousel .carousel-control span {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+.carousel .carousel-control.prev span {
+    margin-left: -10px;
+    left: 50%;
+}
+.carousel .carousel-control.next span {
+    margin-right: -10px;
+    right: 50%;
+}
+@media (min-width: 768px) {
+    .carousel-control span {
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        font-size: 30px;
+    }
+}
+
+.gallery-slider {
+
+  .carousel-control-prev {
+    padding-right: 10px;  
+    height: 60%;
+    background: none;    
+  }
+  .carousel-control-next {
+    padding-left: 10px;  
+    height: 60%;
+    background: none;    
+  }
+
+}
+
+
+
+.featured-slider {
+  .carousel-control {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.6);
+}
+.carousel-control:hover,
+.carousel-control:focus,
+.carousel-control:active {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.95);
+}
+.carousel-control-prev {
+    padding-left: 15px;  
+    margin-left: 23px;
+    margin-top: 130px;
+    height: 120px;
+    width: 5%; 
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.0001) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.0001) 100%);
+}
+.carousel-control-next {
+    padding-right: 15px;
+    margin-right: 8px;
+    margin-top: 130px;
+    height: 120px; 
+    width: 5%; 
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.25) 100%);
+}
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:active {
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.0001) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.0001) 100%);
+}
+.carousel-control-next:hover,
+.carousel-control-next:focus,
+.carousel-control-next:active {
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.4) 100%);
+}
+.carousel .carousel-control span {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+.carousel .carousel-control-prev span {
+    margin-left: -10px;
+    left: 50%;
+}
+.carousel .carousel-control-next span {
+    margin-right: -10px;
+    right: 50%;
+}
+@media (min-width: 768px) {
+    .carousel-control span {
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        font-size: 30px;
+    }
+}
+.carousel .carousel-control {
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    margin-top: -30px;
+}
+.carousel .carousel-control-prev {
+    border-radius: 0 5px 5px 0;
+}
+.carousel .carousel-control-next {
+    border-radius: 5px 0 0 5px;
+}
+
+}
+
+#myCarousel2 {
+  background-color: $darkgray;
+  margin: 22px 0px;
+}
+
+.fa-phone {
+  color: $white;
 }
 
 

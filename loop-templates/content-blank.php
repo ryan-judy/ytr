@@ -5,6 +5,7 @@
  * @package understrap
  */
   wp_enqueue_script( 'header', get_template_directory_uri() . '/js/header.js', array ( 'jquery' ), 1.1, true);
+  wp_enqueue_script( 'search', get_template_directory_uri() . '/js/search.js', array ( 'jquery' ), 1.1, true);
 
 ?>
 
@@ -261,14 +262,16 @@ $count2=0;
 <?php endwhile; wp_reset_query(); ?>
 
         </div>
+        <div class = "featured-slider">
         <a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <i class="fa fa-chevron-left fa-3x text-brand"></i>
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next text-faded" href="#carouselExample2" role="button" data-slide="next">
-            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <i class="fa fa-chevron-right fa-3x text-brand"></i>
             <span class="sr-only">Next</span>
         </a>
+        </div>
     </div>
 </div>
 </div>
@@ -375,8 +378,8 @@ $count2=0;
 		</div>
 		<div class="row no-gutter mt-4">
           <div class="col-lg-3 col-sm-6">
-            <a class="portfolio-box" href="#">
-              <img class="img-fluid community" src="<?php the_field('communities_module_1_image'); ?>" alt="" style = "width: 100%;">
+            <a class="portfolio-box" href="/locations/westside/">
+              <img class="img-fluid featured-community" src="<?php the_field('communities_module_1_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -387,8 +390,8 @@ $count2=0;
             </a>
           </div>
           <div class="col-lg-3 col-sm-6">
-            <a class="portfolio-box" href="#">
-              <img class="img-fluid community" src="<?php the_field('communities_module_2_image'); ?>" alt="" style = "width: 100%;">
+            <a class="portfolio-box" href="/locations/eastside/">
+              <img class="img-fluid featured-community" src="<?php the_field('communities_module_2_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -399,8 +402,8 @@ $count2=0;
             </a>
           </div>
           <div class="col-lg-3 col-sm-6">
-            <a class="portfolio-box" href="#">
-              <img class="img-fluid community" src="<?php the_field('communities_module_3_image'); ?>" alt="" style = "width: 100%;">
+            <a class="portfolio-box" href="/locations/southside/">
+              <img class="img-fluid featured-community" src="<?php the_field('communities_module_3_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
@@ -411,8 +414,8 @@ $count2=0;
             </a>
           </div>
           <div class="col-lg-3 col-sm-6">
-            <a class="portfolio-box" href="#">
-              <img class="img-fluid community" src="<?php the_field('communities_module_4_image'); ?>" alt="" style = "width: 100%;">
+            <a class="portfolio-box" href="/communities/downtown/">
+              <img class="img-fluid featured-community" src="<?php the_field('communities_module_4_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">

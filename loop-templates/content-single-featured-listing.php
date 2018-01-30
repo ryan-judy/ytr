@@ -18,9 +18,8 @@
                 <div class="row">
                     <div class = "col-sm-12 text-center">
                 <a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
-                <a class="btn btn-primary agent-contact" data-toggle="modal" data-target="#exampleModal">Request a Showing</a>
-
-                    </div>
+                <a data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Request a Showing</a>                    
+                </div>
                 </div>
             </div>
         </div>  
@@ -46,23 +45,23 @@
                             <h3 class="text-white">$<?php the_field('price')?></h3>
                         </div>
                         <div class = "col-md-2">
-                            BEDS
+                            <p class = "text-white">BEDS</p>
                             <h3 class="text-white"><?php the_field('beds')?></h3>
                         </div>
                         <div class = "col-md-2">
-                            BATHS
+                            <p class = "text-white">BATHS</p>
                             <h3 class="text-white"><?php the_field('baths')?></h3>
                         </div>
                         <div class = "col-md-2">
-                            SQ. FT
+                            <p class = "text-white">SQ. FT</p>
                             <h3 class="text-white"><?php the_field('sqft')?></h3>
                         </div>
                         <div class = "col-md-2">
-                            ACRES
+                            <p class = "text-white">ACRES</p>
                             <h3 class="text-white"><?php the_field('acres')?></h3>
                         </div>
                         <div class = "col-md-2">
-                            YBT
+                            <p class = "text-white">YBT</p>
                             <h3 class="text-white"><?php the_field('year-built')?></h3>
                         </div>
                     </div>
@@ -70,7 +69,7 @@
             </div>
         </div>
 </section>
- <div class="row text-center mt-3">
+ <div class="row no-gutter text-center mt-3">
     <div class="col-lg-12 offset-lg-2 my-5" id="slider">
         <h3 class = "mb-4">Gallery</h3>
 <?php 
@@ -81,33 +80,37 @@ $count1=0;
 $count2=0;
 if($images) : ?>
 <div class="col-lg-12 offset-lg-2" id="slider">
-    <div id="carousel" class=carousel slide">
+    <div id="carousel" class="carousel slide">
+
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <?php foreach( $images as $image ): ?>
             <div class="item<?php if($count1==0) : echo ' active'; endif; ?> carousel-item">
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />                
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid gallery-photo" />                
             </div><!-- item -->
         <?php 
         $count1++;        
         endforeach;         
         ?>       
       </div><!-- carousel inner -->
+            <div class = gallery-slider>
 
-            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>  
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <i class="fa fa-chevron-left fa-3x text-brand"></i>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <i class="fa fa-chevron-right fa-3x text-brand"></i>
+    <span class="sr-only">Next</span>
+  </a>
+              </div>
 
       <!-- Indicators -->
+
            <div id="myCarousel2" class="carousel slide">
              <!-- Carousel items -->
                 <div class="carousel-inner">
-
+            
                     <?php $chunks = array_chunk($images, 3); ?>
                     <?php foreach($chunks as $chunk): ?>
 
@@ -130,9 +133,10 @@ if($images) : ?>
                     <?php 
                     endforeach; ?>
                         </ul>
-                         <a class="left slide-control" href="#myCarousel2" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-    <a class="right slide-control" href="#myCarousel2" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-
+                        <div class = "thumbnail-slider">
+                        <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev"><i class="fa fa-angle-left fa-3x"></i></a>
+                        <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next"><i class="fa fa-angle-right fa-3x"></i></a>
+                        </div>
                 </div>
             </div>
         </div>
@@ -165,7 +169,7 @@ if($images) : ?>
     <div class = listing-description>
       <?php the_field('description'); ?>
     </div>
-                    <a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true">Inquire About This Home</a>
+                    <a data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-lg active header mt-4 to-the-top" role="button" aria-pressed="true">Inquire About This Home</a>
 
 </div>
 </div>
@@ -187,19 +191,20 @@ if($images) : ?>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Connect with an Agent Today</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Request a Showing for <?php the_title()?></h5>
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class = "component-form">
-         <?php the_field('agent_contact'); ?>
+                <?php echo do_shortcode("[contact-form-7 id='1279' title='Showing Request]"); ?>
           </div>
      </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

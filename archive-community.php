@@ -61,9 +61,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
           <?php endwhile; ?>
 
   <div class="row">
-    <div class="col">
-      <p class="mb-1">Filters:</p>
-    </div>
   </div>
   <div class="row mb-3">
     <div class="col">
