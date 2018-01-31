@@ -269,6 +269,17 @@ function set_posts_per_page_for_locations( $query ) {
 }
 add_action( 'pre_get_posts', 'set_posts_per_page_for_locations' );
 
+
+function set_posts_per_page_for_listings( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive( 'featured-listing' ) ) {
+    $query->set( 'posts_per_page', '15' );
+    $query->set( 'meta_key', 'price' );
+    $query->set( 'orderby', 'meta_value' );
+    $query->set( 'order', 'DESC' );
+  }
+}
+add_action( 'pre_get_posts', 'set_posts_per_page_for_listings' );
+
 function acme_process_newsletter_subscription() {
     // Block spam bots
     if ( ! empty( $_POST['pooh_hundred_acre_wood_field'] ) ) {

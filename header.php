@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-    <div class="d-flex justify-content-end header px-5 p-2">
+    <div class="d-flex justify-content-end header header-top px-5 p-2">
     <div class="mr-5 pt-2"><i class = "fa fa-phone"></i> 216-378-9618</div>
        <ul class="nav">
                     <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>

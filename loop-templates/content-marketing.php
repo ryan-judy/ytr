@@ -29,7 +29,7 @@
 
 <div class= "row text-center">
 	<div class = "col-md-12 text-center">
-		<?php the_field('statistic_header_1'); ?>
+		<h2 class = "text-white mb-5"><?php the_field('statistic_heading'); ?></h2>
 	</div>
 		<div class = "col-md-4">
 			<h2 class = 'text-light'><?php the_field('statistic_header_1'); ?></h2>
@@ -56,6 +56,7 @@
 </div>
 					<div class = "col-md-8">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<div class = "marketing-slider">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -82,13 +83,14 @@
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <i class="fa fa-chevron-left fa-3x text-brand"></i>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <i class="fa fa-chevron-right fa-3x text-brand"></i>
     <span class="sr-only">Next</span>
   </a>
+</div>
 </div>
 </div>
 <div class= "col-md-2">
@@ -110,7 +112,6 @@
 					<h4 class="pt-3 text-white"><?php the_field('digital_content'); ?>
 
 </h4>					
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
 				<img class = "marketing-module" src="<?php the_field('computer_image'); ?>" alt="<?php echo $image['alt']; ?>" />
@@ -118,7 +119,7 @@
 		</div>
 </div>	
 
-<div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+<div class = "component-red component-background component-pricing" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
 			<div class = "col-md-6">
 				<img class = "marketing-module-2" src="<?php the_field('offline_image'); ?>" alt="<?php echo $image['alt']; ?>" />
@@ -128,7 +129,6 @@
 </h2>
 					<h4 class="pt-3 text-white"><?php the_field('offline_subhead'); ?></h4>
 					<h4 class="pt-3 text-white"><?php the_field('offline_content'); ?></h4>					
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
 			<div class = "col-md-1">
 			</div>		

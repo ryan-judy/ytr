@@ -169,7 +169,7 @@ if($images) : ?>
     <div class = listing-description>
       <?php the_field('description'); ?>
     </div>
-                    <a data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-lg active header mt-4 to-the-top" role="button" aria-pressed="true">Inquire About This Home</a>
+                    <a data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-lg active header mt-4 to-the-top" role="button" aria-pressed="true">Request a Showing</a>
 
 </div>
 </div>

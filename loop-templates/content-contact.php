@@ -4,6 +4,8 @@
  *
  * @package understrap
  */
+  wp_enqueue_script( 'google-maps-contact', get_template_directory_uri() . '/js/google-maps-contact.js', array ( 'jquery' ), 1.1, true);
+
 
 ?>
 <div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
@@ -18,11 +20,11 @@
   </div>
 </div>  
 
-       <section class = "component-form">    
+       <section class = "component-form-2">    
        <div class = "container">     
                 <div class="row">
                     <div class="col-md-8 mt-5">
-                              <div class = "component-form">
+                              <div class = "component-form-2">
                                 <div class="about_our_company" style="margin-bottom: 20px;">
                         <h1> <?php the_field('contact_header'); ?></h1>
                         <p> <?php the_field('contact_subhead'); ?></p>
@@ -35,7 +37,7 @@
                             <strong><i class="fa fa-map-marker"></i> Address</strong><br>
                             <?php the_field('address');?>
                         </p> 
-                        <p><strong><i class="fa fa-phone"></i> Phone Number</strong><br>
+                        <p><strong><i class="fa fa-phone text-muted"></i> Phone Number</strong><br>
                             <?php the_field('contact_number');?></p>
                         <p>
                             <strong><i class="fa fa-envelope"></i>  Email Address</strong><br>

@@ -423,7 +423,7 @@ nav {
 
   .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle {
     background-color: transparent;
-    border-width: 3px;
+    border-width: 2px;
     color: $white;
     border-color: $white;
 
@@ -437,7 +437,7 @@ nav {
     color: $brandcolor;
     &:hover {
       background-color: $white;
-      border-color: $darkgray;
+      border-color: gray;
       color: $darkgray;
       -webkit-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
@@ -455,8 +455,12 @@ nav {
 
 .header {
   font-family: 'Lato', sans-serif;
-  background-color: black;
+  background-color: $darkgray;
   color: $white;
+}
+
+.header-top {
+  height: 55px;
 }
 
 .header-home {
@@ -466,6 +470,10 @@ nav {
   height: 55px;
 }
 
+.pricing-photo {
+  max-height: 500px;
+  margin-left: 150px;
+}
 
 
 
@@ -657,13 +665,17 @@ footer .form-control {
 .component-background {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .component-trans {
   background-color: transparent;
   height: 100%;
   padding: 40px 0px;
+}
+
+
+.component-pricing {
+  padding-top: 0px;
 }
 
     .component-overlay {
@@ -718,7 +730,8 @@ footer .form-control {
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: $darkgray;
-
+@media (max-width: 768px) {
+      background-attachment: scroll; } 
 
 
 }
@@ -773,6 +786,10 @@ footer .form-control {
       font-weight: bolder;
       font-style: italic;
     }
+      @media (max-width: 800px) {
+      text-align: center;
+      margin-left: 40px;
+  }
 
 }
 
@@ -993,6 +1010,10 @@ input:focus::-webkit-input-placeholder {
     span {
   }
 }
+
+.listing-page-builing {
+  width: 100%;
+}
 .card-custom {
   overflow: hidden;
   min-height: 450px;
@@ -1007,6 +1028,13 @@ input:focus::-webkit-input-placeholder {
   margin-bottom: 75px;
   background-color: white;
   padding-bottom: 20px;
+  color: $darkgray;
+}
+.card-custom-featured-listing {
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  padding: 30px;
+  background-color: white;
   color: $darkgray;
 }
 
@@ -2124,6 +2152,84 @@ $color_8: #000000;
 
 }
 
+.marketing-slider {
+  .carousel-control {
+    opacity: 1;
+}
+.carousel-control:hover,
+.carousel-control:focus,
+.carousel-control:active {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.95);
+}
+.carousel-control-prev {
+    padding-left: 15px;  
+    margin-left: 23px;
+    margin-top: 130px;
+    height: 120px;
+    width: 5%; 
+    background: none;
+    background: none;
+}
+.carousel-control-next {
+    padding-right: 15px;
+    margin-right: 8px;
+    margin-top: 130px;
+    height: 120px; 
+    width: 5%; 
+    background: none;
+    background: none;
+}
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:active {
+    background: none;
+    background: none;
+}
+.carousel-control-next:hover,
+.carousel-control-next:focus,
+.carousel-control-next:active {
+    background: none;
+    background: none;
+}
+.carousel .carousel-control span {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+.carousel .carousel-control-prev span {
+    margin-left: -10px;
+    left: 50%;
+}
+.carousel .carousel-control-next span {
+    margin-right: -10px;
+    right: 50%;
+}
+@media (min-width: 768px) {
+    .carousel-control span {
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        font-size: 30px;
+    }
+}
+.carousel .carousel-control {
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    margin-top: -30px;
+}
+.carousel .carousel-control-prev {
+    border-radius: 0 5px 5px 0;
+}
+.carousel .carousel-control-next {
+    border-radius: 5px 0 0 5px;
+}
+
+}
+
 #myCarousel2 {
   background-color: $darkgray;
   margin: 22px 0px;
@@ -2131,6 +2237,108 @@ $color_8: #000000;
 
 .fa-phone {
   color: $white;
+}
+
+.component-form-2 {
+    background: #ffffff;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 40px;
+  border-radius: 3px;
+  margin-left: 0px;
+  margin-top: 10px;
+
+
+  .wpcf7 {
+h1, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, button {
+ -webkit-transition: all 0.3s ease-in-out;
+ transition: all 0.3s ease-in-out;
+}
+
+
+h1 {
+  box-sizing: border-box;
+  padding: 10px;
+    color: $darkgray;
+
+}
+input, textarea, {
+  width: 100%;
+  margin: 20px 0px;
+  display: block;
+  border: none;
+  padding: 15px 0;
+  border-bottom: solid 1px $brandcolor;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, $brandcolor 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, $brandcolor 4%);
+  background-position: -300px 0;
+  background-size: 700px 60px;
+  background-repeat: no-repeat;
+  color: $darkgray;
+  border-radius: 0em;
+      @media screen and (max-width: 575px) {
+      margin-left: 0px;
+    }
+}
+textarea {
+  border-bottom: 0px;
+  height: 100px;
+  resize: none;
+  background-size: 900px 30px;
+    background-position: -300px 30px;
+      -webkit-transition: all 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+
+}
+
+textarea.active[type=submit] {
+  width: 40%;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $brandcolor;
+}
+input:focus, textarea:focus  {
+ box-shadow: none;
+ outline: none;
+    background-position: 0 100%; 
+      border-color: transparent;
+
+}
+
+textarea:focus {
+  border-bottom: solid 2px $brandcolor;
+
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+ color: $brandcolor;
+ font-size: 15px;
+ -webkit-transform: translateY(-40px);
+ transform: translateY(-20px);
+ visibility: visible !important;
+
+}
+input.active[type=submit], textarea.active[type=submit] {
+  border: none;
+  background: $brandcolor;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 12px;
+  width: 150px;
+  color: #ffffff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+input.active[type=submit]:hover, textarea.active[type=submit]:hover  {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+}
 }
 
 

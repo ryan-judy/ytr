@@ -19,10 +19,10 @@
       <?php the_field('hero_cta_interior'); ?>
       </div>
               <div class="row">
-          <div class = "col-sm-6">
+          <div class = "col-md-7">
           </div>
-          <div class = "col-sm-6">
-				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
+          <div class = "col-md-5">
+				<a href="#about" class="btn btn-primary btn-lg active header mt-4  mr-2 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
           </div>
         </div>
     </div>  
@@ -35,6 +35,7 @@
 		<div class = "row no-gutter">
 			<div class = "col-md-12 text-center">
 				<h2 class = "header-dark"><?php the_field('seller_stats_header'); ?></h2>
+				<p class = "text-dark"><?php the_field('seller_stats_content');?>
 			</div>
 		</div>
 		<div class = "row mt-4">
@@ -48,11 +49,11 @@
 	</div>
 </section>
 
-<div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+<div class = "component-red component-background" style="background-image: url(<?php the_field('gsp_background'); ?>);">
 	<div class="container">
 		<div class = "row">
 			<div class = "col-md-6">
-				<h2 class = "header-white text-center"><?php the_field('gsp_header'); ?></h2>
+				<h2 class = "header-white text-center pl-5"><?php the_field('gsp_header'); ?></h2>
 				<div class="d-flex align-items-center"><i class = "fa <?php the_field('gsp_subhead_1_icon'); ?> fa-inverse fa-3x pr-3"></i>
 					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_1'); ?></h4>
 				</div>
@@ -62,7 +63,7 @@
 				<div class="d-flex align-items-center"><i class = "fa <?php the_field('gsp_subhead_3_icon'); ?> fa-inverse fa-3x pr-3"></i>
 					<h4 class="pt-3 text-white"><?php the_field('gsp_subhead_3'); ?></h4>
 				</div>				
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header sr-button mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('gsp_button'); ?></a>
+				<a href="<?php the_field('gsp_button_link'); ?>" class="btn btn-secondary btn-lg active header sr-button mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('gsp_button'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center">
 			</div>			
@@ -137,55 +138,42 @@
 	</div>
 </section>
 <div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-6">
-				<img src="<?php the_field('find_agent'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img src="<?php the_field('easy_exit_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
-			<div class = "col-md-5 text-right pr-5">
+			<div class = "col-md-6 text-right">
 				<h2 class = "header-white"><?php the_field('easy_exit_header'); ?></h2>
+			<h4 class = 'text-light'><?php the_field('easy_exit_subhead'); ?></h4>
 
 				<h4 class="pt-3 text-white"><?php the_field('easy_exit_content'); ?></h4>
 
-			</div>	
-			<div class = "col-md-1">
 			</div>		
 		</div>
+	</div>
 </div>	
-<div class = "component-red component-background");">
+<div class = "component-red component-background component-pricing");">
 		<div class = "row">
 			<div class = "col-md-1">
 			</div>
-			<div class = "col-md-5 pl-5">
+			<div class = "col-md-5">
 				<h2 class = "header-white"><?php the_field('pricing_heading'); ?>
 </h2>
-					<h4 class="pt-3 text-white"><?php the_field('pricing_subhead'); ?>
+					<h4 class="text-white"><?php the_field('pricing_subhead'); ?>
 </h4>
 					<h4 class="pt-3 text-white"><?php the_field('pricing_content'); ?></h4>					
 				<a href="<?php the_field('pricing_button_link'); ?>" class="btn btn-secondary btn-lg active header  sr-button mt-4" role="button" aria-pressed="true"><?php the_field('pricing_button_cta'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
-				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img src="<?php the_field('pricing_image'); ?>" alt="<?php echo $image['alt']; ?>" class="pricing-photo" />
 			</div>			
 		</div>
 </div>	
-<section class = "component-red">
-	<div class="container">
-		<div class = "row no-gutter">
-			<div class = "col-md-12 text-center">
-				<h2 class = "header-white pb-4"><?php the_field('home_value_header'); ?></h2>
-			</div>
-		</div>	  
-		<div class = "row no-gutter">
-			<div class = "col-md-3">
-			</div>
-			<div class = "col-md-6 text-center">
-				<input type = "text" class = "input" placeholder="Enter Your Address">
-				<span class="underline underline-value"></span>
-			</div>
-			<div class = "col-md-3">
-				<a href="<?php the_field('newsletter_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('newsletter_button_CTA'); ?></a>
+<div class = "component-form mt-5">
+	<h1 class = "text-center"><?php the_field('selling_contact_header'); ?></h1>
+	<div class = "col-md-12">
+           <?php the_field('selling_contact_form'); ?>
+    </div>
 
-			</div>
-		</div>
-	</div>
-</section>
+</div>

@@ -16,12 +16,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
-					<div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
-                    <div class = "hero-interior-cta">
-                        <?php the_field('hero_cta_interior'); ?>
-                        
-                    </div>
-                </div>  
+<section class = "component">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -78,22 +73,26 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <?php get_footer(); ?>
 
-   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Request a Showing for <?php the_title()?></h5>
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        <div class = "component-form">
+                <?php echo do_shortcode("[contact-form-7 id='1279' title='Showing Request]"); ?>
+          </div>
+     </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</section>
 </div>
-

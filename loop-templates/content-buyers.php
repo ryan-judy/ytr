@@ -34,7 +34,7 @@
 			<div class = "col-md-5 pl-5">
 				<h2 class = "header-white"><?php the_field('search_header'); ?></h2>
 					<h4 class="pt-3 text-white"><?php the_field('search_content'); ?>		
-				<a href="<?php the_field('search_homes_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('search_homes_CTA') ?></a>
+				<a href="<?php the_field('search_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('search_button_cta') ?></a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
 				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
@@ -101,7 +101,7 @@
 		</div>		
 	</div>
 </section>
-<div class = "component component-background" style="background-image: url(<?php the_field('cta_popout_image'); ?>);">
+<div class = "component component-background" style="background-image: url(<?php the_field('cta_popout_image'); ?>); background-position: center">
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-12">

@@ -18,6 +18,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
+<section class = "component component-pricing">
 
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -72,7 +73,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 </div><!-- Wrapper end -->
 
 
-
+</section>
 <?php get_footer(); ?>
 
 

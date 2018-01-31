@@ -9,7 +9,7 @@
 ?>
 
  <section class="listing-page-builing">
-      <div class="container">
+      <div class="container card-custom-featured-listing">
          <div class="row">
                <div class="col-xl-3">
 				  <?php $images = get_field('listing_photos');?>
@@ -36,7 +36,7 @@
                      </div>
                   </div>
                   <?php $desc = get_field('description');?>
-                  <?php $truncated = substr($desc, 0, 140) . '...'?>
+                  <?php $truncated = substr($desc, 0, 340) . '...'?>
                   <p class= "mt-3">
                      <?php echo $truncated ?>
                      <a href=<?php
@@ -47,8 +47,9 @@
                   <ul class="cls-for-btn-listing">
                      <li>
                         <a href=<?php
-					the_permalink(); ?>>View Details</a>
-                        <a class = "text-light" data-toggle="modal" data-target="#exampleModal">Schedule a Showing</a>
+					the_permalink(); ?> clsss= "btn btn-primary btn-lg active header mt-4">See More Information</a>
+                        <a href="<?php
+          the_field('virtual_tour_link'); ?>" class = "text-light" target="_blank">View the Virtual Tour</a>
 						 </li>
 						    
                   </ul>
@@ -58,4 +59,5 @@
             </div>
       </div>
    </section>
+
 

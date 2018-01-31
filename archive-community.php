@@ -43,7 +43,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 				<?php if ( have_posts() ) : ?>
 
 
-<div class="container mt-3">
+<div class="container my-4">
 
           <?php /* Start the Loop */ ?>
           <?php while ( have_posts() ) : the_post(); ?>
