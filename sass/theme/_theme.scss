@@ -66,6 +66,7 @@ font-family: 'Lato', sans-serif;
 }
 
 h2 {
+  font-size: 38px;
   font-weight: lighter;
 }
 
@@ -844,7 +845,10 @@ input:focus::-webkit-input-placeholder {
     width: 50%;
   }
 }
+.timelines {
+    padding-top: 0px;
 
+}
 .timeline {
   list-style: none;
   padding: 20px 0 20px;
@@ -881,6 +885,7 @@ input:focus::-webkit-input-placeholder {
       clear: both;
     }
     > {
+
       .timeline-panel {
         width: 46%;
         float: left;
@@ -933,6 +938,7 @@ input:focus::-webkit-input-placeholder {
         border-bottom-left-radius: 50%;
       }
     }
+
     &.timeline-inverted > .timeline-panel {
       float: right;
       &:before {
@@ -971,6 +977,7 @@ input:focus::-webkit-input-placeholder {
 
 .timeline-title {
   margin-top: 0;
+  font-weight: lighter;
   color: inherit;
 }
 
@@ -1010,6 +1017,7 @@ input:focus::-webkit-input-placeholder {
   padding: 30px;
   background-color: white;
   color: $darkgray;
+  margin-bottom: 30px;
 }
 .card-custom-community {
   overflow: hidden;
@@ -1229,7 +1237,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 .testimonial {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .testimonial-section {
@@ -1258,13 +1266,12 @@ input:focus::-webkit-input-placeholder {
 .testimonial-desc {
   margin-top: 20px;
   text-align: left;
-  padding-left: 15px;
   img {
     border: 1px solid #f5f5f5;
     border-radius: 150px;
-    height: 70px;
+    height: 100px;
     padding: 3px;
-    width: 70px;
+    width: 100px;
     display: inline-block;
     vertical-align: top;
   }
@@ -1349,6 +1356,13 @@ section {
   }
 }
 
+.about-us {
+  max-height: 900px;
+}
+
+.communicate-image {
+  max-height: 700px;
+}
 
 .about_our_company {
   text-align: center;
@@ -1679,6 +1693,11 @@ $font_family_1: 'Roboto';
   }
 }
 
+.career-image {
+  min-height: 500px;
+  width: 100%;
+}
+
 .listing-photo {
   max-height: 244px;
   border: 2px solid $white;
@@ -1931,7 +1950,6 @@ $color_8: #000000;
   }
   .info {
     width: 300px;
-    margin: 50px auto;
     text-align: center;
     h1 {
       margin: 0 0 15px;
@@ -2123,6 +2141,7 @@ $color_8: #000000;
   padding-bottom: 40px;
   border-radius: 3px;
   margin-left: 0px;
+  margin-top: 80px;
 
 
   .wpcf7 {

@@ -9179,6 +9179,7 @@ body {
   body .inline-block {
     display: inline-block; }
   body h2 {
+    font-size: 38px;
     font-weight: lighter; }
   body h3 {
     font-weight: lighter;
@@ -9725,6 +9726,8 @@ body {
       body .connect {
         margin-bottom: 130px;
         width: 50%; } }
+  body .timelines {
+    padding-top: 0px; }
   body .timeline {
     list-style: none;
     padding: 20px 0 20px;
@@ -9826,6 +9829,7 @@ body {
     background-color: #5bc0de !important; }
   body .timeline-title {
     margin-top: 0;
+    font-weight: lighter;
     color: inherit; }
   body .timeline-body > p, body .timeline-body > ul {
     margin-bottom: 0; }
@@ -9850,7 +9854,8 @@ body {
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
     padding: 30px;
     background-color: white;
-    color: #1d1919; }
+    color: #1d1919;
+    margin-bottom: 30px; }
   body .card-custom-community {
     overflow: hidden;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
@@ -9998,7 +10003,7 @@ body {
     -o-object-fit: cover;
     object-fit: cover; }
   body .testimonial {
-    margin-bottom: 30px; }
+    margin-bottom: 40px; }
   body .testimonial-section {
     font-weight: lighter;
     line-height: 25px;
@@ -10021,14 +10026,13 @@ body {
       margin-left: -15px; }
   body .testimonial-desc {
     margin-top: 20px;
-    text-align: left;
-    padding-left: 15px; }
+    text-align: left; }
     body .testimonial-desc img {
       border: 1px solid #f5f5f5;
       border-radius: 150px;
-      height: 70px;
+      height: 100px;
       padding: 3px;
-      width: 70px;
+      width: 100px;
       display: inline-block;
       vertical-align: top; }
   body .testimonial-writer {
@@ -10140,6 +10144,10 @@ body {
       .wpcf7 textarea:focus,
       .wpcf7 body section#contact textarea:focus, body section#contact .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 body section#contact .wpcf7-validation-errors:focus {
         box-shadow: none; }
+  body .about-us {
+    max-height: 900px; }
+  body .communicate-image {
+    max-height: 700px; }
   body .about_our_company {
     text-align: center; }
     body .about_our_company h1 {
@@ -10351,6 +10359,9 @@ body {
       text-indent: initial; }
     body #myCarousel .carousel-indicators > li.active img {
       opacity: 0.7; }
+  body .career-image {
+    min-height: 500px;
+    width: 100%; }
   body .listing-photo {
     max-height: 244px;
     border: 2px solid #f5f5f5; }
@@ -10538,7 +10549,6 @@ body {
     float: left; }
   body .container .info {
     width: 300px;
-    margin: 50px auto;
     text-align: center; }
     body .container .info h1 {
       margin: 0 0 15px;
@@ -10676,7 +10686,8 @@ body {
     width: 100%;
     padding-bottom: 40px;
     border-radius: 3px;
-    margin-left: 0px; }
+    margin-left: 0px;
+    margin-top: 80px; }
     body .component-form .wpcf7 h1, body .component-form .wpcf7 input::-webkit-input-placeholder, body .component-form .wpcf7 textarea::-webkit-input-placeholder, body .component-form .wpcf7 button {
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }

@@ -6,12 +6,17 @@
  */
 
 ?>
-				<div class = "hero-interior" style="background-image: url(<?php the_field('hero'); ?>);">
-					<div class = "hero-interior-cta">
-						<?php the_field('hero_cta_interior'); ?>
-										<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
-
+				<div class = "hero-interior about-us" style="background-image: url(<?php the_field('hero'); ?>);">
+					  <div class = "header-overlay">
+  </div>  
+					<div class = "hero-interior-cta-center text-center">
+			<?php the_field('hero_cta_interior'); ?>
+				<div class="row">
+					<div class = "col-sm-12 text-center">
+				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
 					</div>
+				</div>
+			</div>
 				</div>	
 <section class = "component text-center" id="about">
 
@@ -20,17 +25,18 @@
 <h4 class = "text-dark"><?php the_field('subheader_content'); ?></h4>
 </div>
 </section>
-<section class = "component">
+<section class = "component timelines">
 	<div class="container">
 	  <div class="page-header">
-	    <h1 id="timeline" class = "text-center"><?php the_field('timeline_heading'); ?></h1>
+	    <h2 id="timeline" class = "text-center"><?php the_field('timeline_heading'); ?></h2>
 	  </div>
 	  <ul class="timeline">
 	    <li>
-	      <div class="timeline-badge"><i class="fa fa-check"></i></div>
+	      <div class="timeline-badge danger"><i class="fa fa-building"></i></div>
 	      <div class="timeline-panel">
 	        <div class="timeline-heading">
 	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_1'); ?></h4>
+	          	          <hr>
 	        </div>
 	        <div class="timeline-body">
 	          <p><?php the_field('timeline_card_content_1'); ?></p>
@@ -38,10 +44,11 @@
 	      </div>
 	    </li>
 	    <li class="timeline-inverted">
-	      <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+	      <div class="timeline-badge"><i class="fa fa-users"></i></div>
 	      <div class="timeline-panel">
 	        <div class="timeline-heading">
 	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_2'); ?></h4>
+	          	          <hr>
 	        </div>
 	        <div class="timeline-body">
 	          <p><?php the_field('timeline_card_content_2'); ?></p>
@@ -49,85 +56,103 @@
 	      </div>
 	    </li>
 	    <li>
-	      <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+	      <div class="timeline-badge primary"><i class="fa fa-id-card"></i></div>
 	      <div class="timeline-panel">
 	        <div class="timeline-heading">
 	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_3'); ?></h4>
+	          	          <hr>
 	        </div>
 	        <div class="timeline-body">
 	          <p><?php the_field('timeline_card_content_3'); ?></p>
 	        </div>
 	      </div>
 	    </li>
-	    <li class="timeline-inverted">
+ <li class="timeline-inverted">
+	      <div class="timeline-badge warning"><i class="fa fa-home"></i></div>
 	      <div class="timeline-panel">
 	        <div class="timeline-heading">
 	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_4'); ?></h4>
+	          	          <hr>
 	        </div>
 	        <div class="timeline-body">
 	          <p><?php the_field('timeline_card_content_4'); ?></p>
 	        </div>
 	      </div>
 	    </li>
-	    <li>
-	      <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+	   	    <li>
+	      <div class="timeline-badge info"><i class="fa fa-bookmark"></i></div>
 	      <div class="timeline-panel">
 	        <div class="timeline-heading">
-	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_4'); ?></h4>
-	        </div>
-	        <div class="timeline-body">
-	          <p><?php the_field('timeline_card_content_4'); ?></p>
-	          <hr>
-	          <div class="btn-group">
-	            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-	              <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
-	            </button>
-	            <ul class="dropdown-menu" role="menu">
-	              <li><a href="#">Action</a></li>
-	              <li><a href="#">Another action</a></li>
-	              <li><a href="#">Something else here</a></li>
-	              <li class="divider"></li>
-	              <li><a href="#">Separated link</a></li>
-	            </ul>
-	          </div>
-	        </div>
-	      </div>
-	    </li>
-	    <li class="timeline-inverted">
-	      <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-	      <div class="timeline-panel">
-	        <div class="timeline-heading">
-	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_4'); ?></h4>
+	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_5'); ?></h4>
+	          	        	<hr>
 	        </div>
 	        <div class="timeline-body">
 	          <p><?php the_field('timeline_card_content_5'); ?></p>
 	        </div>
 	      </div>
 	    </li>
+	    <li class="timeline-inverted">
+	      <div class="timeline-badge success"><i class="fa fa-line-chart"></i></div>
+	      <div class="timeline-panel">
+	        <div class="timeline-heading">
+	          <h4 class="timeline-title"><?php the_field('timeline_card_heading_6'); ?></h4>
+	          <hr>
+	        </div>
+	        <div class="timeline-body">
+	          <p><?php the_field('timeline_card_content_6'); ?></p>
+	        </div>
+	      </div>
+	    </li>
 	  </ul>
 	</div>
 </section>
-<div class = "component-dark component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
-					<h2 class = "header-white text-center"><?php the_field('careers_heading'); ?></h2>
-
-	<div class="container">
+<section class = "component-red component-background">
+		<h2 class = "header-white text-center mb-5"><?php the_field('vendors_heading'); ?></h2>
 		<div class = "row">
-			<div class = "col-md-6">
-				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
-					<h4 class="pt-3 text-white"><?php the_field('career_content_1'); ?></h4>
-				</div>
-				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
-					<h4 class="pt-3 text-white"><?php the_field('career_content_1'); ?></h4>
-				</div>
-				<div class="d-flex align-items-center"><i class = "fa fa-user fa-inverse fa-3x pr-3"></i>
-					<h4 class="pt-3 text-white"><?php the_field('career_content_1'); ?></h4>
-				</div>				
-				<a href="<?php the_field('career_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
+			<div class = "col-md-1">
 			</div>
-			<div class = "col-md-6 text-center">
+			<div class = "col-md-2 text-center pt-4">
+				<img src="<?php the_field('vendor_image_1'); ?>" alt="<?php echo $image['alt']; ?>"
+				 />
+			</div>
+			<div class = "col-md-2 text-center pt-4">
+				<img src="<?php the_field('vendor_image_2'); ?>" alt="<?php echo $image['alt']; ?>"/>
+			</div>
+			<div class = "col-md-2 text-center pt-4">
+				<img src="<?php the_field('vendor_image_3'); ?>" alt="<?php echo $image['alt']; ?>"/>
+			</div>
+			<div class = "col-md-2 text-center pt-4">
+				<img src="<?php the_field('vendor_image_4'); ?>" alt="<?php echo $image['alt']; ?>"/>
+			</div>
+			<div class = "col-md-2 text-center pt-4">
+				<img src="<?php the_field('vendor_image_5'); ?>" alt="<?php echo $image['alt']; ?>"/>
+			</div>
+			<div class = "col-md-1">
+			</div>
+		</div>
+	</section>
+<div class = "component component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+					<h2 class = "header-dark text-center mb-5"><?php the_field('careers_heading'); ?></h2>
+
+		<div class = "row">
+						<div class = "col-md-1">
+			</div>
+			<div class = "col-md-5 pl-5 pr-2">
+				<div class="d-flex align-items-center"><i class = "fa fa-bullhorn fa-3x pr-3 text-brand"></i>
+					<h4 class="pt-3 text-dark"><?php the_field('career_content_1'); ?></h4>
+				</div>
+				<div class="d-flex align-items-center"><i class = "fa fa-heartbeat fa-3x pr-3 text-brand"></i>
+					<h4 class="pt-3 text-dark"><?php the_field('career_content_2'); ?></h4>
+				</div>
+				<div class="d-flex align-items-center pl-3"><i class = "fa fa-dollar fa-3x pr-3 text-brand"></i>
+					<h4 class="pt-3 text-dark"><?php the_field('career_content_3'); ?></h4>
+				</div>				
+				<a href="<?php the_field('career_button_link'); ?>" class="btn btn-primary btn-lg mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
+			</div>
+			<div class = "col-md-6 text-center d-flex align-items-center">
+				<img src="<?php the_field('career_image'); ?>" alt="<?php echo $image['alt']; ?>" class="career-image" />
 			</div>			
 		</div>
-	</div>
 </div>		
 <section class = "newsletter-cta">
 	<div class = "container">

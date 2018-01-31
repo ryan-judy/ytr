@@ -18,7 +18,7 @@
                     <?php the_field('testimonial_content'); ?>
                 </div>
                 <div class="testimonial-desc">
-                <img src="<?php the_field('testimonial_picture'); ?>">
+                <img src="<?php the_field('testimonial_image'); ?>">
                     <div class="testimonial-writer">
                       <div class="testimonial-writer-name"><?php the_field('testimonial_author'); ?></div>
                       <div class="testimonial-writer-designation"><?php the_field('testimonial_city'); ?></div>

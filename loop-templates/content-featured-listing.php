@@ -12,7 +12,7 @@
       <div class="container">
          <div class="row">
                <div class="col-xl-3">
-				  <?php $images = get_field('listing-photos');?>
+				  <?php $images = get_field('listing_photos');?>
               <?php $image = $images[0]; ?>
 				  <a href= <?php
                the_permalink(); ?>><div style="background: url(<?php echo $image['url'] ?>) 0 0 no-repeat; height:35vh; background-size:cover; 

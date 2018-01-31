@@ -18,12 +18,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
-	        <div class = "hero-interior" style="background-image: url(<?php the_field('hero', 121); ?>);">
-          <div class = "hero-interior-cta">
-            <?php the_field('hero_cta_interior', 121); ?>
-            
-          </div>
-        </div>  
+
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 

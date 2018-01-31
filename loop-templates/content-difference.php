@@ -24,21 +24,23 @@
     </div>  
   </div>
 </div>  
-				<div id = "about" class = "component-red component-background");">
+				<div id = "about" class = "component component-background");">
 		<div class = "row">
 			<div class = "col-md-1">
 			</div>
 			<div class = "col-md-5 pl-5">
-				<h2 class = "header-white"><?php the_field('team_header'); ?>
+				<h2 class = "header-dark"><?php the_field('team_header'); ?>
+				<h5 class = "header-dark"><?php the_field('team_subhead'); ?></h5>
+
 
 </h2>
-					<h4 class="pt-3 text-white"><?php the_field('team_content'); ?>
+					<h4 class="pt-3 text-dark"><?php the_field('team_content'); ?>
 
 </h4>					
-				<a href="<?php the_field('team_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button_cta'); ?></a>
+				<a href="<?php the_field('team_button_link'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button_cta'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
-				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img src="<?php the_field('team_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>
 </div>	
@@ -73,22 +75,23 @@
 	</div>
 </div>
 </div>	
-<div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
+<div class = "component-background" style="background-color: #751212;">
 		<div class = "row">
-			<div class = "col-md-6">
-				<img src="<?php the_field('agent_picture'); ?>" alt="<?php echo $image['alt']; ?>" />
+			<div class = "col-md-6 ">
+				<img src="<?php the_field('communication_image'); ?>" alt="<?php echo $image['alt']; ?>" / class="communicate-image">
 			</div>
-			<div class = "col-md-5 text-right pr-5">
+			<div class = "col-md-5 text-right mt-5 pb-5">
 				<h2 class = "header-white"><?php the_field('communication_header'); ?></h2>
+				<h5 class = "header-white"><?php the_field('communication_subhead'); ?></h5>
 
 				<h4 class="pt-3 text-white"><?php the_field('communication_content'); ?></h4>		
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
+				<a href="<?php the_field('communication_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('communication_button'); ?></a>
 			</div>	
 			<div class = "col-md-1">
 			</div>		
 		</div>
 </div>	
-<div class = "component-form mt-5">
+<div class = "component-form">
 	<h1 class = "text-center">Get Started Today</h1>
           	<?php the_field('difference_contact'); ?>
 
