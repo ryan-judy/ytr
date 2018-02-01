@@ -34,23 +34,23 @@
 			<div class = "col-md-5 pl-5">
 				<h2 class = "header-white"><?php the_field('search_header'); ?></h2>
 					<h4 class="pt-3 text-white"><?php the_field('search_content'); ?>		
-				<a href="<?php the_field('search_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('search_button_cta') ?></a>
+				<a href="<?php the_field('search_button_link'); ?>" class="btn btn-secondary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('search_button_cta') ?></a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
-				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>"  class="content-right"/>
 			</div>			
 		</div>
 </div>	
 <div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
 			<div class = "col-md-6">
-				<img src="<?php the_field('find_agent'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img src="<?php the_field('find_agent'); ?>" alt="<?php echo $image['alt']; ?>" class="content"/>
 			</div>
 			<div class = "col-md-5 text-right pr-5">
 				<h2 class = "header-white"><?php the_field('agent_header'); ?></h2>
 
 				<h4 class="pt-3 text-white"><?php the_field('agent_content'); ?></h4>			
-				<a href="<?php the_field('agent_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('agent_button_cta'); ?></a>
+				<a href="<?php the_field('agent_button_link'); ?>" class="btn btn-secondary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('agent_button_cta'); ?></a>
 			</div>	
 			<div class = "col-md-1">
 			</div>		
@@ -90,7 +90,7 @@
 		</div>
 		<div class ="row text-center">
 			<div class = "col-md-12">
-				<a id="btncalculate" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true">Calculate</a>
+				<a id="btncalculate" class="btn btn-primary btn-lg sr-button active header mt-4" role="button" aria-pressed="true">Calculate</a>
 				<hr>
 			</div>
 		</div>
@@ -105,7 +105,7 @@
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-12">
-				<div class = "pull-out text-center">
+				<div class = "pull-out content text-center">
 				<h2><?php the_field('cta_popout_text'); ?></h2>
 				</div>
 			</div>

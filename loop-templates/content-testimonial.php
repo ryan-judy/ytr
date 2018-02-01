@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="col-lg-6">
+<div class="col-lg-6 sr-icons">
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 

@@ -37,9 +37,9 @@
 					<h4 class="pt-3 text-dark"><?php the_field('team_content'); ?>
 
 </h4>					
-				<a href="<?php the_field('team_button_link'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button_cta'); ?></a>
+				<a href="<?php the_field('team_button_link'); ?>" class="btn btn-primary btn-lg active header sr-button mt-4" role="button" aria-pressed="true"><?php the_field('team_button_cta'); ?></a>
 			</div>
-			<div class = "col-md-6 text-center d-flex align-items-center">
+			<div class = "col-md-6 text-center d-flex align-items-center content-right">
 				<img src="<?php the_field('team_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>
@@ -54,14 +54,14 @@
 		<div class = "container">
 		<div class = "row">
 
-			<div class = "col-md-6">
+			<div class = "col-md-6 content">
 
 					<h3 class="pt-3 text-light text-center"><?php the_field('left_header'); ?></h3>
 					<h4 class="pt-3 text-light comparison-paragraph"><?php the_field('left_content'); ?>
 
 </h4>					
 			</div>
-			<div class = "col-md-6">
+			<div class = "col-md-6 content-right">
 													<h3 class="pt-3 text-light text-center"><?php the_field('right_header'); ?></h3>
 
 <h4 class="pt-3 text-light comparison-paragraph"><?php the_field('right_content'); ?>
@@ -71,13 +71,13 @@
 	</div>
 		<div class = "row">
 	<div class = "col-md-12 text-center">
-				<a href="<?php the_field('comparison_button_link'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('comparison_button'); ?></a>
+				<a href="<?php the_field('comparison_button_link'); ?>" class="btn btn-primary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('comparison_button'); ?></a>
 	</div>
 </div>
 </div>	
 <div class = "component-background" style="background-color: #751212;">
 		<div class = "row">
-			<div class = "col-md-6 ">
+			<div class = "col-md-6 content">
 				<img src="<?php the_field('communication_image'); ?>" alt="<?php echo $image['alt']; ?>" / class="communicate-image">
 			</div>
 			<div class = "col-md-5 text-right mt-5 pb-5">
@@ -85,7 +85,7 @@
 				<h5 class = "header-white"><?php the_field('communication_subhead'); ?></h5>
 
 				<h4 class="pt-3 text-white"><?php the_field('communication_content'); ?></h4>		
-				<a href="<?php the_field('communication_button_link'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('communication_button'); ?></a>
+				<a href="<?php the_field('communication_button_link'); ?>" class="btn btn-secondary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('communication_button'); ?></a>
 			</div>	
 			<div class = "col-md-1">
 			</div>		

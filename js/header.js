@@ -1,6 +1,16 @@
 $(document).ready(function(){
 
-
+$('.count').each(function() {
+  $(this).prop('Counter', 0).animate({
+    Counter: $(this).text()
+  }, {
+    duration: 8000,
+    easing: 'swing',
+    step: function(now) {
+      $(this).text(Math.ceil(now));
+    }
+  });
+});
 
 $(window).scroll( function(){
 	var headerHeight = $('.header').outerHeight();
@@ -33,17 +43,7 @@ $(window).scroll( function(){
 
 });
 
-$('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 1000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
-    });
-});
+
 
 $('.carousel').carousel({
   interval: 1000

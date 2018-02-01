@@ -362,7 +362,7 @@ function acme_mailchimp_form_shortcode( $atts ) {
                 </div>
                 </div>
             <div class = "col-md-2">
-    <input type="submit" value="' . $submit_text . '" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-lg"></div>            </div>
+    <input type="submit" value="' . $submit_text . '" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-lg sr-button"></div>            </div>
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="pooh_hundred_acre_wood_field" tabindex="-1" value=""></div>
         <input type="hidden" name="action" value="acme_newsletter_subscription">
         <input type="hidden" name="redirect_to" value="' . $redirect_to . '"></form></div>';

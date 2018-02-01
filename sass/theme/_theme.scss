@@ -714,7 +714,7 @@ footer .form-control {
   height: 400px;
      color: $white;
   /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;
+  background-position: center;
   
   /* Background image doesn't tile */
   background-repeat: no-repeat;
@@ -1386,6 +1386,7 @@ section {
 
 .about-us {
   max-height: 900px;
+  background-position: top;
 }
 
 .communicate-image {
@@ -2580,4 +2581,5 @@ $select-height: 35px;
 }
 
 }
+
 

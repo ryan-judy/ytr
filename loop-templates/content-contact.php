@@ -34,13 +34,13 @@
                      </div>
                     <div class="col-md-4 mt-5">
                         <p>
-                            <strong><i class="fa fa-map-marker"></i> Address</strong><br>
+                            <strong><i class="fa fa-map-marker sr-icons-load"></i> Address</strong><br>
                             <?php the_field('address');?>
                         </p> 
-                        <p><strong><i class="fa fa-phone text-muted"></i> Phone Number</strong><br>
+                        <p><strong><i class="fa fa-phone text-muted sr-icons"></i> Phone Number</strong><br>
                             <?php the_field('contact_number');?></p>
                         <p>
-                            <strong><i class="fa fa-envelope"></i>  Email Address</strong><br>
+                            <strong><i class="fa fa-envelope sr-icons"></i>  Email Address</strong><br>
                             <?php the_field('contact_email');?></p>
                         <p></p>
                           <div id="google-container" style="height:250px;"></div>

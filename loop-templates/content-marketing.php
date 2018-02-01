@@ -29,10 +29,10 @@
 
 <div class= "row text-center">
 	<div class = "col-md-12 text-center">
-		<h2 class = "text-white mb-5"><?php the_field('statistic_heading'); ?></h2>
+		<h2 class = "text-white mb-5"><?php the_field('statistic_heading'); ?></span></h2>
 	</div>
 		<div class = "col-md-4">
-			<h2 class = 'text-light'><?php the_field('statistic_header_1'); ?></h2>
+			<h2 class = 'text-light sr-number'><span class="count"><?php the_field('statistic_header_1'); ?></span></h2>
 			<p class = 'text-light'><?php the_field('statistic_subhead_1'); ?></p>
 		</div>
 		<div class = "col-md-4">
@@ -66,19 +66,19 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="<?php the_field('marketing_slideshow_1'); ?>" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-    <h3>...</h3>
+    <h3></h3>
   </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="<?php the_field('marketing_slideshow_2'); ?>" alt="Second slide">
           <div class="carousel-caption d-none d-md-block">
-    <h3>...</h3>
+    <h3></h3>
   </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="<?php the_field('marketing_slideshow_3'); ?>" alt="Third slide">
           <div class="carousel-caption d-none d-md-block">
-    <h3>...</h3>
+    <h3></h3>
   </div>
     </div>
   </div>
@@ -114,7 +114,7 @@
 </h4>					
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center">
-				<img class = "marketing-module" src="<?php the_field('computer_image'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img class = "marketing-module sr-contact" src="<?php the_field('computer_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>
 </div>	
@@ -122,7 +122,7 @@
 <div class = "component-red component-background component-pricing" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
 			<div class = "col-md-6">
-				<img class = "marketing-module-2" src="<?php the_field('offline_image'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img class = "marketing-module-2 sr-contact" src="<?php the_field('offline_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
 <div class = "col-md-5 pl-5">
 				<h2 class = "header-white"><?php the_field('offline_header'); ?>

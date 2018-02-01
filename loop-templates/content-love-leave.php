@@ -33,16 +33,15 @@
 			<div class = "col-md-5 pl-5">
 				<h2 class = "header-white"><?php the_field('component_1_heading'); ?>
 </h2>
-					<h4 class="pt-3 text-white"><?php the_field('component_1_subhead'); ?>
+					<h4 class="text-white text-uppercase"><?php the_field('component_1_subhead'); ?>
 </h4>
 					<h4 class="pt-3 text-white"><?php the_field('component_1_content'); ?>
 
 
 </h4>					
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-secondary btn-lg active header mt-4" role="button" aria-pressed="true">go to me</a>
 			</div>
 			<div class = "col-md-6 text-center d-flex align-items-center pl-5">
-				<img src="<?php the_field('component_1_image'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img src="<?php the_field('component_1_image'); ?>" alt="<?php echo $image['alt']; ?>" class="communicate-image"/>
 			</div>			
 		</div>
 </div>	
@@ -55,22 +54,22 @@
 		</div>
 		<div class = "row">
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-percent fa-3x"></i>
+				<i class= "fa fa-percent sr-icons fa-3x"></i>
 				<h4 class = "text-dark font-weight-light"><?php the_field('module_1_heading'); ?></h4>
 				<p class= "text-dark"><?php the_field('module_1_subhead'); ?></p>
 			</div>
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-briefcase fa-3x"></i>
+				<i class= "fa fa-briefcase sr-icons fa-3x"></i>
 				<h4 class = "text-dark font-weight-light"><?php the_field('module_2_heading'); ?></h4>
 				<p class= "text-dark"><?php the_field('module_2_subhead'); ?></p>				
 			</div>
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-user fa-3x"></i>
+				<i class= "fa fa-user sr-icons fa-3x"></i>
 				<h4 class = "text-dark font-weight-light"><?php the_field('module_3_heading'); ?></h4>
 				<p class= "text-dark"><?php the_field('module_3_subhead'); ?></p>				
 			</div>
 			<div class = "col-md-3 text-center">
-				<i class= "fa fa-handshake-o fa-3x"></i>
+				<i class= "fa fa-handshake-o sr-icons fa-3x"></i>
 				<h4 class = "text-dark font-weight-light"><?php the_field('module_4_heading'); ?></h4>
 				<p class= "text-dark"><?php the_field('module_4_subhead'); ?></p>					
 			</div>

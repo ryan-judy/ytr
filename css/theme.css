@@ -9633,7 +9633,7 @@ body {
     height: 400px;
     color: #f5f5f5;
     /* Background image is centered vertically and horizontally at all times */
-    background-position: center center;
+    background-position: center;
     /* Background image doesn't tile */
     background-repeat: no-repeat;
     /* Background image is fixed in the viewport so that it doesn't move when 
@@ -10166,7 +10166,8 @@ body {
       .wpcf7 body section#contact textarea:focus, body section#contact .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 body section#contact .wpcf7-validation-errors:focus {
         box-shadow: none; }
   body .about-us {
-    max-height: 900px; }
+    max-height: 900px;
+    background-position: top; }
   body .communicate-image {
     max-height: 700px; }
   body .about_our_company {

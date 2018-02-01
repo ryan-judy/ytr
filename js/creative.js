@@ -1,6 +1,17 @@
 (function($) {
   "use strict"; // Start of use strict
-  console.log("loaded")
+  $('.count').each(function() {
+  $(this).prop('Counter', 0).animate({
+    Counter: $(this).text()
+  }, {
+    duration: 4000,
+    easing: 'swing',
+    step: function(now) {
+      $(this).text(Math.ceil(now));
+    }
+  });
+});
+
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -29,14 +40,34 @@
     offset: 120
   });
 
-  
+var config = {
+    duration: 1000,
+    scale: 1,
+    origin: 'left',
+    delay: 200,
+    viewOffset: { top: 60 }
+};
+
+var config2 = {
+    duration: 1000,
+    scale: 1,
+    origin: 'right',
+    delay: 200,
+    viewOffset: { top: 60 }
+};
 
   // Scroll reveal calls
-  window.sr = ScrollReveal();
+  window.sr = ScrollReveal({duration: 2000 });
   sr.reveal('.sr-icons', {
-    duration: 600,
+    duration: 1000,
     scale: 0.3,
     distance: '0px'
+  }, 200);
+  sr.reveal('.sr-icons-load', {
+    duration: 1000,
+    scale: 0.3,
+    distance: '0px',
+    delay: 500
   }, 200);
   sr.reveal('.sr-button', {
     duration: 1000,
@@ -52,6 +83,13 @@
     scale: 0.3,
     distance: '0px'
   }, 200);
+  sr.reveal('.sr-number', {
+    duration: 100,
+    scale: 0.3,
+    distance: '0px'
+  }, 200);
+  sr.reveal(".content", config, 200);
+  sr.reveal(".content-right", config2, 200);
 
   // Magnific popup calls
   $('.popup-gallery').magnificPopup({

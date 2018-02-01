@@ -231,7 +231,13 @@
              <!-- Carousel items -->
 <?php
 $count2=0;
- $loop = new WP_Query( array( 'post_type' => 'featured-listing', 'posts_per_page' => 10) ); ?>
+ $loop = new WP_Query( array( 'post_type' => 'featured-listing', 'meta_key' => 'price', 'orderby' => 'meta_value', 'posts_per_page' => 15, 'tax_query' => array(
+                                array(
+                            'taxonomy' => 'status', 
+                            'field' => 'slug', 
+                            'terms' => array('active')
+                            )
+                        )) ); ?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		               <div class="carousel-item col-md-4<?php if($count2==0) : echo ' active'; endif; ?>">
 
@@ -289,7 +295,7 @@ $count2=0;
 						<div class = "col-md-8">
 							<h2 class ="text-light"><?php the_field('sell_heading'); ?></h2>
 							<p class= "text-light"><?php the_field('sell_cta'); ?></p>	
-							<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('sell_button_cta'); ?></a>
+							<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('sell_button_cta'); ?></a>
 						</div>	
 						<div class = "col-md-2">
 						</div>					
@@ -304,7 +310,7 @@ $count2=0;
 						<div class = "col-md-8">
 							<h2 class ="text-light"><?php the_field('buy_heading'); ?></h2>
 							<p class= "text-light"><?php the_field('buy_cta'); ?></p>	
-							<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('buy_button_cta'); ?></a>
+							<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('buy_button_cta'); ?></a>
 						</div>	
 						<div class = "col-md-2">
 						</div>					
@@ -320,10 +326,10 @@ $count2=0;
 			<div class = "col-md-6">
 				<h2 class = "header-dark"><?php the_field('team_header'); ?></h2>
 				<h4 class="pt-3 text-dark"><?php the_field('team_subhead'); ?></h4>
-				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button'); ?></a>
+				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button'); ?></a>
 			</div>
 			<div class = "col-md-6 text-center">
-				<img class="team-image" src="<?php the_field('team_image'); ?>" alt="<?php echo $image['alt']; ?>" />
+				<img class="team-image content-right" src="<?php the_field('team_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>
 	</div>
@@ -354,7 +360,7 @@ $count2=0;
 					<div class = testimonial>
 						<?php the_field('client_testimonials_content') ?>
 					</div>
-					<a href="<?php the_field('client_review_button_page'); ?>" class="btn btn-primary btn-lg active header" role="button" aria-pressed="true"><?php the_field('client_review_button'); ?></a>
+					<a href="<?php the_field('client_review_button_page'); ?>" class="btn btn-primary btn-lg sr-button active header" role="button" aria-pressed="true"><?php the_field('client_review_button'); ?></a>
 			</div>			
 		</div>
 	</div>
@@ -437,13 +443,10 @@ $count2=0;
 			</div>
 		</div>
 		<div class = "row align-center">
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 				<a class="portfolio-box" href="<? the_field('module_1_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_1_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	              	  <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                     <?php the_field('module_1_caption'); ?>
@@ -452,13 +455,10 @@ $count2=0;
               </div>
             </a>
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_2_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_2_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	   <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                     <?php the_field('module_2_caption'); ?>
@@ -467,13 +467,10 @@ $count2=0;
               </div>
             </a>
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_3_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_3_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	    <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_3_caption'); ?>
@@ -482,13 +479,10 @@ $count2=0;
               </div>
             </a>	
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_4_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_4_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	   <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_4_caption'); ?>
@@ -497,13 +491,10 @@ $count2=0;
               </div>
             </a>	
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_5_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_5_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	   <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_5_caption'); ?>
@@ -512,13 +503,10 @@ $count2=0;
               </div>
             </a>	
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_6_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_6_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	   <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_6_caption'); ?>
@@ -529,13 +517,10 @@ $count2=0;
 			</div>
 		</div>
 		<div class="row align-center mt-4">
-		<div class="col-md-2 connect">
+		<div class="col-md-2 connect sr-icons">
 		<a class="portfolio-box" href="<? the_field('module_7_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_7_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	  <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_7_caption'); ?>
@@ -544,13 +529,10 @@ $count2=0;
               </div>
             </a>
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 				 <a class="portfolio-box" href="<? the_field('module_8_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_8_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	 <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_8_caption'); ?>
@@ -559,13 +541,10 @@ $count2=0;
               </div>
             </a>
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_9_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_9_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	              	  <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_9_caption'); ?>
@@ -574,13 +553,10 @@ $count2=0;
               </div>
             </a>	
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_10_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_10_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	              	  <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_10_caption'); ?>
@@ -589,13 +565,10 @@ $count2=0;
               </div>
             </a>	
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_11_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_11_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	 <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                     <?php the_field('module_11_caption'); ?>
@@ -604,13 +577,10 @@ $count2=0;
               </div>
             </a>	
 			</div>
-			<div class="col-md-2 connect">
+			<div class="col-md-2 connect sr-icons">
 			<a class="portfolio-box" href="<? the_field('module_12_link') ?>">
               <img class="img-fluid" src="<?php the_field('module_12_image'); ?>" alt="" style = "width: 100%;">
               <div class="portfolio-box-caption">
-              	  <div class="project-icon">
-                    <i class = "fa fa-user"></i>
-                  </div>
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
                      <?php the_field('module_12_caption'); ?>
@@ -629,7 +599,7 @@ $count2=0;
 	<div class = "container">
 		<div class = "row no-gutter">
 			<div class = "col-md-6">
-				<h6 class= "pt-2"><?php the_field('newsletter_cta'); ?></h6>
+				<h6 class= "pt-3"><?php the_field('newsletter_cta'); ?></h6>
 			</div>
             <div class = "col-md-4">
                 <?php echo do_shortcode("[acme_mailchimp_form]"); ?>
