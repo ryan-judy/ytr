@@ -26,11 +26,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<div class = "header-overlay">
 	</div>	
 	<div class = "row">
-		<div class = "col-sm-12 text-center" style="position: absolute;">
+		<div class = "col-sm-12 text-center">
 			<div class = "hero-interior-cta-center">
 			<?php the_field('hero_cta_interior', 693); ?>
 				<div class="row">
-					<div class = "col-sm-12 text-center">
+					<div class = "col-lg-12 text-center">
 						<button class="btn btn-primary btn-lg active header mt-5">Learn more
 						</button>
 					</div>

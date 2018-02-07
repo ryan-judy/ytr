@@ -21,8 +21,8 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-5">
                 <div class="row">
                     <div class="col-6">
-                    <img src="//localhost:3000/wp-content/uploads/2018/01/KellerWilliams_Greater_Cleveland_Logo_rev-W.png" class="mb-3">
-                                    <ul class="nav mt-5">
+                    <img src="/wp-content/uploads/2018/01/KellerWilliams_Greater_Cleveland_Logo_rev-W.png" class="mb-3">
+                 <ul class="nav nav-footer mt-5">
                     <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
                     <li class="nav-item"><a href="https://twitter.com/YoungTeamSells/" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
                     <li class="nav-item"><a href="https://www.youtube.com/channel/UCJGFnReXndjiS5LVXzM8YAw" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 footer-center">
                 <h2 class="text-md-right">Contact Us</h5>
                 <p class="text-md-right">
                 216-378-9618<br>

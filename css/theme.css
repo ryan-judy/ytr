@@ -9202,10 +9202,19 @@ body {
   body .widget-count-1 {
     padding: 50px 0px; }
   body .navbar {
-    padding: 0px; }
-    @media (max-width: 1000px) {
+    padding: 0px;
+    -webkit-transition: width 0.8s ease;
+    transition: width 0.8s ease;
+    padding: 0px 40px; }
+    @media (max-width: 667px) {
       body .navbar {
-        padding-bottom: 10px; } }
+        padding-left: 10px;
+        padding-right: 10px; } }
+  body .icon-wrapper {
+    margin: 0px 50px 0px 20px; }
+    @media (max-width: 1000px) {
+      body .icon-wrapper {
+        margin-right: 15px; } }
   body .nav-fixed {
     position: fixed;
     top: 0;
@@ -9239,6 +9248,9 @@ body {
       text-transform: uppercase;
       border-bottom: 3px solid transparent; }
     body nav .shrink-nav {
+      width: 100%;
+      -webkit-transition: all 0.8s ease;
+      transition: all 0.8s ease;
       padding-top: 5px;
       padding-bottom: 5px; }
     body nav .logo img {
@@ -9255,6 +9267,7 @@ body {
         margin-top: 10px;
         width: 180px; } }
     body nav .navbar-brand {
+      margin-right: 40px;
       width: 90%;
       padding: 10px 0px;
       transition: all ease .2s; }
@@ -9281,6 +9294,9 @@ body {
       padding: 0px 10px;
       letter-spacing: 1px;
       box-shadow: none; }
+      @media (max-width: 667px) {
+        body nav .nav-item {
+          padding-left: 0px; } }
     body nav .nav-item-community {
       margin-right: 10px;
       padding: 7px 20px;
@@ -9294,7 +9310,7 @@ body {
       @media only screen and (max-width: 1000px) {
         body nav .nav-link {
           color: #1d1919;
-          margin: 0px 110px; } }
+          width: 100%; } }
       body nav .nav-link:hover {
         color: lightgray;
         box-shadow: 0 -2px #751212 inset;
@@ -9307,14 +9323,12 @@ body {
           margin: 0px; }
           body nav .nav-link:hover {
             padding: auto;
-            margin: 0px 170px;
-            box-shadow: 0 -3px #751212 inset; } }
+            box-shadow: 0 0px transparent inset; } }
       @media (min-width: 768px) {
         body nav .nav-link {
           margin: 0px; }
           body nav .nav-link:hover {
             padding: auto;
-            margin: 0px 320px;
             box-shadow: 0 -3px #751212 inset; } }
       @media (min-width: 992px) {
         body nav .nav-link {
@@ -9439,21 +9453,32 @@ body {
     background-color: #1d1919;
     color: #f5f5f5; }
   body .header-top {
-    height: 55px; }
+    height: 50px; }
   body .header-home {
     font-family: 'Lato', sans-serif;
     color: #f5f5f5;
     background-color: #000;
-    height: 55px; }
+    height: 50px; }
+    body .header-home .header-number {
+      margin-right: 40px; }
+      @media (max-width: 667px) {
+        body .header-home .header-number {
+          margin-right: 40px; } }
   body .pricing-photo {
     max-height: 500px;
     margin-left: 150px; }
+    @media (max-width: 667px) {
+      body .pricing-photo {
+        margin: 10px; } }
+  @media (max-width: 667px) {
+    body .nav .nav-item .nav-link {
+      padding: 10px; } }
   body .navbar-dark .navbar-nav .nav-link {
     color: #f5f5f5; }
     @media (max-width: 1000px) {
       body .navbar-dark .navbar-nav .nav-link {
         color: gray;
-        font-weight: normal; }
+        font-weight: lighter; }
         body .navbar-dark .navbar-nav .nav-link:hover {
           color: #1d1919; } }
   body .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus, body .navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
@@ -9473,10 +9498,10 @@ body {
       color: gray; }
       body .navbar-interior .navbar-nav .nav-link:hover {
         color: #751212; }
-      @media (max-width: 1000px) {
+      @media (min-width: 1000px) {
         body .navbar-interior .navbar-nav .nav-link {
           color: gray;
-          font-weight: normal; }
+          font-weight: lighter; }
           body .navbar-interior .navbar-nav .nav-link:hover {
             color: #1d1919; } }
   body .navbar-light .navbar-toggler-icon {
@@ -9546,8 +9571,10 @@ body {
   body .buy-sell {
     padding: 0 40px; }
   body .hero {
-    height: 600px;
+    height: 670px;
     width: 100%; }
+  body .form-group, body .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form body p, body .wpcf7 .wpcf7-form p {
+    margin-bottom: 0px; }
   body .hero-cta {
     line-height: 50px;
     font-size: 42px;
@@ -9604,7 +9631,7 @@ body {
     height: 100%;
     padding: 40px 0px; }
   body .component-pricing {
-    padding-top: 0px; }
+    padding: 0px 15px; }
   body .component-overlay {
     position: absolute;
     top: 0;
@@ -9615,11 +9642,8 @@ body {
     background: rgba(143, 9, 9, 0.5); }
   body .newsletter-cta {
     height: 100%;
-    padding: 40px 0px;
+    padding: 40px 30px;
     background-color: #751212; }
-    @media (max-width: 768px) {
-      body .newsletter-cta {
-        height: 200px; } }
   body .header-overlay {
     position: absolute;
     top: 0;
@@ -9709,6 +9733,15 @@ body {
     padding: 10px 0px;
     top: 50%;
     width: 100%; }
+    @media (max-width: 1000px) {
+      body .input {
+        margin: -10px 0 0 -10px; } }
+    @media (max-width: 760px) {
+      body .input {
+        margin: -10px 0 0 -10px; } }
+    @media (max-width: 570px) {
+      body .input {
+        padding: 0px 10px; } }
     body .input:focus {
       outline: none; }
   body input::-webkit-input-placeholder {
@@ -9729,6 +9762,14 @@ body {
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     width: 100%; }
+    @media (max-width: 1000px) {
+      body .underline {
+        left: -20px;
+        top: 38px; } }
+    @media (max-width: 560px) {
+      body .underline {
+        top: 38px;
+        left: 0px; } }
   body .underline-value {
     left: -50px;
     width: 100%; }
@@ -9849,7 +9890,8 @@ body {
   body .timeline-body > p + p {
     margin-top: 5px; }
   body .listing-page-builing {
-    width: 100%; }
+    width: 100%;
+    padding: 20px 10px; }
   body .card-custom {
     overflow: hidden;
     min-height: 450px;
@@ -9925,7 +9967,7 @@ body {
     top: 50px;
     left: 1.25rem;
     width: 150px;
-    height: 150px;
+    height: 100%;
     border-style: solid;
     border-width: 8px;
     border-color: #751212; }
@@ -10295,6 +10337,12 @@ body {
       border-color: transparent;
       box-shadow: 0 -2px #751212 inset;
       transition: box-shadow 0.3s linear; }
+  @media (max-width: 1000px) {
+    body .footer-center {
+      text-align: center; } }
+  @media (max-width: 1000px) and (max-width: 766px) {
+    body .footer-center {
+      padding-top: 20px; } }
   body .form-inline {
     width: 70%; }
     body .form-inline #custom-search-11 {
@@ -10412,6 +10460,10 @@ body {
     max-height: 500px;
     max-width: 500px;
     margin-left: 100px; }
+    @media (max-width: 667px) {
+      body .marketing-module-2 {
+        margin-left: 0px;
+        max-width: 100%; } }
   body .listing-photo {
     max-height: 244px; }
   body .agent-contact {
@@ -10940,8 +10992,8 @@ body {
     color: gray;
     width: 250px;
     height: 35px;
-    margin-top: 5px;
-    margin-bottom: 9px;
+    margin-top: 4px;
+    margin-bottom: 8px;
     margin-right: 20px; }
   body .select-styled {
     position: absolute;
@@ -11005,9 +11057,14 @@ body {
     background-color: #751212 !important;
     color: #f5f5f5; }
   body .footing {
-    width: 22%; }
+    width: 23%; }
+    @media (max-width: 667px) {
+      body .footing {
+        width: 100%; } }
   body .footer-form {
     height: 80px; }
+  body .nav-footer .nav-link {
+    padding-right: 9px; }
 
 /*
 * Use existing Bootstrap 4 classes and

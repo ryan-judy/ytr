@@ -14,11 +14,11 @@
 	<div class = "header-overlay">
 	</div>	
 	<div class = "row">
-		<div class = "col-sm-12 text-center" style="position: absolute;">
+		<div class = "col-lg-12 text-center">
 			<div class = "hero-interior-cta-center">
 			<?php the_field('hero_cta_interior'); ?>
 				<div class="row">
-					<div class = "col-sm-12 text-center">
+					<div class = "col-lg-12 text-center">
 				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
 					</div>
 				</div>
@@ -29,30 +29,30 @@
 
 <div class = "component-red component-background" id = "about" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
-			<div class = "col-md-1">
+			<div class = "col-lg-1">
 			</div>
-			<div class = "col-md-5 pl-5">
+			<div class = "col-lg-5 pl-5">
 				<h2 class = "header-white"><?php the_field('search_header'); ?></h2>
 					<h4 class="pt-3 text-white"><?php the_field('search_content'); ?>		
 				<a href="<?php the_field('search_button_link'); ?>" class="btn btn-secondary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('search_button_cta') ?></a>
 			</div>
-			<div class = "col-md-6 text-center d-flex align-items-center">
+			<div class = "col-lg-6 text-center d-flex align-items-center">
 				<img src="<?php the_field('search_homes'); ?>" alt="<?php echo $image['alt']; ?>"  class="content-right"/>
 			</div>			
 		</div>
 </div>	
 <div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
-			<div class = "col-md-6">
+			<div class = "col-lg-6">
 				<img src="<?php the_field('find_agent'); ?>" alt="<?php echo $image['alt']; ?>" class="content"/>
 			</div>
-			<div class = "col-md-5 text-right pr-5">
+			<div class = "col-lg-5 text-right pr-5">
 				<h2 class = "header-white"><?php the_field('agent_header'); ?></h2>
 
 				<h4 class="pt-3 text-white"><?php the_field('agent_content'); ?></h4>			
 				<a href="<?php the_field('agent_button_link'); ?>" class="btn btn-secondary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('agent_button_cta'); ?></a>
 			</div>	
-			<div class = "col-md-1">
+			<div class = "col-lg-1">
 			</div>		
 		</div>
 </div>	
@@ -60,42 +60,42 @@
 <section class = "component">
 	<div class="container">
 		<div class = "row no-gutter">
-			<div class = "col-md-12 text-center">
+			<div class = "col-lg-12 text-center">
 				<h2 class = "header-dark mb-4"><?php the_field('mortgage_calculator_header'); ?></h2>
 			</div>
 		</div>
 		<div class = "row text-center">
-			<div class = "col-md-2">
+			<div class = "col-lg-2">
 			</div>
-			<div class = "col-md-4 mt-3">
+			<div class = "col-lg-4 mt-3">
 				<p>COST OF HOUSE:</p> <input type ="text" class = "form-control text-center" id="incost"/>
 			</div>
-			<div class = "col-md-4 mt-3">			
+			<div class = "col-lg-4 mt-3">			
 				<p>DOWN PAYMENT:</p> <input type ="text" class = "form-control text-center" id="indown"/></p>
 			</div>
-			<div class = "col-md-2">
+			<div class = "col-lg-2">
 			</div>
 		</div>
 		<div class = "row text-center">
-			<div class = "col-md-2">
+			<div class = "col-lg-2">
 			</div>
-			<div class = "col-md-4 mt-3">
+			<div class = "col-lg-4 mt-3">
 				<p>APR (ANNUAL PERCENTAGE RATE):</p> <input type ="text" class = "form-control text-center" id="inapr"/></p>
 			</div>
-			<div class = "col-md-4 mt-3">
+			<div class = "col-lg-4 mt-3">
 				<p>PERIOD (HOW LONG):</p> <input type ="text" class = "form-control text-center" id="inperiod"/></p>
 			</div>
-			<div class = "col-md-2">
+			<div class = "col-lg-2">
 			</div>
 		</div>
 		<div class ="row text-center">
-			<div class = "col-md-12">
+			<div class = "col-lg-12">
 				<a id="btncalculate" class="btn btn-primary btn-lg sr-button active header mt-4" role="button" aria-pressed="true">Calculate</a>
 				<hr>
 			</div>
 		</div>
 		<div class ="row text-center">
-			<div class = "col-md-12">
+			<div class = "col-lg-12">
 				TOTAL MONTHLY PAYMENT: <span id="outmonthly"></span></br>
 			</div>
 		</div>		
@@ -104,7 +104,7 @@
 <div class = "component component-background" style="background-image: url(<?php the_field('cta_popout_image'); ?>); background-position: center">
 	<div class = "container">
 		<div class = "row">
-			<div class = "col-md-12">
+			<div class = "col-lg-12">
 				<div class = "pull-out content text-center">
 				<h2><?php the_field('cta_popout_text'); ?></h2>
 				</div>
@@ -114,7 +114,7 @@
 </div>
 <div class = "component-form mt-5">
 	<h1 class = "text-center"><?php the_field('buyer_contact_header'); ?></h1>
-	<div class = "col-md-12">
+	<div class = "col-lg-12">
            <?php the_field('buyer_contact_form'); ?>
     </div>
 

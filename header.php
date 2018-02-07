@@ -33,9 +33,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-    <div class="d-flex justify-content-end header header-top px-5 p-2">
-    <div class="mr-5 pt-2"><i class = "fa fa-phone"></i> 216-378-9618</div>
-       <ul class="nav">
+    <div class="d-flex justify-content-end header-home pt-1">
+        <div class="pt-2 header-number"><i class = "fa fa-phone"></i> 216-378-9618</div>
+   <ul class="nav icon-wrapper">
                     <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
                     <li class="nav-item"><a href="https://twitter.com/YoungTeamSells/" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
                     <li class="nav-item"><a href="https://www.youtube.com/channel/UCJGFnReXndjiS5LVXzM8YAw" class="nav-link"><i class="fa fa-youtube fa-lg"></i></a></li>
@@ -45,7 +45,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-	<nav class="navbar navbar-interior navbar-expand-lg px-5" id="menu">
+	<nav class="navbar navbar-interior navbar-expand-lg" id="menu">
             <!-- Your site title as branding in the menu -->
           <?php if ( ! has_custom_logo() ) { ?>
 
@@ -62,7 +62,8 @@ $container = get_theme_mod( 'understrap_container_type' );
           
           <?php } else {
             the_custom_logo();
-          } ?><!-- end custom logo -->
+          } ?>
+
   <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

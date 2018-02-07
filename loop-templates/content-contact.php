@@ -12,7 +12,7 @@
   <div class = "header-overlay">
   </div>  
   <div class = "row">
-    <div class = "col-sm-12 text-center" style="position: absolute;">
+    <div class = "col-sm-12 text-center">
       <div class = "hero-interior-cta-center mt-5">
       <?php the_field('hero_cta_interior'); ?>
       </div>
@@ -23,7 +23,7 @@
        <section class = "component-form-2">    
        <div class = "container">     
                 <div class="row">
-                    <div class="col-md-8 mt-5">
+                    <div class="col-lg-8 mt-5">
                               <div class = "component-form-2">
                                 <div class="about_our_company" style="margin-bottom: 20px;">
                         <h1> <?php the_field('contact_header'); ?></h1>
@@ -32,10 +32,11 @@
                                     <?php the_field('contact_form'); ?>
                                   </div>
                      </div>
-                    <div class="col-md-4 mt-5">
+                    <div class="col-lg-4 mt-5">
                         <p>
                             <strong><i class="fa fa-map-marker sr-icons-load"></i> Address</strong><br>
                             <?php the_field('address');?>
+                            <p><?php the_field('address_2');?></p>
                         </p> 
                         <p><strong><i class="fa fa-phone text-muted sr-icons"></i> Phone Number</strong><br>
                             <?php the_field('contact_number');?></p>

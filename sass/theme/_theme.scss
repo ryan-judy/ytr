@@ -108,13 +108,30 @@ h6 {
 
 .navbar {
   padding: 0px;
+    -webkit-transition: width 0.8s ease;
+   transition: width 0.8s ease;
+  padding: 0px 40px;
   @media (max-width: 1000px) {
-    padding-bottom: 10px;
+  }
+  @media (max-width: 667px) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
 }
 
+
+
+  .icon-wrapper {
+    margin:0px 50px 0px 20px;
+  @media (max-width: 1000px) {
+    margin-right: 15px;
+  }
+  }
+
+
 .nav-fixed {
+
     position: fixed;
     top: 0;
     z-index: 999;
@@ -160,8 +177,12 @@ nav {
   }
 
   .shrink-nav {
+    width: 100%;
+-webkit-transition: all 0.8s ease;
+   transition: all 0.8s ease;
     padding-top: 5px;
     padding-bottom: 5px;
+
   }
 
   .logo img{
@@ -186,7 +207,7 @@ nav {
   }
 
   .navbar-brand {
-
+    margin-right: 40px;
     width: 90%;
     padding: 10px 0px;
     transition:all ease .2s;
@@ -226,13 +247,16 @@ nav {
 
   }
 
-  .nav-item {
-      font-weight: lighter;
 
+
+  .nav-item {
+    font-weight: lighter;
     padding: 0px 10px;
     letter-spacing: 1px;
     box-shadow: none;
-  
+    @media (max-width: 667px) {
+      padding-left: 0px;
+    }
   }
 
     .nav-item-community {
@@ -249,7 +273,8 @@ nav {
     color: $white;
     @media only screen and (max-width: 1000px){  
       color: $darkgray;
-      margin: 0px 110px;
+      width: 100%;
+
     }
     &:hover {
     color: lightgray;
@@ -266,8 +291,7 @@ nav {
       margin: 0px;
       &:hover {
       padding: auto;
-      margin: 0px 170px;
-      box-shadow: 0 -3px $brandcolor inset;
+      box-shadow: 0 0px transparent inset;
       }
     }
 
@@ -276,7 +300,6 @@ nav {
       margin: 0px;
       &:hover {
       padding: auto;
-      margin: 0px 320px;
       box-shadow: 0 -3px $brandcolor inset;
       }
     }
@@ -460,30 +483,49 @@ nav {
 }
 
 .header-top {
-  height: 55px;
+  height: 50px;
 }
 
 .header-home {
   font-family: 'Lato', sans-serif;
   color: $white;
   background-color: #000;
-  height: 55px;
+  height: 50px;
+    .header-number {
+      margin-right: 40px;
+      @media (max-width: 667px) {
+       margin-right: 40px;
+      }
+  }
 }
 
 .pricing-photo {
   max-height: 500px;
   margin-left: 150px;
+   @media (max-width: 667px) {
+          margin: 10px;
+  }
 }
 
 
+.nav {
+  .nav-item {
+    .nav-link {
+              @media (max-width: 667px) {
+          padding: 10px;
+          }
+    }
+  }
+}
 
   .navbar-dark {
     .navbar-nav {
+
       .nav-link {
           color: $white;
         @media (max-width: 1000px) {
           color: gray;
-          font-weight: normal;
+          font-weight: lighter;
           &:hover {
             color: $darkgray;
           }
@@ -515,9 +557,9 @@ nav {
           &:hover {
             color: $brandcolor;
           }
-        @media (max-width: 1000px) {
+        @media (min-width: 1000px) {
           color: gray;
-          font-weight: normal;
+          font-weight: lighter;
           &:hover {
             color: $darkgray;
           }
@@ -578,10 +620,13 @@ footer .form-control {
 }
 
 .hero {
-  height: 600px;
+  height: 670px;
   width: 100%;
 }
 
+.form-group, .wpcf7 .wpcf7-form p {
+  margin-bottom: 0px;
+}
 
 
 .hero-cta {
@@ -675,7 +720,7 @@ footer .form-control {
 
 
 .component-pricing {
-  padding-top: 0px;
+  padding: 0px 15px;
 }
 
     .component-overlay {
@@ -691,12 +736,10 @@ footer .form-control {
 
 .newsletter-cta {
   height: 100%;
-    padding: 40px 0px;
+    padding: 40px 30px;
 
   background-color: $brandcolor;
-      @media (max-width: 768px) {
-      height: 200px;
-  }
+
 }
 
     .header-overlay {
@@ -816,7 +859,15 @@ footer .form-control {
   padding: 10px 0px;
   top: 50%;
   width: 100%;
-
+      @media (max-width: 1000px) {
+    margin: -10px 0 0 -10px;
+  }
+        @media (max-width: 760px) {
+    margin: -10px 0 0 -10px;
+  }
+          @media (max-width: 570px) {
+    padding: 0px 10px;
+  }
   &:focus {
     outline: none;    
   }
@@ -846,6 +897,14 @@ input:focus::-webkit-input-placeholder {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   width: 100%;
+        @media (max-width: 1000px) {
+    left: -20px;
+   top: 38px;
+  }
+          @media (max-width: 560px) {
+   top: 38px;
+   left: 0px;
+  }
 }
 
 .underline-value {
@@ -1013,6 +1072,7 @@ input:focus::-webkit-input-placeholder {
 
 .listing-page-builing {
   width: 100%;
+  padding: 20px 10px;
 }
 .card-custom {
   overflow: hidden;
@@ -1104,7 +1164,7 @@ input:focus::-webkit-input-placeholder {
   top: 50px;
   left: 1.25rem;
   width: 150px;
-  height: 150px;
+  height: 100%;
   border-style: solid;
   border-width: 8px;
   border-color: $brandcolor;
@@ -1192,6 +1252,7 @@ input:focus::-webkit-input-placeholder {
   }
 
 }
+
 
 .dropdown-menu {
   padding: 10px 0px;
@@ -1587,6 +1648,18 @@ section {
 }
 }
 
+
+
+.footer-center {
+   @media (max-width: 1000px) {
+    text-align: center;
+  @media (max-width: 766px) {
+    padding-top: 20px;
+  }
+  }
+}
+
+
 .form-inline {
   width: 70%;
   #custom-search-11 {
@@ -1766,6 +1839,10 @@ $font_family_1: 'Roboto';
   max-height: 500px;
   max-width: 500px;
   margin-left: 100px;
+   @media (max-width: 667px) {
+          margin-left: 0px;
+          max-width: 100%;
+    }
 }
 
 
@@ -2490,8 +2567,8 @@ $select-height: 35px;
   color: gray;
   width: $select-width;
   height: $select-height;
-  margin-top: 5px;
-  margin-bottom: 9px;
+  margin-top: 4px;
+  margin-bottom: 8px;
   margin-right: 20px;
 }
 .select-styled {
@@ -2573,12 +2650,21 @@ $select-height: 35px;
 }
 
 .footing {
-  width: 22%;
+  width: 23%;
+ @media (max-width: 667px) {
+   width: 100%;
+    }
 }
 
 .footer-form {
   height: 80px;
 }
+.nav-footer {
+  .nav-link {
+    padding-right: 9px;
+  }
+}
+
 
 }
 

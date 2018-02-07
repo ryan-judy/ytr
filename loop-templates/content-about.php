@@ -109,25 +109,25 @@
 <section class = "component-red component-background">
 		<h2 class = "header-white text-center mb-5"><?php the_field('vendors_heading'); ?></h2>
 		<div class = "row">
-			<div class = "col-md-1">
+			<div class = "col-lg-1">
 			</div>
-			<div class = "col-md-2 text-center sr-icons pt-4">
+			<div class = "col-lg-2 text-center sr-icons pt-4">
 				<img src="<?php the_field('vendor_image_1'); ?>" alt="<?php echo $image['alt']; ?>"
 				 />
 			</div>
-			<div class = "col-md-2 text-center sr-icons pt-4">
+			<div class = "col-lg-2 text-center sr-icons pt-4">
 				<img src="<?php the_field('vendor_image_2'); ?>" alt="<?php echo $image['alt']; ?>"/>
 			</div>
-			<div class = "col-md-2 text-center sr-icons pt-4">
+			<div class = "col-lg-2 text-center sr-icons pt-4">
 				<img src="<?php the_field('vendor_image_3'); ?>" alt="<?php echo $image['alt']; ?>"/>
 			</div>
-			<div class = "col-md-2 text-center sr-icons pt-4">
+			<div class = "col-lg-2 text-center sr-icons pt-4">
 				<img src="<?php the_field('vendor_image_4'); ?>" alt="<?php echo $image['alt']; ?>"/>
 			</div>
-			<div class = "col-md-2 text-center sr-icons pt-4">
+			<div class = "col-lg-2 text-center sr-icons pt-4">
 				<img src="<?php the_field('vendor_image_5'); ?>" alt="<?php echo $image['alt']; ?>"/>
 			</div>
-			<div class = "col-md-1">
+			<div class = "col-lg-1">
 			</div>
 		</div>
 	</section>
@@ -135,9 +135,9 @@
 					<h2 class = "header-dark text-center mb-5"><?php the_field('careers_heading'); ?></h2>
 
 		<div class = "row">
-						<div class = "col-md-1">
+						<div class = "col-lg-1">
 			</div>
-			<div class = "col-md-5 pl-5 pr-2">
+			<div class = "col-lg-5 pl-5 pr-2">
 				<div class="d-flex align-items-center"><i class = "fa fa-bullhorn sr-icons fa-3x pr-3 text-brand"></i>
 					<h4 class="pt-3 text-dark"><?php the_field('career_content_1'); ?></h4>
 				</div>
@@ -149,7 +149,7 @@
 				</div>				
 				<a href="<?php the_field('career_button_link'); ?>" class="btn btn-primary btn-lg sr-button mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
 			</div>
-			<div class = "col-md-6 text-center d-flex align-items-center">
+			<div class = "col-lg-6 text-center d-flex align-items-center">
 				<img src="<?php the_field('career_image'); ?>" alt="<?php echo $image['alt']; ?>" class="career-image" />
 			</div>			
 		</div>
@@ -157,10 +157,10 @@
 <section class = "newsletter-cta">
 	<div class = "container">
 		<div class = "row no-gutter">
-			<div class = "col-md-6">
+			<div class = "col-lg-6">
 				<h6 class= "pt-2"><?php the_field('newsletter_content'); ?></h6>
 			</div>
-			<div class = "col-md-4">
+			<div class = "col-lg-4">
 				 <?php echo do_shortcode("[acme_mailchimp_form]"); ?>
 		</div>
 	</div>

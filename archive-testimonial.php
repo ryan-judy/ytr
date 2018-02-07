@@ -20,7 +20,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
   <div class = "header-overlay">
   </div>  
   <div class = "row">
-    <div class = "col-sm-12 text-center" style="position: absolute;">
+    <div class = "col-lg-12 text-center">
       <div class = "hero-interior-cta-center mt-5">
       <?php the_field('hero_cta_interior', 246); ?>
       </div>
@@ -38,7 +38,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 				<?php if ( have_posts() ) : ?>
 
 					<div class = "row text-center">
-						<div class = "col-md-12">
+						<div class = "col-lg-12">
 						<h1 class = "mb-5">What Our Clients Have to Say</h1>
 					</div>
 					</div>
