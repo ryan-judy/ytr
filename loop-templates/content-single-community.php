@@ -6,6 +6,7 @@
  */
 
 ?>
+
 <?php 
 $image = get_field('gallery_image_1');
 $image2 = get_field('gallery_image_2');
@@ -85,6 +86,14 @@ $url3 = $image3['url'];
 
 </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><?php the_field('community_tab_2_content')?>
+    <div class = "row">
+      <div class = "col-xl-12">
+        <canvas id="bar-chart" width="800" height="450"></canvas>
+      </div>
+      <div class = "col-xl-12">
+        <canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
+      </div>
+    </div>
 
 </div>
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><?php the_field('community_tab_1_content')?>

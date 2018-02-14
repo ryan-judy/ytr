@@ -11,7 +11,8 @@ $(window).scroll( function(){
 	if ( scrollPos >= headerHeight && windowWidth > 480 ) {
 		$('.navbar').addClass('nav-fixed');
 		$('.navbar').addClass('navbar-light');
-		$('.navbar-brand img').attr("src", "./wp-content/uploads/2018/01/YTR-Logo-Color-Copy.png");
+		$('.navbar-brand img').attr("src", "./wp-content/uploads/2018/02/YTR-LOGO-FINAL-4-No-SLOGAN-REALTOR-1.png");
+		$('.secondary-logo img').attr("src", "./wp-content/uploads/2018/01/KellerWilliams_Greater_Cleveland_Logo_RGB.png");
 		//$('.container').css('margin-top', navHeight);
 		$('.navbar').removeClass('navbar-dark');
 		$('.navbar-brand').addClass('shrink-nav');
@@ -20,7 +21,8 @@ $(window).scroll( function(){
 
 
 	} else {
-		$('.navbar-brand img').attr("src", "./wp-content/uploads/2018/01/YTR-Logo-White-Copy.png");
+		$('.navbar-brand img').attr("src", "./wp-content/uploads/2018/02/YTR-LOGO-FINAL-4-No-SLOGAN-REALTOR-2.png");
+		$('.secondary-logo img').attr("src", "./wp-content/uploads/2018/01/KellerWilliams_Greater_Cleveland_Logo_rev-W.png");
 		$('.mobile').addClass('home-logo');
 		$('.navbar').removeClass('nav-fixed');
 		$('.navbar').removeClass('navbar-light');

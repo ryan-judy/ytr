@@ -128,15 +128,20 @@ h6 {
     margin-right: 15px;
   }
   }
-
+  .menu-trans {
+    background-color: transparent;
+    @media (max-width: 1000px) {
+      background-color: $black;
+  }
+  }
 
 .nav-fixed {
-
+    background-color: $white;
     position: fixed;
     top: 0;
     z-index: 999;
-    background-color: $white;
-    transition:all ease .1s;
+    transition:all ease .2s;
+
 }
 
 .navbar-shadow {
@@ -160,13 +165,15 @@ h6 {
     }
 }
 
+
 nav {
   width: 100%;
   font-family: 'Lato', sans-serif;
-	background-color: transparent;
-  @media (max-width: 1000px) {
+	background-color: $white;
+  @media (max-width: 776px) {
       background-color: $white;
   }
+
 
   a {
     text-align: center;
@@ -178,8 +185,8 @@ nav {
 
   .shrink-nav {
     width: 100%;
--webkit-transition: all 0.8s ease;
-   transition: all 0.8s ease;
+-webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
     padding-top: 5px;
     padding-bottom: 5px;
 
@@ -207,8 +214,8 @@ nav {
   }
 
   .navbar-brand {
-    margin-right: 40px;
-    width: 90%;
+    margin-right: 25px;
+    width: 100%;
     padding: 10px 0px;
     transition:all ease .2s;
     @media screen and (max-width: 575px) {
@@ -216,19 +223,23 @@ nav {
     }
 
     @media screen and (min-width: 576px) {
-      width: 110%;
+      width: 30%;
 
     }
 
     @media (max-width: 767px) {
-      width: 65%;
+      width: 110px;
+      margin-right: 0px;
+      margin-left: 5px;
     }
 
     @media (min-width: 768px) {
-    width: 60%;
+    width: 35%;
     }
 
-    @media (max-width: 991px) {
+    @media (min-width: 991px) {
+    width: 40%;
+
     }
 
     @media (min-width: 992px) {
@@ -236,12 +247,13 @@ nav {
 
     }
 
-    @media (max-width: 1199px) {
+    @media (min-width: 1199px) {
+      width: 120%;
 
     }
 
     @media (min-width: 1200px) {
-      width: 80%;
+      width: 100%;
 
     }
 
@@ -272,7 +284,7 @@ nav {
 	.nav-link {
     color: $white;
     @media only screen and (max-width: 1000px){  
-      color: $darkgray;
+      color: $white;
       width: 100%;
 
     }
@@ -492,9 +504,9 @@ nav {
   background-color: #000;
   height: 50px;
     .header-number {
-      margin-right: 40px;
+        padding-left: 55px;
       @media (max-width: 667px) {
-       margin-right: 40px;
+        padding-left: 20px;
       }
   }
 }
@@ -571,17 +583,6 @@ nav {
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
 
-.image2{
-   display: none;
-}
-  @media only screen and (max-width: 1000px){ //some value
-   .home-logo {
-    display: none;
-  }
-  .image2 {
-    display: block;
-  }
-}
 /* Sticky footer style and color
 -------------------------------------------------- */
 footer {

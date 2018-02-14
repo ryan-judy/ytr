@@ -6,10 +6,13 @@
  */
   wp_enqueue_script( 'google-maps-ind', get_template_directory_uri() . '/js/google-maps-ind.js', array ( 'jquery' ), 1.1, true);
 
+
 get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
 <?php 
 
 $countPosts = $wp_the_query->post_count;
@@ -22,7 +25,7 @@ $countPosts = $wp_the_query->post_count;
  <article id="cd-google-map">
 
   <div class = "container">
-                <h1 class="page-title mt-5 text-light" style="position:absolute; z-index:5;"><?php the_field('header'); ?></h1>
+                <h1 class="page-title mt-5 text-dark" style="position:absolute; z-index:5;"><?php the_field('header'); ?></h1>
 </div>
   <div id="google-container"></div>
   <div id="cd-zoom-in"></div>
@@ -67,6 +70,7 @@ $countPosts = $wp_the_query->post_count;
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
 <script>
 

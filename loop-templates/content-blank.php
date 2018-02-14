@@ -13,7 +13,7 @@
 <div class = "hero-banner-image" style="background-image: url(<?php the_field('hero_image'); ?>" alt="<?php echo $image['alt']; ?>");">
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-    <div class="d-flex justify-content-end header-home pt-1">
+    <div class="d-flex justify-content-between header-home pt-1">
         <div class="pt-2 header-number"><i class = "fa fa-phone"></i> 216-378-9618</div>
    <ul class="nav icon-wrapper">
                     <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
@@ -24,7 +24,7 @@
     </div>
 
 
-	<nav class="navbar navbar-expand-lg" id="menu">
+	<nav class="navbar navbar-expand-lg menu-trans" id="menu">
             <!-- Your site title as branding in the menu -->
           <?php if ( ! has_custom_logo() ) { ?>
 
@@ -40,8 +40,14 @@
             
           
           <?php } else { ?>
-            <a href="/" class="navbar-brand custom-logo-link home-logo" rel="home" itemprop="url"><img width="200" height="73" src="<?php the_field('white_logo'); ?>" class="navbar-brand" alt="Young Team Realtors" itemprop="logo"></a>
-                        <a href="/" class="navbar-brand custom-logo-link image2" rel="home" itemprop="url"><img width="200" height="73" src="<?php the_field('color_logo'); ?>" class="navbar-brand mobile image2" alt="Young Team Realtors" itemprop="logo"></a>
+
+            <?php
+            $id = '3'; //(string) (required) Menu 'id','name' or 'slug'
+            $menu = wp_get_nav_menu_object( $id );
+            $logo = get_field('secondary_logo_white', $menu);
+            ?>
+          <a href="/" class="navbar-brand custom-logo-link secondary-logo" rel="home" itemprop="url"><img width="200" height="73" src="<?php echo $logo['url'];?>" class="navbar-brand" alt="Young Team Realtors" itemprop="logo"></a>
+                      <a href="/" class="navbar-brand custom-logo-link home-logo" rel="home" itemprop="url"><img width="200" height="73" src="<?php the_field('white_logo'); ?>" class="navbar-brand" alt="Young Team Realtors" itemprop="logo"></a>
           <?php } ?><!-- end custom logo -->
   <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -217,7 +223,7 @@ $count2=0;
                             )
                         )) ); ?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-		               <div class="carousel-item col-lg-4<?php if($count2==0) : echo ' active'; endif; ?>">
+		               <div class="carousel-item col-lg-4 col-sm-4<?php if($count2==0) : echo ' active'; endif; ?>">
 
 		   <div class="img-fluid d-block card-custom-listing">
 	

@@ -307,7 +307,7 @@ jQuery(document).ready(function($){
         ]
     }
 ];
-		
+
 	//set google map options
 	for (i = 0; i < locations.length; i++) { 
 
@@ -322,7 +322,11 @@ jQuery(document).ready(function($){
       	scrollwheel: false,
       	styles: style,
     }
+
 }
+
+
+
     //inizialize the map
 	var map = new google.maps.Map(document.getElementById('google-container'), map_options);
 
@@ -378,7 +382,122 @@ jQuery(document).ready(function($){
 
 };
 
+var geodude = function() {
+            var geocoder;
+        var ZipCode;
+        var SaleArr = [];
+        var UnitsArr = [];
+        var status;
+    for (var i = 0; i < locations.length; i++) {
+
+                var latlng = new google.maps.LatLng(locations[i][0], locations[i][1]),
+                   geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({'latLng': latlng}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+
+                console.log(results[0]);
+                if (results[0].address_components[6].types[0] === "postal_code") {
+                  ZipCode = results[0].address_components[6].short_name;
+                }
+
+                else {
+                  ZipCode = results[0].address_components[7].short_name;
+                }
+$.ajax({
+    url: 'https://search.onboard-apis.com/propertyapi/v1.0.0/salestrend/snapshot?geoid=ZI' + ZipCode + '&interval=quarterly&startyear=2017&endyear=2017&startmonth=january&endmonth=december',
+    headers: {
+        'Accept':'application/json',
+         'apikey':'f4a500f797d24450ca2f34f5187bb3c3'
+
+    },
+    method: 'GET',
+    dataType: 'json',
+    success: function(data){
+      console.log('succes: '+ data.status.msg);
+              for (var i = 0; i < data.salestrends.length; i++) {
+            console.log(data.salestrends[i])
+            if (data.salestrends[i].daterange.start === "Q1 2017") {
+            UnitsArr[0] = data.salestrends[i].SalesTrend.homesalecount;
+            SaleArr[0] = data.salestrends[i].SalesTrend.avgsaleprice;
+            }
+            
+            else if (data.salestrends[i].daterange.start === "Q2 2017") {
+            UnitsArr[1] = data.salestrends[i].SalesTrend.homesalecount;
+            SaleArr[1] = data.salestrends[i].SalesTrend.avgsaleprice;
+            }
+
+             else if (data.salestrends[i].daterange.start === "Q3 2017") {
+            UnitsArr[2] = data.salestrends[i].SalesTrend.homesalecount;
+            SaleArr[2] = data.salestrends[i].SalesTrend.avgsaleprice;
+            }
+             else if (data.salestrends[i].daterange.start === "Q4 2017") {
+            UnitsArr[3] = data.salestrends[i].SalesTrend.homesalecount;
+            SaleArr[3] = data.salestrends[i].SalesTrend.avgsaleprice;
+            }
+
+        }    
+                console.log(SaleArr)
+
+    new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+labels: ["Q1", "Q2", "Q3", "Q4"],
+    datasets: [{
+        fillColor: "rgba(220,220,220,0)",
+        strokeColor: "rgb(143,9,9)",
+        pointColor: "rgb(143,9,9)",
+        data: SaleArr
+
+    }]
+    },
+    options: {
+      
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Average Sales Price per Quarter (2017)'
+      }
+}
+});
+
+
+    new Chart(document.getElementById("bar-chart-horizontal"), {
+    type: 'bar',
+    data: {
+labels: ["Q1", "Q2", "Q3", "Q4"],
+    datasets: [{
+        fillColor: "rgba(220,220,220,0)",
+        strokeColor: "rgb(143,9,9)",
+        pointColor: "rgb(143,9,9)",
+        data: UnitsArr
+
+    }]
+    },
+    options: {
+      
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Average Home Sold Per Quarter'
+      }
+}
+});
+    
+}
+  });
+
+            }
+             else {
+                alert("Geocoder failed due to: " + status);
+            }
+        });
+    }
+}
+
+
 archiveMap();
+geodude();
 
 
 

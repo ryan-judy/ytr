@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-    <div class="d-flex justify-content-end header-home pt-1">
+    <div class="d-flex justify-content-between header-home pt-1">
         <div class="pt-2 header-number"><i class = "fa fa-phone"></i> 216-378-9618</div>
    <ul class="nav icon-wrapper">
                     <li class="nav-item"><a href="https://www.facebook.com/youngteamsells" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></li>
@@ -61,8 +61,18 @@ $container = get_theme_mod( 'understrap_container_type' );
             
           
           <?php } else {
-            the_custom_logo();
+
+$id = '3'; //(string) (required) Menu 'id','name' or 'slug'
+$menu = wp_get_nav_menu_object( $id );
+$logo = get_field('secondary_logo', $menu);
+
+
           } ?>
+          <a href="/" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img width="1728" height="630" src="<?php echo $logo['url'];?>" class="navbar-brand" alt="Young Team Realtors" itemprop="logo" srcset="<?php echo $logo['url'];?> 1728w, <?php echo $logo['url'];?> 300w, <?php echo $logo['url'];?> 768w, <?php echo $logo['url'];?> 1024w" sizes="(max-width: 1728px) 100vw, 1728px"></a>
+          <?php             the_custom_logo(); ?>
+
+
+
 
   <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
