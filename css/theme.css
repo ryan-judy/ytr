@@ -11091,6 +11091,24 @@ body {
     height: 80px; }
   body .nav-footer .nav-link {
     padding-right: 9px; }
+  body .view img, body .view video {
+    display: block;
+    position: relative; }
+  body video {
+    object-fit: contain; }
+  body .video-full {
+    /*  making the video fullscreen  */
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; }
+    @media (max-width: 667px) {
+      body .video-full {
+        left: 0px; } }
 
 /*
 * Use existing Bootstrap 4 classes and

@@ -10,7 +10,12 @@
 ?>
 
 <div class="hfeed site" id="page">
-<div class = "hero-banner-image" style="background-image: url(<?php the_field('hero_image'); ?>)" alt="<?php echo $image['alt']; ?>");">
+<div class = "hero-banner-image">
+                    <!--Video source-->
+                    <video class="video-full" autoplay loop>
+                        <source src="/wp-content/uploads/2018/02/YTR-ROOF.mp4" type="video/mp4" />
+                    </video>
+
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
     <div class="d-flex justify-content-between header-home pt-1">
@@ -583,6 +588,7 @@ $count2=0;
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-lg-6">
+
 				<h4 class= "py-2"><?php the_field('newsletter_cta'); ?></h4>
 			</div>
             <div class = "col-lg-4">
