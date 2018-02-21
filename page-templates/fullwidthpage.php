@@ -108,7 +108,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 
 					?>					
+					<?php 
+					if ( is_page('join-the-team') ) {
+					  get_template_part( 'loop-templates/content', 'careers' );
+					} else {
+					  get_template_part( 'loop-templates/content', 'page' );
+					}
 
+					?>		
 				</main><!-- #main -->
 
 			</div><!-- #primary -->

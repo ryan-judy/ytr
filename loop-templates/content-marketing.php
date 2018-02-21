@@ -12,7 +12,7 @@
 	<div class = "header-overlay">
 	</div>	
 	<div class = "row">
-		<div class = "col-sm-12 text-center" style="position: absolute;">
+		<div class = "col-sm-12 text-center">
 			<div class = "hero-interior-cta-center">
 			<?php the_field('hero_cta_interior'); ?>
 				<div class="row">
@@ -121,10 +121,10 @@
 
 <div class = "component-red component-background component-pricing" style="background-image: url(<?php the_field('component-background'); ?>);">
 		<div class = "row">
-			<div class = "col-lg-6">
+			<div class = "col-lg-6 order-lg-1 order-12">
 				<img class = "marketing-module-2 sr-contact" src="<?php the_field('offline_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
-<div class = "col-lg-5 pl-5">
+<div class = "col-lg-5 order-lg-12 order-1 pl-5">
 				<h2 class = "header-white"><?php the_field('offline_header'); ?>
 </h2>
 					<h4 class="pt-3 text-white"><?php the_field('offline_subhead'); ?></h4>

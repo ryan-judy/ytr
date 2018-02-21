@@ -30,7 +30,7 @@
 		<div class = "row">
 			<div class = "col-lg-1">
 			</div>
-			<div class = "col-lg-5 pl-5">
+			<div class = "col-lg-5 pl-5 order-lg-1 order-12">
 				<h2 class = "header-white"><?php the_field('component_1_heading'); ?>
 </h2>
 					<h4 class="text-white text-uppercase"><?php the_field('component_1_subhead'); ?>
@@ -40,7 +40,7 @@
 
 </h4>					
 			</div>
-			<div class = "col-lg-6 text-center d-flex align-items-center pl-5">
+			<div class = "col-lg-6 order-lg-12 order-1 text-center d-flex align-items-center pl-5 pb-3">
 				<img src="<?php the_field('component_1_image'); ?>" alt="<?php echo $image['alt']; ?>" class="communicate-image"/>
 			</div>			
 		</div>

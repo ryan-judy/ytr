@@ -47,6 +47,7 @@ $args = array(
 ?>
 <h5 class = "community-transform mt-4"><?php $terms = get_the_terms($post->ID, 'locations');foreach($terms as $term){echo $term->name;} ?>
  Communities</h5>
+ <hr>
 
 
 <?php
@@ -69,8 +70,8 @@ wp_reset_postdata();
 <!-- end custom related loop, isa -->
 
 
-<hr>
 <h5>Search Homes for Sale</h5>
+<hr>
 
  <div class = "select-drops scrollable-menu">
 

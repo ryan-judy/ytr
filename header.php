@@ -69,7 +69,7 @@ $logo = get_field('secondary_logo', $menu);
 
           } ?>
           <a href="/" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img width="1728" height="630" src="<?php echo $logo['url'];?>" class="navbar-brand" alt="Young Team Realtors" itemprop="logo" srcset="<?php echo $logo['url'];?> 1728w, <?php echo $logo['url'];?> 300w, <?php echo $logo['url'];?> 768w, <?php echo $logo['url'];?> 1024w" sizes="(max-width: 1728px) 100vw, 1728px"></a>
-          <?php             the_custom_logo(); ?>
+          <?php the_custom_logo(); ?>
 
 
 

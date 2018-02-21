@@ -28,7 +28,6 @@ $url3 = $image3['url'];
   $thumb = $image['sizes'][ $size ];
   $thumb2 = $image2['sizes'][ $size ];
   $thumb3 = $image3['sizes'][ $size ];
-
 ?>
 
 <div class = "card-custom-community">
@@ -41,23 +40,28 @@ $url3 = $image3['url'];
 
 				</header><!-- .entry-header -->
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
+
   <div class="carousel-inner">
     <div class = "aspect aspect--16x9">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="<?php echo $thumb; ?>" alt="First slide">
+      <?php if( have_rows('gallery') ): ?>
+
+  <?php $i =0;
+ while( have_rows('gallery') ): the_row(); 
+
+    // vars
+    $image = get_sub_field('gallery_image');
+
+
+    ?>
+    <div class="carousel-item <?php if ($i ==0): echo('active'); endif; ?>"">
+        <img class="d-block w-100" src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" />
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo $thumb2; ?>" alt="Second slide">
+  
+  <?php $i++; endwhile; ?>
+
+
+<?php endif; ?>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo $thumb3; ?>" alt="Third slide">
-    </div>
-  </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <i class="fa fa-chevron-left fa-3x"></i>
@@ -85,7 +89,7 @@ $url3 = $image3['url'];
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><?php the_field('community_tab_3_content')?>
 
 </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><?php the_field('community_tab_2_content')?>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
     <div class = "row">
       <div class = "col-xl-12">
         <canvas id="bar-chart" width="800" height="450"></canvas>

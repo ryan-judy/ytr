@@ -88,7 +88,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
         </button>
       </div>
       <div class="modal-body">
-      	<div class = "component-form">
+      	<div class = "component-form-2">
          <?php the_field('agent_contact'); ?>
          	</div>
      </div>

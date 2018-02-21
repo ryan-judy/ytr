@@ -12,7 +12,7 @@
 
 $terms = get_the_terms( $post->ID, 'locations' );
 
-$image = get_field('gallery_image_1');
+$image = get_field('featured_image');
 $url = $image['url'];
   $title = $image['title'];
   $alt = $image['alt'];
@@ -39,7 +39,7 @@ if ( $terms && ! is_wp_error( $terms ) ) :
 <?php endif; ?>
 
 
-       <figure class="image-item col-3" data-groups="[&quot;<?php echo $actors; ?>&quot;]">
+       <figure class="image-item col-sm-3" data-groups="[&quot;<?php echo $actors; ?>&quot;]">
   <a class="portfolio-box" href=<?php the_permalink(); ?>>
           <div class="aspect aspect--16x9">
 

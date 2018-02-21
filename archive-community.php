@@ -82,7 +82,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
   </div>
   <div class="row my-shuffle">
 
-    <div class="col-1 my-sizer-element"></div>
+    <div class="col-md-1 my-sizer-element"></div>
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>

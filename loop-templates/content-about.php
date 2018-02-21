@@ -137,7 +137,7 @@
 		<div class = "row">
 						<div class = "col-lg-1">
 			</div>
-			<div class = "col-lg-5 pl-5 pr-2">
+			<div class = "col-lg-5 order-lg-1 order-12 pl-5 pr-2">
 				<div class="d-flex align-items-center"><i class = "fa fa-bullhorn sr-icons fa-3x pr-3 text-brand"></i>
 					<h4 class="pt-3 text-dark"><?php the_field('career_content_1'); ?></h4>
 				</div>
@@ -149,7 +149,7 @@
 				</div>				
 				<a href="<?php the_field('career_button_link'); ?>" class="btn btn-primary btn-lg sr-button mt-4 ml-5" role="button" aria-pressed="true"><?php the_field('career_button_cta'); ?></a>
 			</div>
-			<div class = "col-lg-6 text-center d-flex align-items-center">
+			<div class = "col-lg-6 order-lg-12 order-1 text-center d-flex align-items-center">
 				<img src="<?php the_field('career_image'); ?>" alt="<?php echo $image['alt']; ?>" class="career-image" />
 			</div>			
 		</div>

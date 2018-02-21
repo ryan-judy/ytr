@@ -11,7 +11,7 @@
     <div class = "header-overlay">
     </div>  
     <div class = "row">
-        <div class = "col-sm-12 text-center" style="position: absolute;">
+        <div class = "col-sm-12 text-center">
             <div class = "hero-interior-cta-center">
             <?php the_title( '<h1 class="address text-uppercase">', '</h1>' ); ?>
         </div>
@@ -38,29 +38,29 @@
 
                     <h3 class = "listing-tagline text-center text-light"><?php the_field('tagline')?></h3>
 
-                <div class="entry-content mt-5">
+                <div class="entry-content">
                     <div class = "row text-center">
-                        <div class = "col-md-2">
+                        <div class = "col-md-2 mt-4">
                             <p class = "text-white">PRICE</p>
                             <h3 class="text-white">$<?php the_field('price')?></h3>
                         </div>
-                        <div class = "col-md-2">
+                        <div class = "col-md-2 mt-4">
                             <p class = "text-white">BEDS</p>
                             <h3 class="text-white"><?php the_field('beds')?></h3>
                         </div>
-                        <div class = "col-md-2">
+                        <div class = "col-md-2 mt-4">
                             <p class = "text-white">BATHS</p>
                             <h3 class="text-white"><?php the_field('baths')?></h3>
                         </div>
-                        <div class = "col-md-2">
+                        <div class = "col-md-2 mt-4">
                             <p class = "text-white">SQ. FT</p>
                             <h3 class="text-white"><?php the_field('sqft')?></h3>
                         </div>
-                        <div class = "col-md-2">
+                        <div class = "col-md-2 mt-4">
                             <p class = "text-white">ACRES</p>
                             <h3 class="text-white"><?php the_field('acres')?></h3>
                         </div>
-                        <div class = "col-md-2">
+                        <div class = "col-md-2 mt-4">
                             <p class = "text-white">YBT</p>
                             <h3 class="text-white"><?php the_field('year-built')?></h3>
                         </div>
@@ -148,11 +148,11 @@ if($images) : ?>
 <div class = "container">
 <div class = "row text-center mb-5">
     <div class = "col-md-6">
-        <h3 class = "text-dark mb-4">Virtual Tour</h3>
+        <h3 class = "text-dark my-4">Virtual Tour</h3>
         <?php the_field('matterport_link'); ?>
     </div>
     <div class = "col-md-6">
-        <h3 class = "text-dark mb-4">Video Guide</h3>
+        <h3 class = "text-dark my-4">Video Guide</h3>
         <?php the_field('matterport_link_copy'); ?>
         
     </div>

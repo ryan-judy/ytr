@@ -16,6 +16,7 @@ html {
   margin: 0px; 
   padding: 0px; 
 }
+
 a {
     color: $brandcolor;
     &:hover {
@@ -29,7 +30,10 @@ min-height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 font-family: 'Lato', sans-serif;
+-webkit-font-smoothing: subpixel-antialiased;
+-moz-osx-font-smoothing: grayscale;
 
 .fa-envelope, .fa-map-marker, .fa-phone {
   color: gray;
@@ -68,6 +72,7 @@ font-family: 'Lato', sans-serif;
 h2 {
   font-size: 38px;
   font-weight: lighter;
+
 }
 
 h3 {
@@ -141,6 +146,7 @@ h6 {
     top: 0;
     z-index: 999;
     transition:all ease .2s;
+    -webkit-transition:all ease .2s;
 
 }
 
@@ -196,10 +202,12 @@ nav {
     margin-top:5px; 
     width:150px;
     transition:width ease-in-out .2s;
+    -webkit-transition:width ease-in-out .2s;
   }
 
   .shrink-logo img {
     transition:width ease-in-out .2s;
+    -webkit-transition:width ease-in-out .2s;
     width:100px;
   }
 
@@ -218,6 +226,7 @@ nav {
     width: 100%;
     padding: 10px 0px;
     transition:all ease .2s;
+    -webkit-transition:all ease .2s;
     @media screen and (max-width: 575px) {
       width: 100%;
     }
@@ -272,13 +281,14 @@ nav {
   }
 
     .nav-item-community {
+      margin-top: 10px;
     margin-right: 10px;
-    padding: 7px 20px;
+    padding: 9px 20px 7px 20px;
     letter-spacing: 1px;
     box-shadow: none;
     background-color: $brandcolor;
     border-radius: 5px;
-    height: 35px;
+    font-size: 18px;
   }
 
 	.nav-link {
@@ -292,6 +302,7 @@ nav {
     color: lightgray;
     box-shadow: 0 -2px $brandcolor inset;
     transition: box-shadow 0.3s linear;
+    -webkit-transition:box-shadow 0.3s linear;
         @media only screen and (max-width: 1000px){  
       color: $brandcolor;
     }
@@ -671,6 +682,7 @@ footer .form-control {
       radius: 10px;
       margin: auto;
       transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
 
 }
 
@@ -1201,6 +1213,7 @@ input:focus::-webkit-input-placeholder {
     color: white;
     background: fade-out($darkgray, .1);
     transition: all ease .5s;
+    -webkit-transition: all ease .5s;
           .project-icon {
         text-align: right;
         margin-right: 10px;
@@ -1537,6 +1550,7 @@ section {
     border-color: transparent;
         box-shadow: 0 -2px $brandcolor inset;
     transition: box-shadow 0.3s linear;
+    -webkit-transition:box-shadow 0.3s linear;
     color: $white;
     background-color: transparent;
   }
@@ -1546,6 +1560,7 @@ section {
         border-color: transparent;
         box-shadow: 0 -2px $brandcolor inset;
     transition: box-shadow 0.3s linear;
+    -webkit-transition:box-shadow 0.3s linear;
   }
 }
 }
@@ -1636,6 +1651,7 @@ section {
     border-color: transparent;
         box-shadow: 0 -2px $brandcolor inset;
     transition: box-shadow 0.3s linear;
+    -webkit-transition:box-shadow 0.3s linear;
     color: $white;
     background-color: $brandcolor;
   }
@@ -1645,6 +1661,7 @@ section {
         border-color: transparent;
         box-shadow: 0 -2px $brandcolor inset;
     transition: box-shadow 0.3s linear;
+    -webkit-transition:box-shadow 0.3s linear;
   }
 }
 }
@@ -1828,7 +1845,7 @@ $font_family_1: 'Roboto';
   border-color: $brandcolor;
   border-width: 10px;
  @media (max-width: 1000px) {
-    margin-top: 100px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1839,8 +1856,9 @@ $font_family_1: 'Roboto';
 .marketing-module-2 {
   max-height: 500px;
   max-width: 500px;
-  margin-left: 100px;
+          padding-bottom: 15px;
    @media (max-width: 667px) {
+        padding-top: 10px;
           margin-left: 0px;
           max-width: 100%;
     }
@@ -2249,6 +2267,10 @@ $color_8: #000000;
     width: 5%; 
     background: none;
     background: none;
+       @media (max-width: 776px) {
+        margin-top: 45px;
+  }
+
 }
 .carousel-control-next {
     padding-right: 15px;
@@ -2258,6 +2280,9 @@ $color_8: #000000;
     width: 5%; 
     background: none;
     background: none;
+           @media (max-width: 776px) {
+        margin-top: 45px;
+  }
 }
 .carousel-control-prev:hover,
 .carousel-control-prev:focus,
@@ -2322,7 +2347,6 @@ $color_8: #000000;
     background: #ffffff;
   box-sizing: border-box;
   width: 100%;
-  padding-bottom: 40px;
   border-radius: 3px;
   margin-left: 0px;
   margin-top: 10px;

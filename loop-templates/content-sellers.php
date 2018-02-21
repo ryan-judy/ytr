@@ -38,11 +38,11 @@
 				<p class = "text-dark"><?php the_field('seller_stats_content');?>
 			</div>
 		</div>
-		<div class = "row mt-4">
-			<div class = "col-lg-6 sr-logo">
+		<div class = "row">
+			<div class = "col-lg-6 mt-4 sr-logo">
 				<canvas id="bar-chart" width="800" height="450"></canvas>
 			</div>
-			<div class = "col-lg-6 sr-logo">
+			<div class = "col-lg-6 mt-4 sr-logo">
 				<canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
 			</div>
 		</div>	  	  
@@ -140,10 +140,10 @@
 <div class = "component-red component-background" style="background-image: url(<?php the_field('component-background'); ?>);">
 	<div class = "container">
 		<div class = "row">
-			<div class = "col-lg-6">
+			<div class = "col-lg-6 order-lg-1 order-12">
 				<img src="<?php the_field('easy_exit_image'); ?>" alt="<?php echo $image['alt']; ?>" class="sr-contact"/>
 			</div>
-			<div class = "col-lg-6 text-right">
+			<div class = "col-lg-6 order-lg-12 order-1 text-right">
 				<h2 class = "header-white"><?php the_field('easy_exit_header'); ?></h2>
 			<h4 class = 'text-light'><?php the_field('easy_exit_subhead'); ?></h4>
 
@@ -165,7 +165,7 @@
 					<h4 class="pt-3 text-white"><?php the_field('pricing_content'); ?></h4>					
 				<a href="<?php the_field('pricing_button_link'); ?>" class="btn btn-secondary btn-lg sr-button active header  sr-button mt-4" role="button" aria-pressed="true"><?php the_field('pricing_button_cta'); ?></a>
 			</div>
-			<div class = "col-lg-6 text-center d-flex align-items-center">
+			<div class = "col-lg-6 my-4 text-center d-flex align-items-center">
 				<img src="<?php the_field('pricing_image'); ?>" alt="<?php echo $image['alt']; ?>" class="pricing-photo sr-contact" />
 			</div>			
 		</div>

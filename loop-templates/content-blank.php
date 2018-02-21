@@ -10,7 +10,7 @@
 ?>
 
 <div class="hfeed site" id="page">
-<div class = "hero-banner-image" style="background-image: url(<?php the_field('hero_image'); ?>" alt="<?php echo $image['alt']; ?>");">
+<div class = "hero-banner-image" style="background-image: url(<?php the_field('hero_image'); ?>)" alt="<?php echo $image['alt']; ?>");">
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
     <div class="d-flex justify-content-between header-home pt-1">
@@ -307,12 +307,12 @@ $count2=0;
 <section class = "component team">
 	<div class = "container">
 		<div class = "row">
-			<div class = "col-lg-6">
+			<div class = "col-lg-6 order-lg-1 order-12">
 				<h2 class = "header-dark"><?php the_field('team_header'); ?></h2>
 				<h4 class="pt-3 text-dark"><?php the_field('team_subhead'); ?></h4>
 				<a href="<?php the_field('team_button_page'); ?>" class="btn btn-primary btn-lg sr-button active header mt-4" role="button" aria-pressed="true"><?php the_field('team_button'); ?></a>
 			</div>
-			<div class = "col-lg-6 text-center">
+			<div class = "col-lg-6 order-lg-12 order-1 text-center">
 				<img class="team-image content-right" src="<?php the_field('team_image'); ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>			
 		</div>

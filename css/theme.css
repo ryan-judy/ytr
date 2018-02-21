@@ -9153,6 +9153,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /* Sticky footer style and color
 -------------------------------------------------- */
   /* First border-left-width setting is a fallback */
@@ -9225,7 +9227,8 @@ body {
     position: fixed;
     top: 0;
     z-index: 999;
-    transition: all ease .2s; }
+    transition: all ease .2s;
+    -webkit-transition: all ease .2s; }
   body .navbar-shadow {
     -webkit-box-shadow: 0px 5px 14px -2px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 5px 14px -2px rgba(0, 0, 0, 0.3);
@@ -9261,9 +9264,11 @@ body {
     body nav .logo img {
       margin-top: 5px;
       width: 150px;
-      transition: width ease-in-out .2s; }
+      transition: width ease-in-out .2s;
+      -webkit-transition: width ease-in-out .2s; }
     body nav .shrink-logo img {
       transition: width ease-in-out .2s;
+      -webkit-transition: width ease-in-out .2s;
       width: 100px; }
     @media (max-width: 767px) {
       body nav .logo img {
@@ -9275,7 +9280,8 @@ body {
       margin-right: 25px;
       width: 100%;
       padding: 10px 0px;
-      transition: all ease .2s; }
+      transition: all ease .2s;
+      -webkit-transition: all ease .2s; }
       @media screen and (max-width: 575px) {
         body nav .navbar-brand {
           width: 100%; } }
@@ -9311,13 +9317,14 @@ body {
         body nav .nav-item {
           padding-left: 0px; } }
     body nav .nav-item-community {
+      margin-top: 10px;
       margin-right: 10px;
-      padding: 7px 20px;
+      padding: 9px 20px 7px 20px;
       letter-spacing: 1px;
       box-shadow: none;
       background-color: #751212;
       border-radius: 5px;
-      height: 35px; }
+      font-size: 18px; }
     body nav .nav-link {
       color: #f5f5f5; }
       @media only screen and (max-width: 1000px) {
@@ -9327,7 +9334,8 @@ body {
       body nav .nav-link:hover {
         color: lightgray;
         box-shadow: 0 -2px #751212 inset;
-        transition: box-shadow 0.3s linear; }
+        transition: box-shadow 0.3s linear;
+        -webkit-transition: box-shadow 0.3s linear; }
         @media only screen and (max-width: 1000px) {
           body nav .nav-link:hover {
             color: #751212; } }
@@ -9610,7 +9618,8 @@ body {
       input-border: 1px solid #630f0f;
       input-radius: 10px;
       input-margin: auto;
-      input-transition: all 0.3s ease; }
+      input-transition: all 0.3s ease;
+      input--webkit-transition: all 0.3s ease; }
   body .container {
     margin-top: 0px; }
   body .component {
@@ -9998,7 +10007,8 @@ body {
       opacity: 0;
       color: white;
       background: rgba(29, 25, 25, 0.9);
-      transition: all ease .5s; }
+      transition: all ease .5s;
+      -webkit-transition: all ease .5s; }
       body .portfolio-box .portfolio-box-caption .project-icon {
         text-align: right;
         margin-right: 10px; }
@@ -10267,13 +10277,15 @@ body {
       border-color: transparent;
       box-shadow: 0 -2px #751212 inset;
       transition: box-shadow 0.3s linear;
+      -webkit-transition: box-shadow 0.3s linear;
       color: #f5f5f5;
       background-color: transparent; }
     body .nav-tabs .nav-link:hover {
       border-bottom: none;
       border-color: transparent;
       box-shadow: 0 -2px #751212 inset;
-      transition: box-shadow 0.3s linear; }
+      transition: box-shadow 0.3s linear;
+      -webkit-transition: box-shadow 0.3s linear; }
   body .nav a {
     color: white; }
     body .nav a:hover {
@@ -10336,13 +10348,15 @@ body {
       border-color: transparent;
       box-shadow: 0 -2px #751212 inset;
       transition: box-shadow 0.3s linear;
+      -webkit-transition: box-shadow 0.3s linear;
       color: #f5f5f5;
       background-color: #751212; }
     body .nav-tabs-community .nav-link:hover {
       border-bottom: none;
       border-color: transparent;
       box-shadow: 0 -2px #751212 inset;
-      transition: box-shadow 0.3s linear; }
+      transition: box-shadow 0.3s linear;
+      -webkit-transition: box-shadow 0.3s linear; }
   @media (max-width: 1000px) {
     body .footer-center {
       text-align: center; } }
@@ -10458,16 +10472,17 @@ body {
     border-width: 10px; }
     @media (max-width: 1000px) {
       body .team-image {
-        margin-top: 100px; } }
+        margin-bottom: 30px; } }
   body .marketing-module {
     max-height: 500px;
     width: 100%; }
   body .marketing-module-2 {
     max-height: 500px;
     max-width: 500px;
-    margin-left: 100px; }
+    padding-bottom: 15px; }
     @media (max-width: 667px) {
       body .marketing-module-2 {
+        padding-top: 10px;
         margin-left: 0px;
         max-width: 100%; } }
   body .listing-photo {
@@ -10770,6 +10785,9 @@ body {
     width: 5%;
     background: none;
     background: none; }
+    @media (max-width: 776px) {
+      body .marketing-slider .carousel-control-prev {
+        margin-top: 45px; } }
   body .marketing-slider .carousel-control-next {
     padding-right: 15px;
     margin-right: 8px;
@@ -10778,6 +10796,9 @@ body {
     width: 5%;
     background: none;
     background: none; }
+    @media (max-width: 776px) {
+      body .marketing-slider .carousel-control-next {
+        margin-top: 45px; } }
   body .marketing-slider .carousel-control-prev:hover,
   body .marketing-slider .carousel-control-prev:focus,
   body .marketing-slider .carousel-control-prev:active {
@@ -10824,7 +10845,6 @@ body {
     background: #ffffff;
     box-sizing: border-box;
     width: 100%;
-    padding-bottom: 40px;
     border-radius: 3px;
     margin-left: 0px;
     margin-top: 10px; }

@@ -70,7 +70,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class = "component-form">
+        <div class = "component-form-2">
          <?php the_field('agent_contact'); ?>
           </div>
      </div>
