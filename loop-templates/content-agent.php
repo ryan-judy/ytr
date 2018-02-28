@@ -7,7 +7,7 @@
   wp_enqueue_script( 'card', get_template_directory_uri() . '/js/card.js');
 
 ?>
-<div class = "col-lg-3 sr-icons-load px-4">
+<div class = "col-lg-3 sr-icons px-4">
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 

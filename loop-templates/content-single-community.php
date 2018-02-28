@@ -80,13 +80,13 @@ $url3 = $image3['url'];
 <input class="lat" value=<?php echo(types_render_field( 'latitude', array()));?> type="hidden">
 <input class="lon" value=<?php echo(types_render_field( 'longitude', array()));?> type="hidden">
 
-					<nav class="nav nav-tabs mb-3" id="myTab" role="tablist">
+					<nav class="nav nav-tabs nav-tabs-trans mb-3" id="myTab" role="tablist">
   <a class="nav-item-community text-light" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><?php the_field('community_tab_1_name')?></a>
   <a class="nav-item-community text-light" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><?php the_field('community_tab_2_name')?></a>
   <a class="nav-item-community text-light" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><?php the_field('community_tab_3_name')?></a>
 </nav>
 <div class="tab-content mt-4 active" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><?php the_field('community_tab_3_content')?>
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><?php the_field('community_tab_1_content')?>
 
 </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -100,7 +100,7 @@ $url3 = $image3['url'];
     </div>
 
 </div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><?php the_field('community_tab_1_content')?>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><?php the_field('community_tab_3_content')?>
 
 </div>
 </div>

@@ -9659,6 +9659,10 @@ body {
     height: 100%;
     padding: 40px 30px;
     background-color: #751212; }
+    @media (max-width: 1000px) {
+      body .newsletter-cta {
+        text-align: center;
+        padding-bottom: 40px; } }
   body .header-overlay {
     position: absolute;
     top: 0;
@@ -10290,6 +10294,8 @@ body {
     color: white; }
     body .nav a:hover {
       border-bottom: 2px solid #751212; }
+  body .nav-tabs-trans {
+    background-color: transparent; }
   @media (min-width: 768px) {
     body .featured-listings-car {
       /* show 3 items */
@@ -11109,6 +11115,8 @@ body {
     @media (max-width: 667px) {
       body .video-full {
         left: 0px; } }
+  body .text-sm-right {
+    font-size: 15px; }
 
 /*
 * Use existing Bootstrap 4 classes and

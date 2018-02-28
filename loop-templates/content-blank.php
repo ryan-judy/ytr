@@ -13,7 +13,7 @@
 <div class = "hero-banner-image">
                     <!--Video source-->
                     <video class="video-full" autoplay loop>
-                        <source src="/wp-content/uploads/2018/02/YTR-ROOF.mp4" type="video/mp4" />
+                        <source src="<?php the_field('video'); ?>" type="video/mp4" />
                     </video>
 
 	<!-- ******************* The Navbar Area ******************* -->
@@ -274,8 +274,7 @@ $count2=0;
 
 
 
-
-		<div class = "row">
+		<div class = "row" style="margin-right: 0px">
 			<div class = "col-lg-6 text-left component-red">
 				<div class = "container">
 					<div class ="row px-3">
@@ -306,7 +305,7 @@ $count2=0;
 					</div>
 				</div>
 			</div>
-
+        </div>
 		</div>
 
 <section class = "component team">

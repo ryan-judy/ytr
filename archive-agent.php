@@ -16,6 +16,22 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 ?>
+<div class = "hero-interior" style="background-image: url(<?php the_field('hero', 248); ?>);">
+	<div class = "header-overlay">
+	</div>	
+	<div class = "row">
+		<div class = "col-lg-12 text-center">
+			<div class = "hero-interior-cta-center">
+			<?php the_field('hero_cta_interior', 248); ?>
+				<div class="row">
+					<div class = "col-lg-12 text-center">
+				<a href="#about" class="btn btn-primary btn-lg active header mt-4 js-scroll-trigger" role="button" aria-pressed="true">Learn More</a>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>	
 
 <div class="wrapper" id="archive-wrapper">
 <section class = "component component-pricing">
@@ -24,6 +40,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
+
 
 			<!-- Do the left sidebar check -->
 

@@ -467,7 +467,7 @@ labels: ["Q1", "Q2", "Q3", "Q4"],
     data: {
 labels: ["Q1", "Q2", "Q3", "Q4"],
     datasets: [{
-        fillColor: "rgba(220,220,220,0)",
+        fillColor: "rgba(0,0,0,0)",
         strokeColor: "rgb(143,9,9)",
         pointColor: "rgb(143,9,9)",
         data: UnitsArr

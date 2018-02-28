@@ -32,7 +32,7 @@ new Chart(document.getElementById("bar-chart-horizontal"), {
         {
           label: "List vs Sold Price (percentage)",
           backgroundColor: ["#292c2f", "#751212"],
-          data: [94,99,50]
+          data: [94,97,50]
         }
       ]
     },

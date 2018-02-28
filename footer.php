@@ -45,11 +45,12 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
             <div class="col-md-3 footer-center">
                 <h2 class="text-md-right">Contact Us</h5>
-                <p class="text-md-right">
+                <p class="text-sm-right">
                 216-378-9618<br>
-                info@youngteamrealtors.com<br>
+                info@youngteamrealtors.com<br><br>
                 29225 Chagrin Blvd. #300,<br> Pepper Pike, OH 44122<br>
-                <hr>
+                20525 Center Ridge Rd #220,<br> Rocky River, OH 44116<br>
+            </p>
             </div>
             <div class="col-md-4">
             <?php echo do_shortcode("[contact-form-7 id='1278' title='Footer Form']");?>

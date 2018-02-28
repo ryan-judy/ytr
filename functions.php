@@ -290,8 +290,11 @@ function acme_process_newsletter_subscription() {
     }
  
     // Configure --------------------------------------
-    $api_key = '';
-    $list_id = 'a75e3d52c6';
+    $id = '3'; //(string) (required) Menu 'id','name' or 'slug'
+$menu = wp_get_nav_menu_object( $id );
+$api_key = get_field('mailchimp_api', $menu);
+ $list_id = get_field('mailchimp_listid', $menu);
+
  
     // STOP Configuring -------------------------------
 

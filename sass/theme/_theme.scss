@@ -752,6 +752,10 @@ footer .form-control {
     padding: 40px 30px;
 
   background-color: $brandcolor;
+     @media (max-width: 1000px) {
+          text-align: center;
+          padding-bottom: 40px;
+  }
 
 }
 
@@ -1541,6 +1545,7 @@ section {
     padding-right: 40px;
   }
 
+
 .nav-tabs {
   border: none;
   a {
@@ -1573,6 +1578,12 @@ section {
   }
   }
 }
+
+  .nav-tabs-trans{
+  background-color: transparent;
+}
+
+
 
 @media (min-width: 768px) {
 .featured-listings-car {
@@ -2710,6 +2721,10 @@ video {
    @media (max-width: 667px) {
     left: 0px;
     }
+}
+
+.text-sm-right {
+  font-size: 15px;
 }
 
 }
